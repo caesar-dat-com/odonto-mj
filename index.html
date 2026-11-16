@@ -398,7 +398,71 @@ body.con-cursor.sobre-enlace #cursor-anillo{width:52px;height:52px;margin:-26px 
 .hero-in h1{max-width:14ch;margin-inline:auto}
 @media(max-width:620px){.hero-in h1{max-width:none}}
 
+/* ============================================================
+   ACABADOS (ideas de Magic UI / Aceternity, en CSS puro)
+   ============================================================ */
+
+/* entrada con desenfoque (blur fade) */
+[data-reveal]{filter:blur(6px)}
+[data-reveal].visible{filter:blur(0);transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease);transition-delay:var(--d,0ms)}
+
+/* foco que sigue al cursor dentro de las tarjetas (magic card) */
+.plan,.arco{position:relative;isolation:isolate}
+.plan::after,.arco::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;opacity:0;
+  transition:opacity .35s;pointer-events:none;
+  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(185,154,104,.18),transparent 70%)}
+.plan:hover::after,.arco:hover::after{opacity:1}
+
+/* haz dorado recorriendo el borde de las tarjetas destacadas (border beam) */
+.plan.destacado{position:relative}
+.plan.destacado::before{content:"";position:absolute;inset:-1px;left:-1px;top:-1px;width:auto;height:auto;
+  transform:none;transition:none;border-radius:inherit;padding:1.6px;
+  background:conic-gradient(from var(--giro,0deg),transparent 0 62%,rgba(185,154,104,.55) 74%,rgba(201,166,110,1) 82%,#FFF4DE 88%,rgba(185,154,104,.75) 94%,transparent 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;
+  animation:girarHaz 6s linear infinite;pointer-events:none}
+@property --giro{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes girarHaz{to{--giro:360deg}}
+
+/* brillo que barre el botón dorado y el distintivo (shine) */
+.btn-oro{position:relative;overflow:hidden}
+.btn-oro::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-18deg);animation:barrido 4.5s ease-in-out infinite}
+@keyframes barrido{0%,62%{left:-120%}88%,100%{left:160%}}
+.plan .tag{position:relative;overflow:hidden}
+.plan .tag::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,transparent 35%,rgba(255,255,255,.65) 50%,transparent 65%);
+  transform:translateX(-100%);animation:barridoTag 5s ease-in-out infinite}
+@keyframes barridoTag{0%,70%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
+/* trama de puntos de fondo en el catálogo (dot pattern) */
+#planes{position:relative}
+#planes::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:radial-gradient(rgba(185,154,104,.17) 1px,transparent 1px);background-size:28px 28px;
+  -webkit-mask-image:radial-gradient(ellipse 80% 55% at 50% 0%,#000 25%,transparent 75%);
+  mask-image:radial-gradient(ellipse 80% 55% at 50% 0%,#000 25%,transparent 75%)}
+#planes>*{position:relative;z-index:1}
+
+/* flecha del botón principal */
+.btn .flecha{width:17px;height:17px;margin-left:2px;transition:transform .35s var(--ease)}
+.btn:hover .flecha{transform:translateX(4px)}
+
+@media (prefers-reduced-motion:reduce){
+  [data-reveal]{filter:none!important}
+  .plan.destacado::before,.btn-oro::after,.plan .tag::after{animation:none}
+  .plan::after,.arco::after{display:none}
+}
+
+/* iconos lineales: mismo peso óptico */
+.valores-grid .ico{transform:scale(.94)}
+.valores-grid > *:last-child .ico{transform:scale(.88)}
+/* insignia con más presencia */
+.plan .tag{background:linear-gradient(180deg,#F6E9CF,#EBD9B4);border-color:rgba(138,106,58,.45);color:#5A4221;font-weight:600}
+
 /* ---------- responsive (al final: manda sobre lo anterior) ---------- */
+
+
 @media(min-width:900px){
   .nav-wa{display:inline-flex}
 }
@@ -503,7 +567,7 @@ html{scroll-padding-top:96px}
 
 /* badge discreto, deja de competir con el precio */
 .plan .tag{
-  background:transparent;color:var(--marron);border:1px solid var(--oro);
+  background:linear-gradient(180deg,#F7EBD3,#EBD9B4);color:#5A4221;border:1px solid rgba(138,106,58,.45);
   letter-spacing:.12em;padding:4px 9px;font-size:9px;top:16px;right:16px;
 }
 .plan.destacado h3{padding-right:86px}
@@ -612,7 +676,7 @@ header.compacto{background:rgba(250,246,239,.99)}
       <span>María José Reyes</span>
     </a>
     <button class="hamb" id="hamb" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16" /> <path d="M4 12h16" /> <path d="M4 19h16" /></svg>
     </button>
     <nav>
       <ul class="menu" id="menu">
@@ -654,7 +718,7 @@ header.compacto{background:rgba(250,246,239,.99)}
     <h1><span class="script">Tu sonrisa,</span> diseñada a tu medida</h1>
     <p class="lead">Elige el plan que te interesa y escríbeme directo por WhatsApp: resolvemos tus dudas y agendamos tu valoración.</p>
     <div class="hero-cta">
-      <a class="btn btn-oro" href="#planes">Ver planes</a>
+      <a class="btn btn-oro" href="#planes">Ver planes <svg class="flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></svg></a>
       <a class="btn btn-wa" href="#" data-wa="Hola Dra. María José, vi su página web y quiero agendar una valoración.">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2 3.2 5 4.4 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2.1-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.5-.4zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
         Escríbeme
@@ -673,22 +737,22 @@ header.compacto{background:rgba(250,246,239,.99)}
 <div class="valores">
   <div class="wrap valores-grid" data-reveal-grupo>
     <div>
-      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M24 8c-6 0-9 3-9 9 0 7 3 9 4 16 .5 3.5 1.5 6 2.5 6s1.5-2 2.5-7c.4-2 1.4-2 2 0 1 5 1.5 7 2.5 7s2-2.5 2.5-6c1-7 4-9 4-16 0-6-3-9-9-9h-2z"/></svg>
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /></svg>
       <h3>Valoración personalizada</h3>
       <p>Primero revisamos tu caso y definimos qué necesitas realmente.</p>
     </div>
     <div>
-      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="10" y="12" width="28" height="24" rx="2"/><path d="M16 20h16M16 26h10"/></svg>
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /></svg>
       <h3>Plan claro y por escrito</h3>
       <p>Sabes qué incluye, cuántas sesiones son y cuánto cuesta antes de empezar.</p>
     </div>
     <div>
-      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="24" cy="24" r="14"/><path d="M24 14v10l7 5"/></svg>
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" /></svg>
       <h3>Agenda por WhatsApp</h3>
       <p>Escribes, cuadramos horario y te confirmo la cita sin vueltas.</p>
     </div>
     <div>
-      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M24 10l4 8 9 1.5-6.5 6.5L32 36l-8-4.5L16 36l1.5-10L11 19.5 20 18z"/></svg>
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41l-7.59-7.59a2.41 2.41 0 0 0-3.41 0Z" /></svg>
       <h3>Materiales de alta gama</h3>
       <p>Resina, disilicato y zirconio según el resultado que buscas.</p>
     </div>
@@ -743,7 +807,7 @@ header.compacto{background:rgba(250,246,239,.99)}
     <div class="filtros-caja" id="filtrosCaja"><div class="filtros" id="filtros"></div></div>
     <div class="herramientas">
       <label class="campo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /></svg>
         <input id="q" type="search" placeholder="Buscar: blanqueamiento, corona, resina…" aria-label="Buscar plan">
       </label>
       <select id="orden" aria-label="Ordenar planes">
@@ -791,7 +855,7 @@ header.compacto{background:rgba(250,246,239,.99)}
       <a href="#" data-wa="Hola Dra. María José, vi su página web y quiero información.">WhatsApp 317 698 0998</a>
       <!-- Instagram: reemplazar el href por el perfil real -->
       <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">Redirecting to /lucide-static@1.73.0/icons/instagram.svg</svg>
       </a>
     </div>
   </div>
@@ -934,9 +998,10 @@ function pintar(){
   items = items.slice().sort(cmp);
 
   const nombreCat = id => (CATEGORIAS.find(c => c.id === id) || {}).nombre || "";
+  let insignias = 0;   // la etiqueta «Más pedido» solo en los dos primeros, para que no pierda fuerza
   document.getElementById("lista").innerHTML = items.length ? items.map(p => `
     <article class="plan${p.destacado?' destacado':''}">
-      <div class="fila-sup"><p class="cat">${nombreCat(p.cat)}</p>${p.destacado?'<span class="tag">Más pedido</span>':''}</div>
+      <div class="fila-sup"><p class="cat">${nombreCat(p.cat)}</p>${p.destacado && insignias++ < 2 ? '<span class="tag">Más pedido</span>' : ''}</div>
       <h3>${p.nombre}</h3>
       <p class="incluye">${p.incluye}</p>
       ${CONFIG.mostrarPrecios?`<p class="precio"><small>Desde</small>${fmt(p.precio)}<span class="cop">COP</span></p>`:''}
@@ -1160,6 +1225,8 @@ function activarTilt(){
       const r = c.getBoundingClientRect();
       const px = (e.clientX - r.left)/r.width - .5, py = (e.clientY - r.top)/r.height - .5;
       c.style.transform = `perspective(900px) rotateY(${px*3.2}deg) rotateX(${-py*3.2}deg) translateY(-4px)`;
+      c.style.setProperty("--mx", (e.clientX - r.left) + "px");
+      c.style.setProperty("--my", (e.clientY - r.top) + "px");
     });
     c.addEventListener("pointerleave", () => c.style.transform = "");
   });
