@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>María José Reyes · Rehabilitación Oral y Estética</title>
+<meta name="description" content="Rehabilitación oral y estética dental. Diseño de sonrisa, blanqueamiento, coronas y prótesis. Agenda tu valoración por WhatsApp.">
+<meta property="og:title" content="María José Reyes · Rehabilitación Oral y Estética">
+<meta property="og:description" content="Diseño de sonrisa, estética dental y rehabilitación oral. Escribe por WhatsApp y agenda tu valoración.">
+<meta property="og:image" content="img/logo.png">
+<link rel="icon" href="img/monograma.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400;500&family=Sacramento&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   MARÍA JOSÉ REYES — Rehabilitación Oral y Estética
+   Catálogo de planes con contacto directo por WhatsApp.
+   Paleta: crema / marfil / oro viejo / negro cálido.
+   ============================================================ */
+:root{
+  --crema:#FAF6EF;
+  --crema-2:#F4EDE1;
+  --arena:#EDE4D5;
+  --oro:#B99A68;
+  --oro-texto:#6A5024;
+  --oro-oscuro:#8A6A3A;
+  --marron:#4A3B2A;
+  --tinta:#221F1B;
+  --tinta-2:#3A332C;
+  --topo:#5E5449;
+  --marfil:#FFFDF9;
+  --wa:#128C47;
+  --wa-oscuro:#0F7A3D;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Jost","Helvetica Neue",Arial,sans-serif;
+  --script:"Sacramento",cursive;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{
+  margin:0;background:var(--crema);color:var(--tinta);
+  font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.centro{text-align:center}
+
+/* ---------- tipografía ---------- */
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;margin:0;line-height:1.2}
+.kicker{
+  font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--oro-texto);margin-bottom:14px;
+}
+.h2{font-size:clamp(26px,4vw,38px);color:var(--tinta)}
+.sub{color:var(--topo);font-size:15px;max-width:620px;margin:18px auto 0}
+.linea{width:54px;height:1px;background:var(--oro);margin:20px auto}
+.script{font-family:var(--script);color:var(--oro-texto);font-size:30px;line-height:1}
+
+/* ---------- botones ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--sans);font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;
+  min-height:50px;padding:0 30px;border:1px solid var(--oro);background:var(--marfil);color:var(--tinta);
+  cursor:pointer;transition:.25s;border-radius:0;
+}
+.btn:focus-visible,.chip:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--marron);outline-offset:2px}
+.btn:hover{background:var(--oro);color:var(--marfil);border-color:var(--oro)}
+.btn-oro{background:var(--oro-oscuro);border-color:var(--oro-oscuro);color:var(--marfil)}
+.btn-oro:hover{background:var(--marron);border-color:var(--marron)}
+.btn-wa{border-color:var(--wa);color:#14703a;background:#fff}
+.btn-wa:hover{background:var(--wa);color:#fff;border-color:var(--wa)}
+.btn-wa-solido{background:var(--wa);border-color:var(--wa);color:#fff}
+.btn-wa-solido:hover{background:var(--wa-oscuro);border-color:var(--wa-oscuro);color:#fff}
+.btn svg{width:15px;height:15px;flex:0 0 auto}
+
+/* ---------- nav ---------- */
+header{
+  position:sticky;top:0;z-index:40;
+  background:rgba(250,246,239,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(185,154,104,.22);
+}
+.nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;height:74px;position:relative}
+.nav>.hamb{justify-self:end;grid-column:3}
+.nav>nav{justify-self:center}
+.nav>.btn{justify-self:end}
+.nav .marca{display:flex;align-items:center;gap:12px}
+.nav .marca img{height:40px;width:auto}
+.nav .marca span{
+  font-family:var(--serif);font-size:13px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--tinta);display:block;white-space:nowrap;
+}
+.menu{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+.menu a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta-2);padding:6px 0;border-bottom:1px solid transparent}
+.menu a:hover{border-bottom-color:var(--oro)}
+.nav-wa{display:none;border-color:var(--oro);color:var(--tinta)}
+.nav-wa svg{color:var(--oro-texto)}
+.nav-wa:hover{background:var(--oro);color:var(--marfil)}
+.nav-wa:hover svg{color:var(--marfil)}
+
+
+.hamb{
+  display:none;align-items:center;justify-content:center;width:44px;height:44px;
+  background:none;border:1px solid rgba(138,106,58,.35);color:var(--tinta);cursor:pointer;
+}
+.hamb svg{width:18px;height:18px}
+
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 90% at 50% 0%,#FFFDF9 0%,var(--crema) 45%,var(--crema-2) 100%);}
+.hero-in{position:relative;z-index:2;padding:66px 24px 84px;text-align:center;max-width:900px;margin:0 auto}
+.hero img.logo{width:min(210px,46%);margin:0 auto 26px}
+.hero h1{font-size:clamp(36px,6vw,66px);color:var(--tinta);margin-bottom:6px;text-wrap:balance}
+.hero h1 .script{display:block;font-size:clamp(30px,5vw,50px);margin-bottom:-6px}
+.hero p.lead{color:var(--topo);font-size:15.5px;max-width:560px;margin:20px auto 34px;text-wrap:balance}
+.hero-cta{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.hoja{position:absolute;opacity:.55;pointer-events:none;color:var(--oro)}
+.hoja-1{top:34px;right:24px;width:300px;transform:rotate(8deg)}
+.hoja-2{bottom:10px;left:20px;width:300px;transform:scaleX(-1) rotate(-6deg)}
+
+
+/* ---------- franja de valores ---------- */
+.valores{background:var(--arena);padding:46px 0}
+.valores-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:34px;text-align:center}
+.valores h3{font-size:19px;margin-bottom:6px}
+.valores p{font-size:13px;color:var(--topo);margin:0}
+.valores .ico{width:38px;height:38px;margin:0 auto 14px;color:var(--oro)}
+
+/* ---------- arcos (galería / pasos) ---------- */
+.arco{
+  border-radius:9999px 9999px 6px 6px;
+  border:1px solid var(--oro-oscuro);background:linear-gradient(180deg,#FBF6EC,#F0E7D7);
+  min-height:330px;display:flex;flex-direction:column;align-items:center;
+  gap:12px;padding:62px 26px 32px;text-align:center;overflow:hidden;
+  cursor:pointer;transition:.25s;
+}
+.arco:hover{box-shadow:0 12px 30px rgba(138,106,58,.14);transform:translateY(-3px)}
+.arco .ico{width:34px;height:34px;color:var(--oro-texto);flex:0 0 auto;margin-bottom:4px}
+.arco h4{font-size:19px}
+.arco p{font-size:13px;color:var(--topo);margin:0 0 auto;text-wrap:balance;max-width:230px}
+.arco .ver{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--oro-texto);margin-top:18px;border-bottom:1px solid var(--oro);padding-bottom:3px}
+
+
+/* ---------- secciones ---------- */
+section{padding:74px 0;scroll-margin-top:84px}
+.sec-arena{background:var(--arena)}
+.sec-crema2{background:var(--crema-2)}
+
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:26px;margin-top:46px}
+
+/* ---------- catálogo ---------- */
+.filtros{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:34px auto 10px;max-width:900px}
+.chip{
+  font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  padding:11px 20px;border:1px solid rgba(185,154,104,.55);background:transparent;color:var(--tinta-2);
+  cursor:pointer;transition:.2s;
+}
+.chip:hover{border-color:var(--oro)}
+.chip.on{background:var(--marron);border-color:var(--marron);color:var(--marfil)}
+.chip b{font-weight:400;color:var(--topo)}
+.chip.on b{color:#E8DCC6}
+.herramientas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:20px auto 6px;max-width:900px}
+.campo{position:relative;flex:1 1 320px;max-width:460px}
+.campo svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--oro-texto);pointer-events:none}
+.campo input{
+  font-family:var(--sans);font-size:13.5px;font-weight:300;color:var(--tinta);
+  width:100%;padding:13px 16px 13px 40px;background:var(--marfil);
+  border:1px solid rgba(138,106,58,.45);outline:none;
+}
+.campo input::placeholder{color:#6b6156}
+.campo input:focus{border-color:var(--oro)}
+select#orden{
+  font-family:var(--sans);font-size:13.5px;font-weight:300;color:var(--tinta);
+  height:48px;padding:0 38px 0 16px;background:var(--marfil);
+  border:1px solid rgba(138,106,58,.45);outline:none;cursor:pointer;
+  -webkit-appearance:none;appearance:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237E6236' stroke-width='1.8'><path d='M6 9l6 6 6-6'/></svg>");
+  background-repeat:no-repeat;background-position:right 13px center;background-size:15px;
+}
+.campo input{height:48px;padding:0 16px 0 40px}
+.contador{text-align:center;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--topo);margin-top:16px}
+
+.planes{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:40px;margin-top:30px;padding-bottom:34px}
+.plan{
+  background:var(--marfil);border:1px solid rgba(185,154,104,.35);
+  padding:26px 24px 24px;display:flex;flex-direction:column;position:relative;transition:.25s;
+}
+.plan:hover{border-color:var(--oro);box-shadow:0 10px 30px rgba(154,127,85,.10);transform:translateY(-2px)}
+.plan{text-align:left}
+.plan .cat{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--oro-texto);margin-bottom:10px}
+.plan h3{font-size:21px;margin-bottom:8px;color:var(--tinta);text-wrap:balance;min-height:2.4em}
+.plan.destacado h3{padding-right:96px}
+.plan .incluye{font-size:13.5px;color:var(--topo);margin:0 0 20px;flex:1;min-height:3.2em}
+.plan .precio{font-family:var(--serif);font-size:28px;color:var(--tinta);line-height:1.1}
+.plan .precio small{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--oro-texto);display:block;margin-bottom:4px}
+.plan .precio span.cop{font-family:var(--sans);font-size:12px;color:var(--topo);letter-spacing:.08em;margin-left:5px}
+.plan .btn{width:100%;justify-content:center;margin-top:18px}
+.plan.destacado{border-color:var(--oro);background:linear-gradient(180deg,#FFFDF9,#FBF5EA)}
+.plan .tag{
+  position:absolute;top:20px;right:20px;background:var(--marron);color:var(--marfil);
+  font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;
+}
+.aviso{font-size:12px;color:var(--topo);text-align:center;margin-top:34px;font-style:italic}
+
+/* ---------- pasos ---------- */
+.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;margin-top:46px;text-align:center}
+.paso .num{
+  font-family:var(--serif);font-size:30px;color:var(--oro);width:62px;height:62px;
+  border:1px solid var(--oro);border-radius:50%;display:flex;align-items:center;justify-content:center;
+  margin:0 auto 16px;background:var(--marfil);
+}
+.paso h3{font-size:19px;margin-bottom:6px}
+.paso p{font-size:13px;color:var(--topo);margin:0}
+
+/* ---------- cta final ---------- */
+.cta{background:var(--tinta);color:var(--marfil);text-align:center}
+.cta img{width:min(330px,70%);margin:0 auto 26px}
+.cta h2{color:var(--marfil);font-size:clamp(26px,4vw,36px)}
+.cta p{color:#CFC7BB;font-size:14px;max-width:470px;margin:16px auto 28px}
+.cta .btn{background:transparent;color:var(--marfil);border-color:rgba(185,154,104,.8)}
+.cta .btn:hover{background:var(--oro);border-color:var(--oro);color:#fff}
+
+/* ---------- footer ---------- */
+footer{background:var(--arena);padding:40px 0 96px;font-size:12.5px;color:var(--topo)}
+.foot{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.foot a:hover{color:var(--oro-texto)}
+.foot .redes{display:flex;gap:18px;align-items:center}
+.foot .redes svg{width:17px;height:17px}
+
+/* ---------- WhatsApp flotante ---------- */
+.fab{
+  position:fixed;right:18px;bottom:18px;z-index:50;
+  display:flex;align-items:center;gap:10px;
+  background:var(--wa);color:#fff;padding:13px 18px;border-radius:40px;
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+}
+.fab:hover{background:#17874a}
+.fab svg{width:19px;height:19px}
+.fab span{display:none}
+
+/* ============================================================
+   ANIMACIONES Y MICRO-INTERACCIONES
+   ============================================================ */
+@keyframes subir{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes aparecer{from{opacity:0}to{opacity:1}}
+@keyframes flotar{0%,100%{transform:var(--base) translateY(0)}50%{transform:var(--base) translateY(-14px)}}
+@keyframes trazo{to{stroke-dashoffset:0}}
+@keyframes brillo{0%{background-position:-120% 0}100%{background-position:220% 0}}
+@keyframes pulso{0%{box-shadow:0 8px 24px rgba(0,0,0,.18),0 0 0 0 rgba(18,140,71,.45)}70%{box-shadow:0 8px 24px rgba(0,0,0,.18),0 0 0 16px rgba(18,140,71,0)}100%{box-shadow:0 8px 24px rgba(0,0,0,.18),0 0 0 0 rgba(18,140,71,0)}}
+@keyframes correr{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* revelado al hacer scroll */
+[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.22,.7,.3,1),transform .75s cubic-bezier(.22,.7,.3,1);transition-delay:var(--d,0ms)}
+[data-reveal].visible{opacity:1;transform:none}
+[data-reveal="zoom"]{transform:scale(.94)}
+[data-reveal="izq"]{transform:translateX(-28px)}
+[data-reveal="der"]{transform:translateX(28px)}
+
+/* barra de progreso de lectura */
+#progreso{position:fixed;top:0;left:0;height:2px;width:0;z-index:60;
+  background:linear-gradient(90deg,var(--oro),var(--marron));transition:width .1s linear}
+
+/* header que se compacta */
+header{transition:box-shadow .3s,background .3s}
+header.compacto{box-shadow:0 6px 24px rgba(90,70,45,.10);background:rgba(250,246,239,.97)}
+header.compacto .nav{height:62px}
+.nav{transition:height .3s}
+.menu a{position:relative;border-bottom:none!important}
+.menu a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--oro);transition:right .3s cubic-bezier(.22,.7,.3,1)}
+.menu a:hover::after,.menu a.activo::after{right:0}
+.menu a.activo{color:var(--marron)}
+
+/* hero animado */
+.hero-in>*{animation:subir .9s cubic-bezier(.22,.7,.3,1) both}
+.hero-in>img.logo{animation-delay:.05s}
+.hero-in>h1{animation-delay:.18s}
+.hero-in>p.lead{animation-delay:.3s}
+.hero-in>.hero-cta{animation-delay:.42s}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(60% 50% at 20% 15%,rgba(255,255,255,.75),transparent 60%),
+             radial-gradient(55% 45% at 85% 70%,rgba(214,190,150,.30),transparent 65%);
+  animation:aparecer 1.6s ease both}
+.hoja{animation:flotar 9s ease-in-out infinite;will-change:transform}
+.hoja-1{--base:rotate(8deg)}
+.hoja-2{--base:scaleX(-1) rotate(-6deg);animation-duration:11s;animation-delay:-3s}
+.hoja path{stroke-dasharray:420;stroke-dashoffset:420;animation:trazo 2.6s ease forwards .25s}
+
+/* botones con brillo al pasar */
+.btn{position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;
+  background:linear-gradient(100deg,transparent 35%,rgba(255,255,255,.55) 50%,transparent 65%);
+  background-size:250% 100%}
+.btn:hover::after{opacity:1;animation:brillo .9s ease}
+.btn:active{transform:translateY(1px)}
+
+/* franja dorada en movimiento */
+.marquesina{background:var(--marron);color:#F2E6D0;overflow:hidden;padding:13px 0}
+.marquesina .pista{display:flex;width:max-content;animation:correr 32s linear infinite}
+.marquesina span{font-size:11px;letter-spacing:.26em;text-transform:uppercase;padding:0 26px;white-space:nowrap;opacity:.92}
+.marquesina i{color:var(--oro);font-style:normal}
+.marquesina:hover .pista{animation-play-state:paused}
+
+/* tarjetas */
+.plan{transition:transform .35s cubic-bezier(.22,.7,.3,1),box-shadow .35s,border-color .35s}
+.plan::before{content:"";position:absolute;left:0;top:0;width:100%;height:2px;background:var(--oro);
+  transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.22,.7,.3,1)}
+.plan:hover::before{transform:scaleX(1)}
+.plan:hover{transform:translateY(-6px)}
+.plan .btn{transition:.25s}
+.plan:hover .btn-wa:not(.btn-wa-solido){background:var(--wa);color:#fff;border-color:var(--wa)}
+.plan.entrando{animation:subir .5s cubic-bezier(.22,.7,.3,1) both}
+.arco{transition:transform .4s cubic-bezier(.22,.7,.3,1),box-shadow .4s,background .4s}
+.arco .ico{transition:transform .4s cubic-bezier(.22,.7,.3,1)}
+.arco:hover .ico{transform:translateY(-6px) scale(1.08)}
+.arco:hover{background:linear-gradient(180deg,#FFFCF6,#F3EADA)}
+.arco .ver{transition:letter-spacing .3s}
+.arco:hover .ver{letter-spacing:.22em}
+.valores>*>.ico,.valores-grid>div .ico{transition:transform .4s}
+.valores-grid>div:hover .ico{transform:translateY(-5px) rotate(-4deg)}
+.paso .num{transition:transform .4s,background .4s,color .4s}
+.paso:hover .num{transform:translateY(-5px);background:var(--oro);color:var(--marfil)}
+.chip{transition:background .25s,border-color .25s,color .25s,transform .2s}
+.chip:active{transform:scale(.96)}
+
+/* WhatsApp flotante con latido */
+.fab{animation:pulso 3.6s ease-out 2s infinite;transition:transform .25s,background .25s}
+.fab:hover{transform:translateY(-3px) scale(1.04);animation-play-state:paused}
+
+/* accesibilidad: sin movimiento si el sistema lo pide */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  [data-reveal]{opacity:1!important;transform:none!important}
+  .hoja path{stroke-dashoffset:0!important}
+}
+
+/* ============================================================
+   SISTEMA DE MOVIMIENTO (referencias: Odyssée, Venetian Nail Spa)
+   ============================================================ */
+:root{--ease:cubic-bezier(.22,.7,.3,1)}
+
+/* cortina de entrada */
+#cortina{position:fixed;inset:0;z-index:100;background:var(--marfil);
+  display:grid;place-items:center;transition:opacity .7s var(--ease),visibility .7s}
+#cortina img{width:92px;opacity:0;transform:translateY(10px);animation:entraMonograma 1.5s var(--ease) forwards}
+#cortina.fuera{opacity:0;visibility:hidden}
+@keyframes entraMonograma{
+  0%{opacity:0;transform:translateY(12px) scale(.96)}
+  40%{opacity:1;transform:none}
+  100%{opacity:1;transform:none}
+}
+
+/* revelado de texto por palabras */
+.pal{display:inline-block;overflow:hidden;vertical-align:bottom}
+.pal>span{display:inline-block;transform:translateY(105%);transition:transform .9s var(--ease);transition-delay:var(--dp,0ms)}
+.visible .pal>span,.pal.visible>span{transform:none}
+
+/* filete dorado que se dibuja */
+.linea{transform:scaleX(0);transform-origin:center;transition:transform .9s var(--ease) .15s}
+.visible .linea,.linea.visible{transform:scaleX(1)}
+
+/* partículas doradas del hero */
+#chispas{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.85}
+
+/* cursor dorado (solo ratón) */
+#cursor,#cursor-anillo{position:fixed;top:0;left:0;z-index:95;pointer-events:none;border-radius:50%;
+  mix-blend-mode:multiply;opacity:0;transition:opacity .3s}
+#cursor{width:7px;height:7px;background:var(--oro-oscuro);margin:-3.5px 0 0 -3.5px}
+#cursor-anillo{width:34px;height:34px;border:1px solid rgba(185,154,104,.75);margin:-17px 0 0 -17px;
+  transition:opacity .3s,width .3s var(--ease),height .3s var(--ease),margin .3s var(--ease),background .3s}
+body.con-cursor #cursor,body.con-cursor #cursor-anillo{opacity:1}
+body.con-cursor.sobre-enlace #cursor-anillo{width:52px;height:52px;margin:-26px 0 0 -26px;background:rgba(185,154,104,.12)}
+@media(hover:none),(pointer:coarse){body:not(.forzar-raton) #cursor,body:not(.forzar-raton) #cursor-anillo{display:none}}
+
+/* inclinación 3D sutil en tarjetas */
+.plan,.arco{transform-style:preserve-3d}
+.plan.tilt,.arco.tilt{transition:transform .25s var(--ease),box-shadow .35s}
+
+/* logo del hero: revelado con máscara */
+.hero img.logo{clip-path:inset(0 0 100% 0);transition:clip-path 1.1s var(--ease) .1s}
+.hero.listo img.logo{clip-path:inset(0 0 0 0)}
+
+/* contador de números */
+.num-anim{font-variant-numeric:tabular-nums}
+
+@media (prefers-reduced-motion:reduce){
+  #chispas,#cursor,#cursor-anillo{display:none}
+  .pal>span{transform:none!important}
+  .linea{transform:scaleX(1)!important}
+  .hero img.logo{clip-path:none!important}
+  #cortina{display:none}
+}
+
+.hero-in h1{max-width:14ch;margin-inline:auto}
+@media(max-width:620px){.hero-in h1{max-width:none}}
+
+/* ---------- responsive (al final: manda sobre lo anterior) ---------- */
+@media(min-width:900px){
+  .nav-wa{display:inline-flex}
+}
+@media(max-width:899px){
+  .menu{
+    display:none;position:absolute;left:0;right:0;top:74px;
+    flex-direction:column;gap:0;background:var(--marfil);
+    border-bottom:1px solid rgba(185,154,104,.3);box-shadow:0 14px 26px rgba(80,62,40,.10);
+  }
+  .menu.abierto{display:flex}
+  .menu li{border-top:1px solid rgba(185,154,104,.18)}
+  .menu a{display:block;padding:16px 24px;font-size:12px}
+  .hamb{display:inline-flex}
+}
+@media(max-width:620px){
+  .nav{grid-template-columns:1fr auto}
+  .nav .marca span{font-size:11px;letter-spacing:.16em}
+  .hero-cta{flex-direction:column;align-items:stretch;gap:12px}
+  .hero-cta .btn{width:100%}
+  .arco{padding-top:46px}
+  .fab{padding:12px}
+  .fab svg{width:22px;height:22px}
+  section{padding:52px 0}
+  .wrap{padding:0 18px}
+  .filtros{
+    flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;
+    padding:2px 18px;margin:26px -18px 4px;scroll-snap-type:x proximity;scroll-padding-left:18px;
+    -ms-overflow-style:none;scrollbar-width:none;
+  }
+  .filtros::-webkit-scrollbar{display:none}
+  .chip{flex:0 0 auto;white-space:nowrap;scroll-snap-align:start}
+  .herramientas{display:grid;grid-template-columns:1fr;gap:10px;justify-items:stretch}
+  .campo{max-width:none;flex:none}
+  select#orden{width:100%}
+  .planes{gap:20px}
+  .sub{font-size:14.5px}
+  .nav-wa{display:none}
+  .hero-in{padding:44px 20px 60px}
+}
+@media(max-width:700px){.hoja{width:190px;opacity:.3}}
+@media(max-width:620px){.arco{min-height:0;border-radius:140px 140px 6px 6px;padding:52px 26px 30px;max-width:330px;margin:0 auto;width:100%}}
+@media(max-width:620px){
+  .fab{right:14px;bottom:14px;padding:13px;border-radius:50%}
+  .planes{padding-bottom:18px}
+}
+@media(min-width:700px){.fab span{display:inline}}
+@media(min-width:621px) and (max-width:899px){
+  .nav-wa{display:inline-flex;padding:0 16px;gap:7px}
+  .nav-wa span.txt{display:none}
+  .nav{grid-template-columns:auto 1fr}
+  .nav>.btn{grid-column:2;justify-self:end}
+}
+
+/* ---------- tablet vertical (iPad) ---------- */
+@media(min-width:700px) and (max-width:1023px){
+  .wrap{padding:0 32px}
+  section{padding:66px 0}
+  .hero-in{padding:60px 32px 76px}
+  .hero img.logo{width:min(240px,40%)}
+  .galeria{grid-template-columns:repeat(2,1fr);gap:30px;max-width:620px;margin-inline:auto}
+  .planes{grid-template-columns:repeat(2,1fr);gap:28px}
+  .pasos{grid-template-columns:repeat(3,1fr);gap:24px}
+  .valores-grid{grid-template-columns:repeat(2,1fr);gap:30px}
+  .campo{flex:1 1 300px}
+}
+/* iPad horizontal y portátiles pequeños */
+@media(min-width:1024px) and (max-width:1199px){
+  .planes{grid-template-columns:repeat(3,1fr)}
+  .galeria{grid-template-columns:repeat(4,1fr)}
+}
+/* pantallas grandes */
+@media(min-width:1500px){
+  :root{--max:1300px}
+  .planes{grid-template-columns:repeat(4,1fr)}
+  .hero-in{padding:86px 24px 104px}
+}
+/* hover solo en dispositivos con puntero (evita estados pegados en táctil) */
+@media(hover:none){
+  .plan:hover{transform:none;box-shadow:none}
+  .arco:hover{transform:none;box-shadow:none}
+  .btn:hover::after{animation:none}
+}
+/* ---------- correcciones de revisión visual ---------- */
+/* franja: bordes difuminados y más contraste */
+.marquesina{
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);
+}
+.marquesina span{color:#F7EEDC;opacity:1}
+.marquesina i{color:var(--oro);opacity:.85}
+
+/* un solo CTA de WhatsApp a la vista: el del header solo en escritorio */
+@media(max-width:1023px){ .nav-wa{display:none!important} }
+
+/* el flotante se aparta cuando aparece el cierre con su propio CTA */
+.fab{transition:transform .35s cubic-bezier(.22,.7,.3,1),opacity .35s,background .25s}
+.fab.oculto{transform:translateY(130%);opacity:0;pointer-events:none}
+
+/* ancla por debajo del header fijo */
+section,.valores,footer{scroll-margin-top:96px}
+html{scroll-padding-top:96px}
+
+/* badge discreto, deja de competir con el precio */
+.plan .tag{
+  background:transparent;color:var(--marron);border:1px solid var(--oro);
+  letter-spacing:.12em;padding:4px 9px;font-size:9px;top:16px;right:16px;
+}
+.plan.destacado h3{padding-right:86px}
+.plan .incluye{min-height:2.6em}
+
+/* chips: aviso visual de que la fila se desplaza */
+.filtros-caja{position:relative}
+.filtros-caja::after{
+  content:"";position:absolute;top:0;bottom:0;right:0;width:36px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,var(--crema-2));opacity:0;transition:opacity .3s;
+}
+.filtros-caja.desborda::after{opacity:1}
+
+/* arcos: sin hueco muerto en pantallas medianas */
+@media(min-width:700px) and (max-width:1023px){
+  .arco{min-height:0;padding:54px 30px 30px;border-radius:200px 200px 6px 6px}
+  .arco p{margin-bottom:14px}
+  .arco .ver{margin-top:4px}
+  .herramientas{max-width:none}
+  .filtros{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding-inline:2px;scrollbar-width:none}
+  .filtros::-webkit-scrollbar{display:none}
+  .chip{flex:0 0 auto;white-space:nowrap}
+}
+@media(min-width:1024px){
+  .arco p{margin-bottom:18px}
+  .arco .ver{margin-top:6px}
+  .arco{min-height:300px}
+}
+/* ---------- ajustes finales ---------- */
+header{background:rgba(250,246,239,.97)}
+header.compacto{background:rgba(250,246,239,.99)}
+
+/* franja: degradado más largo para que el corte no se note */
+.marquesina{
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent);
+}
+
+/* arcos: icono más arriba y filas de igual altura */
+.arco p{min-height:3.2em;display:flex;align-items:center;justify-content:center}
+
+@media(max-width:1023px){
+  .herramientas{max-width:none;width:100%;grid-template-columns:1fr;justify-items:stretch}
+  .herramientas>*{width:100%;max-width:none;min-width:0}
+  .campo{display:block;position:relative}
+  .campo input{width:100%}
+}
+@media(max-width:620px){
+  .valores-grid{padding-bottom:70px}
+  .arco{min-height:0}
+  .arco p{min-height:0}
+}
+/* en escritorio, aire bajo la franja de valores para que el flotante no pise texto */
+@media(min-width:900px){ .valores{padding-bottom:96px} }
+/* ---------- ajustes de tarjeta y arcos ---------- */
+.plan .fila-sup{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+.plan .fila-sup .cat{margin:0}
+.plan .tag{position:static;flex:0 0 auto}
+.plan.destacado h3{padding-right:0}
+
+.arco{justify-content:center;gap:14px}
+.arco p{margin:0}
+.arco .ver{margin-top:6px}
+@media(min-width:1024px){ .arco{min-height:310px;padding:66px 26px 34px} }
+@media(min-width:700px) and (max-width:1023px){ .arco{padding:58px 30px 34px} }
+
+/* flotante: se aparta mientras se baja, vuelve al parar */
+.fab.escondido{transform:translateY(120%);opacity:0}
+@media(max-width:620px){ .fab{animation:none;box-shadow:0 8px 22px rgba(0,0,0,.20)} }
+/* ---------- uniformidad de arcos y flotante en móvil ---------- */
+.arco{border-radius:9999px 9999px 8px 8px !important;align-items:center}
+@media(min-width:1024px){ .arco{min-height:320px;padding:70px 26px 34px} }
+@media(min-width:700px) and (max-width:1023px){ .arco{min-height:320px;padding:70px 30px 34px} }
+@media(max-width:699px){ .arco{min-height:300px;padding:62px 26px 30px} }
+
+@media(max-width:620px){
+  .fab{bottom:16px;right:16px;padding:13px}
+  .fab svg{width:21px;height:21px}
+}
+/* indicio de desplazamiento más visible en los filtros */
+.filtros-caja::after{width:48px;background:linear-gradient(90deg,rgba(241,234,222,0),var(--crema-2) 72%)}
+.filtros-caja::before{
+  content:"›";position:absolute;right:10px;top:50%;transform:translateY(-55%);z-index:2;
+  font-size:22px;line-height:1;color:var(--oro-texto);opacity:0;transition:opacity .3s;pointer-events:none;
+}
+.filtros-caja.desborda::before{opacity:.75}
+.filtros{padding-right:40px}
+/* ---------- últimos retoques ---------- */
+.filtros-caja::before{content:none}
+.filtros-caja::after{width:54px;background:linear-gradient(90deg,rgba(241,234,222,0),var(--crema-2) 60%)}
+.arco{background:linear-gradient(180deg,#FBF6EC,#F0E7D7) !important}
+/* en el catálogo cada tarjeta ya tiene su botón: el flotante sobra */
+.fab.silenciado{transform:translateY(130%);opacity:0;pointer-events:none}
+@media print{.fab,header{display:none}}
+</style>
+</head>
+<body>
+
+<!-- ======================= NAV ======================= -->
+<div id="cortina"><img src="img/monograma.png" alt=""></div>
+<div id="cursor" aria-hidden="true"></div><div id="cursor-anillo" aria-hidden="true"></div>
+<div id="progreso"></div>
+<header>
+  <div class="wrap nav">
+    <a class="marca" href="#inicio">
+      <span>María José Reyes</span>
+    </a>
+    <button class="hamb" id="hamb" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav>
+      <ul class="menu" id="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#tratamientos">Tratamientos</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#proceso">Cómo agendar</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-wa nav-wa" href="#" data-wa="Hola Dra. María José, vi su página web y quiero agendar una valoración.">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2 3.2 5 4.4 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2.1-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.5-.4zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+      <span class="txt">WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="inicio" style="padding:0">
+  <!-- ornamento botánico (line art dorado) -->
+  <svg class="hoja hoja-1" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+    <path d="M190 10C150 30 120 60 100 100c-20 40-28 70-30 85"/>
+    <path d="M150 30c-18-6-34-2-44 10 12 10 30 10 44-10z"/>
+    <path d="M128 62c-19-4-34 2-42 15 13 8 31 6 42-15z"/>
+    <path d="M110 96c-19-2-33 6-39 19 14 6 31 2 39-19z"/>
+    <path d="M96 132c-18 1-30 10-34 24 14 4 30-2 34-24z"/>
+    <path d="M160 44c14 6 24 18 26 32-15 1-28-9-26-32z"/>
+    <path d="M138 80c14 5 24 17 26 31-15 1-28-9-26-31z"/>
+  </svg>
+  <svg class="hoja hoja-2" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+    <path d="M190 10C150 30 120 60 100 100c-20 40-28 70-30 85"/>
+    <path d="M150 30c-18-6-34-2-44 10 12 10 30 10 44-10z"/>
+    <path d="M128 62c-19-4-34 2-42 15 13 8 31 6 42-15z"/>
+    <path d="M110 96c-19-2-33 6-39 19 14 6 31 2 39-19z"/>
+    <path d="M160 44c14 6 24 18 26 32-15 1-28-9-26-32z"/>
+  </svg>
+
+  <div class="hero-in">
+    <img class="logo" src="img/logo.png" alt="María José Reyes — Rehabilitación Oral y Estética">
+    <h1><span class="script">Tu sonrisa,</span> diseñada a tu medida</h1>
+    <p class="lead">Elige el plan que te interesa y escríbeme directo por WhatsApp: resolvemos tus dudas y agendamos tu valoración.</p>
+    <div class="hero-cta">
+      <a class="btn btn-oro" href="#planes">Ver planes</a>
+      <a class="btn btn-wa" href="#" data-wa="Hola Dra. María José, vi su página web y quiero agendar una valoración.">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2 3.2 5 4.4 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2.1-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.5-.4zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        Escríbeme
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================= FRANJA EN MOVIMIENTO ======================= -->
+<div class="marquesina" aria-hidden="true">
+  <div class="pista" id="pista"></div>
+</div>
+
+<!-- ======================= VALORES ======================= -->
+<div class="valores">
+  <div class="wrap valores-grid" data-reveal-grupo>
+    <div>
+      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M24 8c-6 0-9 3-9 9 0 7 3 9 4 16 .5 3.5 1.5 6 2.5 6s1.5-2 2.5-7c.4-2 1.4-2 2 0 1 5 1.5 7 2.5 7s2-2.5 2.5-6c1-7 4-9 4-16 0-6-3-9-9-9h-2z"/></svg>
+      <h3>Valoración personalizada</h3>
+      <p>Primero revisamos tu caso y definimos qué necesitas realmente.</p>
+    </div>
+    <div>
+      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="10" y="12" width="28" height="24" rx="2"/><path d="M16 20h16M16 26h10"/></svg>
+      <h3>Plan claro y por escrito</h3>
+      <p>Sabes qué incluye, cuántas sesiones son y cuánto cuesta antes de empezar.</p>
+    </div>
+    <div>
+      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="24" cy="24" r="14"/><path d="M24 14v10l7 5"/></svg>
+      <h3>Agenda por WhatsApp</h3>
+      <p>Escribes, cuadramos horario y te confirmo la cita sin vueltas.</p>
+    </div>
+    <div>
+      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M24 10l4 8 9 1.5-6.5 6.5L32 36l-8-4.5L16 36l1.5-10L11 19.5 20 18z"/></svg>
+      <h3>Materiales de alta gama</h3>
+      <p>Resina, disilicato y zirconio según el resultado que buscas.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ======================= TRATAMIENTOS (arcos) ======================= -->
+<section id="tratamientos" data-reveal-sec>
+  <div class="wrap centro">
+    <p class="kicker">Lo que hacemos</p>
+    <h2 class="h2">Tratamientos</h2>
+    <div class="linea"></div>
+    <p class="sub">Cuatro frentes de trabajo. Dentro de cada uno hay varios planes según el número de dientes y el material.</p>
+
+    <div class="galeria" data-reveal-grupo>
+      <a class="arco" href="#planes" data-ir="diseno">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20c4.5-5 10-7.5 16-7.5S35.5 15 40 20"/><rect x="13" y="20" width="7.5" height="11" rx="3"/><rect x="20.5" y="20" width="7" height="12.5" rx="3"/><rect x="27.5" y="20" width="7.5" height="11" rx="3"/><path d="M10 26c2 7 7.5 11 14 11s12-4 14-11"/></svg>
+        <h4>Diseño de sonrisa</h4>
+        <p>Mini diseño, resina, resina impresa y cerámica. De 4 a 20 dientes.</p>
+        <span class="ver">Ver planes</span>
+      </a>
+      <a class="arco" href="#planes" data-ir="estetica">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 14c-5-3-11-2-11 5.5 0 7.5 3.4 9.4 4.3 15.3.3 2.5 1.2 3.4 2.2 3.4 1.1 0 1.7-1.4 2.4-5.1.4-2.2 2.3-2.2 2.7 0 .7 3.7 1.3 5.1 2.4 5.1 1 0 1.9-.9 2.2-3.4.5-3.3 1.7-5.6 2.7-8"/><path d="M33 10l1.5 3.8 3.8 1.5-3.8 1.5L33 20.6l-1.5-3.8-3.8-1.5 3.8-1.5z"/></svg>
+        <h4>Estética dental</h4>
+        <p>Blanqueamiento, higiene, microabrasión, resinas y carillas.</p>
+        <span class="ver">Ver planes</span>
+      </a>
+      <a class="arco" href="#planes" data-ir="rehabilitacion">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10.5h18l-2 10H17z"/><path d="M13.5 10.5h21"/><path d="M19 24.5c0 6-1 9.5-1 12.5M29 24.5c0 6 1 9.5 1 12.5"/><path d="M17 24.5h14"/></svg>
+        <h4>Rehabilitación oral</h4>
+        <p>Coronas, incrustaciones, prótesis fijas, removibles y flexibles.</p>
+        <span class="ver">Ver planes</span>
+      </a>
+      <a class="arco" href="#planes" data-ir="mantenimiento">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 9.5c-4.4-2.6-9.8-1.6-9.8 4.6 0 6.4 2.9 8.3 3.7 13.6.3 2.2 1 3 1.9 3 1 0 1.5-1.2 2.1-4.4.4-1.9 2-1.9 2.4 0 .6 3.2 1.1 4.4 2.1 4.4.9 0 1.6-.8 1.9-3 .8-5.3 3.7-7.2 3.7-13.6 0-6.2-5.4-7.2-9.8-4.6z"/><path d="M18.5 20.5l3.6 3.6 7-7"/></svg>
+        <h4>Mantenimiento</h4>
+        <p>Controles, retenedores y cuidado de tu diseño en el tiempo.</p>
+        <span class="ver">Ver planes</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CATÁLOGO DE PLANES ======================= -->
+<section id="planes" class="sec-crema2" data-reveal-sec>
+  <div class="wrap centro">
+    <p class="kicker">Catálogo</p>
+    <h2 class="h2">Planes y tarifas</h2>
+    <div class="linea"></div>
+    <p class="sub">Toca el plan que te interese y te llega a mi WhatsApp con el nombre ya escrito. Si no sabes cuál elegir, pide la valoración y lo definimos juntas.</p>
+
+    <div class="filtros-caja" id="filtrosCaja"><div class="filtros" id="filtros"></div></div>
+    <div class="herramientas">
+      <label class="campo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <input id="q" type="search" placeholder="Buscar: blanqueamiento, corona, resina…" aria-label="Buscar plan">
+      </label>
+      <select id="orden" aria-label="Ordenar planes">
+        <option value="destacados">Más pedidos primero</option>
+        <option value="menor">Precio: menor a mayor</option>
+        <option value="mayor">Precio: mayor a menor</option>
+        <option value="az">Nombre A–Z</option>
+      </select>
+    </div>
+    <p class="contador" id="contador" aria-live="polite"></p>
+    <div class="planes" id="lista"></div>
+    <p class="aviso">Los valores son de referencia (pesos colombianos) y pueden variar según tu caso. El plan definitivo se confirma en la valoración.</p>
+  </div>
+</section>
+
+<!-- ======================= PROCESO ======================= -->
+<section id="proceso" data-reveal-sec>
+  <div class="wrap centro">
+    <p class="kicker">Cómo agendar</p>
+    <h2 class="h2">Tres pasos</h2>
+    <div class="linea"></div>
+    <div class="pasos" data-reveal-grupo>
+      <div class="paso"><div class="num">I</div><h3>Escribes</h3><p>Eliges el plan en el catálogo y me llega el mensaje por WhatsApp.</p></div>
+      <div class="paso"><div class="num">II</div><h3>Valoración</h3><p>Reviso tu caso, te explico opciones y te doy el precio exacto.</p></div>
+      <div class="paso"><div class="num">III</div><h3>Tu tratamiento</h3><p>Agendamos las sesiones y empezamos. Yo te acompaño en todo el proceso.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA FINAL ======================= -->
+<section class="cta" data-reveal-sec>
+  <div class="wrap">
+    <img src="img/logo-blanco.png" alt="María José Reyes">
+    <h2>¿Lista para empezar?</h2>
+    <p>Cuéntame qué te gustaría mejorar de tu sonrisa. Respondo personalmente.</p>
+    <a class="btn" href="#" data-wa="Hola Dra. María José, vi su página web y quiero agendar una valoración.">Escribir por WhatsApp</a>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="anio"></span> María José Reyes · Rehabilitación Oral y Estética</span>
+    <div class="redes">
+      <a href="#" data-wa="Hola Dra. María José, vi su página web y quiero información.">WhatsApp 317 698 0998</a>
+      <!-- Instagram: reemplazar el href por el perfil real -->
+      <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<a class="fab" aria-label="Escríbeme por WhatsApp" href="#" data-wa="Hola Dra. María José, vi su página web y quiero agendar una valoración.">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2 3.2 5 4.4 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2.1-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.5-.4zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+  <span>Escríbeme</span>
+</a>
+
+<script>
+/* ============================================================
+   CONFIGURACIÓN — lo único que hay que editar normalmente
+   ============================================================ */
+const CONFIG = {
+  whatsapp: "573176980998",   // número con indicativo de país, sin + ni espacios
+  mostrarPrecios: true,       // false => oculta todos los precios del catálogo
+  moneda: "COP"
+};
+
+/* ============================================================
+   CATÁLOGO — tomado del tarifario de la doctora.
+   cat: diseno | estetica | rehabilitacion | mantenimiento
+   destacado: true => se marca como "Más pedido" y sale primero
+   ============================================================ */
+const PLANES = [
+  // ----- DISEÑO DE SONRISA -----
+  {cat:"diseno", nombre:"Mini diseño monolítico · 4 bordes", incluye:"Limpieza + 3 sesiones de aclaramiento + 4 bordes incisales en resina monolítica.", precio:1040000},
+  {cat:"diseno", nombre:"Mini diseño estratificado · 4 bordes", incluye:"Limpieza + 3 sesiones de aclaramiento + 4 bordes incisales estratificados (más natural).", precio:1160000},
+  {cat:"diseno", nombre:"Mini diseño monolítico · 6 bordes", incluye:"Limpieza + 3 sesiones de aclaramiento + 6 bordes incisales en resina monolítica.", precio:1280000, destacado:true},
+  {cat:"diseno", nombre:"Mini diseño estratificado · 6 bordes", incluye:"Limpieza + 3 sesiones de aclaramiento + 6 bordes incisales estratificados.", precio:1500000},
+  {cat:"diseno", nombre:"Bordes en resina x 4", incluye:"Cuatro bordes incisales en resina monolítica, sin limpieza ni aclaramiento.", precio:710000},
+  {cat:"diseno", nombre:"Bordes en resina x 6", incluye:"Seis bordes incisales en resina monolítica, sin limpieza ni aclaramiento.", precio:980000},
+  {cat:"diseno", nombre:"Diseño en resina x 8", incluye:"Diseño de sonrisa en resina sobre 8 dientes.", precio:2400000},
+  {cat:"diseno", nombre:"Diseño en resina x 10", incluye:"Diseño de sonrisa en resina sobre 10 dientes.", precio:2800000},
+  {cat:"diseno", nombre:"Diseño en resina impresa x 8", incluye:"Diseño digital impreso en resina sobre 8 dientes.", precio:3200000},
+  {cat:"diseno", nombre:"Diseño en resina impresa x 10", incluye:"Diseño digital impreso en resina sobre 10 dientes.", precio:3600000},
+  {cat:"diseno", nombre:"Diseño completo x 16", incluye:"Diseño de sonrisa completo (arcos superior e inferior), 16 dientes.", precio:4500000},
+  {cat:"diseno", nombre:"Diseño completo x 20", incluye:"Diseño de sonrisa completo (arcos superior e inferior), 20 dientes.", precio:4900000},
+  {cat:"diseno", nombre:"Diseño cerámico x 8", incluye:"Carillas en cerámica sobre 8 dientes. Máxima duración y estética.", precio:7900000},
+  {cat:"diseno", nombre:"Diseño cerámico x 10", incluye:"Carillas en cerámica sobre 10 dientes.", precio:9500000},
+  {cat:"diseno", nombre:"Diseño cerámico x 16", incluye:"Rehabilitación estética completa en cerámica, 16 dientes.", precio:14800000},
+  {cat:"diseno", nombre:"Diseño cerámico x 20", incluye:"Rehabilitación estética completa en cerámica, 20 dientes.", precio:18400000},
+
+  // ----- ESTÉTICA DENTAL -----
+  {cat:"estetica", nombre:"Valoración", incluye:"Revisión clínica, diagnóstico y plan de tratamiento con precios.", precio:60000, destacado:true},
+  {cat:"estetica", nombre:"Higiene oral", incluye:"Limpieza profesional, remoción de placa y cálculo.", precio:120000},
+  {cat:"estetica", nombre:"Blanqueamiento x 3 sesiones", incluye:"Protocolo completo de aclaramiento dental en tres sesiones.", precio:450000, destacado:true},
+  {cat:"estetica", nombre:"Blanqueamiento x 2 sesiones", incluye:"Aclaramiento dental en dos sesiones.", precio:300000},
+  {cat:"estetica", nombre:"Sesión adicional de blanqueamiento", incluye:"Una sesión extra para pacientes en tratamiento.", precio:150000},
+  {cat:"estetica", nombre:"Microabrasión", incluye:"Tratamiento de manchas blancas y superficiales del esmalte.", precio:360000},
+  {cat:"estetica", nombre:"Carilla", incluye:"Carilla individual para corregir forma, color o posición.", precio:300000},
+  {cat:"estetica", nombre:"Borde incisal monolítico", incluye:"Reconstrucción de un borde incisal en resina monolítica.", precio:120000},
+  {cat:"estetica", nombre:"Borde incisal estratificado", incluye:"Reconstrucción de un borde incisal con capas (más natural).", precio:170000},
+  {cat:"estetica", nombre:"Resina · 1 superficie", incluye:"Restauración estética de una superficie.", precio:120000},
+  {cat:"estetica", nombre:"Resina · 2 superficies", incluye:"Restauración estética de dos superficies.", precio:220000},
+  {cat:"estetica", nombre:"Resina · 3 superficies", incluye:"Restauración estética de tres superficies.", precio:280000},
+  {cat:"estetica", nombre:"Cuello en resina", incluye:"Restauración del cuello dental (desgaste o sensibilidad).", precio:160000},
+  {cat:"estetica", nombre:"Pulido de borde", incluye:"Pulido y armonización del borde del diente.", precio:80000},
+
+  // ----- REHABILITACIÓN ORAL -----
+  {cat:"rehabilitacion", nombre:"Corona en zirconio", incluye:"Corona de zirconio, alta resistencia y estética.", precio:1800000, destacado:true},
+  {cat:"rehabilitacion", nombre:"Corona en disilicato de litio", incluye:"Corona de disilicato, ideal para dientes anteriores.", precio:1450000},
+  {cat:"rehabilitacion", nombre:"Incrustación en disilicato", incluye:"Incrustación cerámica para reconstruir el diente sin corona.", precio:1450000},
+  {cat:"rehabilitacion", nombre:"Incrustación en zirconio", incluye:"Incrustación de zirconio para dientes posteriores.", precio:1600000},
+  {cat:"rehabilitacion", nombre:"Prótesis fija de 3 unidades", incluye:"Puente fijo de tres unidades.", precio:4000000},
+  {cat:"rehabilitacion", nombre:"Provisional fija de 3", incluye:"Puente provisional de tres unidades durante el tratamiento.", precio:570000},
+  {cat:"rehabilitacion", nombre:"Poste en fibra de vidrio", incluye:"Poste intrarradicular para dientes tratados de conducto.", precio:250000},
+  {cat:"rehabilitacion", nombre:"Prótesis total", incluye:"Prótesis completa para arco superior o inferior.", precio:1800000},
+  {cat:"rehabilitacion", nombre:"Prótesis transicional acrílica", incluye:"Prótesis provisional en acrílico.", precio:1000000},
+  {cat:"rehabilitacion", nombre:"Prótesis removible metálica", incluye:"Prótesis parcial removible con estructura metálica.", precio:2300000},
+  {cat:"rehabilitacion", nombre:"Prótesis flexible", incluye:"Prótesis parcial en material flexible, más cómoda y estética.", precio:1200000},
+  {cat:"rehabilitacion", nombre:"Acker flexible", incluye:"Retención flexible para prótesis parcial.", precio:490000},
+  {cat:"rehabilitacion", nombre:"Retiro de corona o carilla · fresa", incluye:"Retiro con fresa de corona o carilla existente.", precio:150000},
+  {cat:"rehabilitacion", nombre:"Retiro de corona o carilla · láser", incluye:"Retiro con láser, más conservador con el diente.", precio:220000},
+
+  // ----- MANTENIMIENTO Y OTROS -----
+  {cat:"mantenimiento", nombre:"Mantenimiento mini diseño", incluye:"Control, pulido y ajuste de tu mini diseño.", precio:180000},
+  {cat:"mantenimiento", nombre:"Mantenimiento diseño superior", incluye:"Control y pulido del diseño del arco superior.", precio:220000},
+  {cat:"mantenimiento", nombre:"Mantenimiento diseño completo", incluye:"Control y pulido del diseño completo.", precio:300000},
+  {cat:"mantenimiento", nombre:"Retenedor en acetato", incluye:"Retenedor transparente para conservar el resultado.", precio:160000},
+  {cat:"mantenimiento", nombre:"Retenedores fijos", incluye:"Retención fija adherida por detrás de los dientes.", precio:260000},
+  {cat:"mantenimiento", nombre:"Retenedor en arco continuo", incluye:"Retenedor de arco continuo.", precio:280000},
+  {cat:"mantenimiento", nombre:"Provisional", incluye:"Restauración provisional mientras se elabora la definitiva.", precio:190000},
+  {cat:"mantenimiento", nombre:"Exodoncia simple", incluye:"Extracción dental simple.", precio:180000},
+  {cat:"mantenimiento", nombre:"Retiro de ortodoncia + higiene", incluye:"Retiro de brackets, limpieza y pulido del esmalte.", precio:190000},
+  {cat:"mantenimiento", nombre:"Retiro de mini diseño", incluye:"Retiro del mini diseño en resina.", precio:100000},
+  {cat:"mantenimiento", nombre:"Retiro de diseño superior", incluye:"Retiro del diseño del arco superior.", precio:280000},
+  {cat:"mantenimiento", nombre:"Retiro de diseño completo", incluye:"Retiro del diseño completo.", precio:480000}
+];
+
+const CATEGORIAS = [
+  {id:"todos", nombre:"Todos"},
+  {id:"diseno", nombre:"Diseño de sonrisa"},
+  {id:"estetica", nombre:"Estética dental"},
+  {id:"rehabilitacion", nombre:"Rehabilitación"},
+  {id:"mantenimiento", nombre:"Mantenimiento"}
+];
+
+/* ============================================================
+   LÓGICA
+   ============================================================ */
+window.sinMovimientoFlag = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const fmt = n => "$" + n.toLocaleString("es-CO");
+let orden = "destacados";
+const waLink = txt => "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(txt);
+
+let filtro = "todos", busca = "";
+
+function mensajePlan(p){
+  const precio = CONFIG.mostrarPrecios ? " (" + fmt(p.precio) + ")" : "";
+  return "Hola Dra. María José, vi su página web y me interesa el plan *" + p.nombre + "*" + precio + ". ¿Me cuenta cómo agendar la valoración?";
+}
+
+function pintarFiltros(){
+  const cont = document.getElementById("filtros");
+  cont.innerHTML = CATEGORIAS.map(c => {
+    const n = c.id === "todos" ? PLANES.length : PLANES.filter(p => p.cat === c.id).length;
+    return `<button class="chip${c.id===filtro?' on':''}" data-cat="${c.id}" aria-pressed="${c.id===filtro}">${c.nombre} <b>${n}</b></button>`;
+  }).join("");
+  cont.querySelectorAll(".chip").forEach(b => b.onclick = () => {
+    filtro = b.dataset.cat; pintarFiltros(); pintar();
+    const activo = cont.querySelector(".chip.on");
+    if (activo && cont.scrollWidth > cont.clientWidth) activo.scrollIntoView({block:"nearest", inline:"center", behavior:"smooth"});
+  });
+}
+
+function pintar(){
+  const q = busca.trim().toLowerCase();
+  let items = PLANES.filter(p =>
+    (filtro === "todos" || p.cat === filtro) &&
+    (!q || (p.nombre + " " + p.incluye).toLowerCase().includes(q))
+  );
+  const cmp = {
+    destacados:(a,b) => ((b.destacado?1:0)-(a.destacado?1:0)) || (a.precio-b.precio),
+    menor:(a,b) => a.precio - b.precio,
+    mayor:(a,b) => b.precio - a.precio,
+    az:(a,b) => a.nombre.localeCompare(b.nombre,"es")
+  }[orden];
+  items = items.slice().sort(cmp);
+
+  const nombreCat = id => (CATEGORIAS.find(c => c.id === id) || {}).nombre || "";
+  document.getElementById("lista").innerHTML = items.length ? items.map(p => `
+    <article class="plan${p.destacado?' destacado':''}">
+      <div class="fila-sup"><p class="cat">${nombreCat(p.cat)}</p>${p.destacado?'<span class="tag">Más pedido</span>':''}</div>
+      <h3>${p.nombre}</h3>
+      <p class="incluye">${p.incluye}</p>
+      ${CONFIG.mostrarPrecios?`<p class="precio"><small>Desde</small>${fmt(p.precio)}<span class="cop">COP</span></p>`:''}
+      <a class="btn btn-wa${p.destacado?' btn-wa-solido':''}" target="_blank" rel="noopener" href="${waLink(mensajePlan(p))}">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2 3.2 5 4.4 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2.1-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.5-.4zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        Consultar por WhatsApp
+      </a>
+    </article>`).join("")
+    : `<div style="grid-column:1/-1;text-align:center;padding:10px 0 6px">
+         <p style="color:var(--topo);margin-bottom:18px">No encontré «${busca}»${filtro==="todos"?"":" en "+nombreCat(filtro).toLowerCase()}.</p>
+         ${filtro==="todos"?"":'<button class="btn" id="verTodas" style="margin-right:12px">Buscar en todas</button>'}
+         <a class="btn btn-wa btn-wa-solido" target="_blank" rel="noopener" href="${waLink("Hola Dra. María José, vi su página web y busco información sobre: " + busca)}">Preguntar por WhatsApp</a>
+       </div>`;
+  const vt = document.getElementById("verTodas");
+  if (vt) vt.onclick = () => { filtro = "todos"; pintarFiltros(); pintar(); };
+
+  if (window.activarTilt) window.activarTilt();
+  // animación de entrada escalonada de las tarjetas
+  if (!window.sinMovimientoFlag){
+    document.querySelectorAll("#lista .plan").forEach((el,i) => {
+      el.classList.add("entrando");
+      el.style.animationDelay = Math.min(i,8)*45 + "ms";
+    });
+  }
+
+  document.getElementById("contador").textContent =
+    items.length + (items.length === 1 ? " plan" : " planes") +
+    (filtro === "todos" ? "" : " en " + nombreCat(filtro).toLowerCase());
+}
+
+document.getElementById("q").addEventListener("input", e => { busca = e.target.value; pintar(); });
+document.getElementById("orden").addEventListener("change", e => { orden = e.target.value; pintar(); });
+
+// navegación suave con el header sticky compensado
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener("click", ev => {
+    const destino = document.querySelector(a.getAttribute("href"));
+    if (!destino || a.getAttribute("href") === "#") return;
+    ev.preventDefault();
+    destino.scrollIntoView({behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
+    history.replaceState(null, "", a.getAttribute("href"));
+  });
+});
+document.querySelectorAll("[data-ir]").forEach(a => a.addEventListener("click", () => {
+  filtro = a.dataset.ir; busca = ""; document.getElementById("q").value = "";
+  pintarFiltros(); pintar();
+}));
+document.querySelectorAll("[data-wa]").forEach(a => {
+  a.href = waLink(a.dataset.wa);
+  a.target = "_blank"; a.rel = "noopener";
+});
+
+// el flotante se esconde sobre el cierre y el pie (evita tapar contenido)
+(() => {
+  const fab = document.querySelector(".fab");
+  const zonas = [document.querySelector(".cta"), document.querySelector("footer")].filter(Boolean);
+  if (!fab || !zonas.length) return;
+  const dentro = new Set();
+  const obs = new IntersectionObserver(es => {
+    es.forEach(e => e.isIntersecting ? dentro.add(e.target) : dentro.delete(e.target));
+    fab.classList.toggle("oculto", dentro.size > 0);
+  }, {threshold:0, rootMargin:"-12% 0px -12% 0px"});
+  zonas.forEach(z => obs.observe(z));
+})();
+
+// el flotante se aparta mientras se baja y vuelve al detenerse
+(() => {
+  const fab = document.querySelector(".fab");
+  if (!fab || window.matchMedia("(min-width:900px)").matches) return;
+  let ultimo = window.scrollY, t;
+  window.addEventListener("scroll", () => {
+    const y = window.scrollY;
+    if (y > ultimo + 12) fab.classList.add("escondido");
+    else if (y < ultimo - 12) fab.classList.remove("escondido");
+    ultimo = y;
+    clearTimeout(t);
+    t = setTimeout(() => fab.classList.remove("escondido"), 650);
+  }, {passive:true});
+})();
+
+// en móvil el flotante se calla dentro del catálogo (cada tarjeta ya lleva su botón)
+(() => {
+  const fab = document.querySelector(".fab");
+  const zonas = [document.getElementById("planes"), document.querySelector(".valores")].filter(Boolean);
+  if (!fab || !zonas.length) return;
+  const activo = () => window.matchMedia("(max-width:899px)").matches;
+  const ob = new IntersectionObserver(es => {
+    es.forEach(e => fab.classList.toggle("silenciado", activo() && e.isIntersecting));
+  }, {threshold:0, rootMargin:"-20% 0px -20% 0px"});
+  zonas.forEach(z => ob.observe(z));
+})();
+
+// indicador de desplazamiento en la fila de filtros
+(() => {
+  const caja = document.getElementById("filtrosCaja"), fila = document.getElementById("filtros");
+  const revisar = () => caja.classList.toggle("desborda", fila.scrollWidth - fila.clientWidth > 8 && fila.scrollLeft < fila.scrollWidth - fila.clientWidth - 12);
+  fila.addEventListener("scroll", revisar, {passive:true});
+  window.addEventListener("resize", revisar);
+  new ResizeObserver(revisar).observe(fila);
+  revisar();
+})();
+
+/* ============================================================
+   MOVIMIENTO: cortina, texto por palabras, chispas, cursor,
+   magnético, inclinación y contadores
+   ============================================================ */
+(() => {
+const quieto = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+// ?raton=1 fuerza los efectos de ratón (útil para probar en navegadores sin hover)
+const conRaton = new URLSearchParams(location.search).has("raton")
+  || window.matchMedia("(hover:hover) and (pointer:fine)").matches;
+
+// --- cortina de entrada ---
+if (conRaton) document.body.classList.add("forzar-raton");
+const cortina = document.getElementById("cortina");
+const salir = () => {
+  cortina.classList.add("fuera");
+  document.querySelector(".hero").classList.add("listo");
+  setTimeout(() => cortina.remove(), 800);
+};
+if (quieto){ cortina.remove(); document.querySelector(".hero").classList.add("listo"); }
+else { window.addEventListener("load", () => setTimeout(salir, 420)); setTimeout(salir, 2600); }
+
+// --- títulos palabra por palabra ---
+if (!quieto){
+  document.querySelectorAll(".h2, .hero-in h1, .cta h2").forEach(t => {
+    if (t.querySelector(".pal")) return;
+    const palabras = t.textContent.trim().split(/\s+/);
+    t.innerHTML = palabras.map((p,i) =>
+      `<span class="pal"><span style="--dp:${i*55}ms">${p}</span></span>`).join(" ");
+  });
+}
+
+// cada título se revela solo cuando entra en pantalla
+const obsTitulos = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting){ e.target.classList.add("visible"); obsTitulos.unobserve(e.target); }
+}), {threshold:.25, rootMargin:"0px 0px -5% 0px"});
+document.querySelectorAll(".h2, .hero-in h1, .cta h2, .linea").forEach(t => obsTitulos.observe(t));
+// el título de portada se revela al retirarse la cortina
+setTimeout(() => document.querySelectorAll(".hero-in h1, .hero-in .linea").forEach(t => t.classList.add("visible")), quieto ? 0 : 700);
+
+// --- chispas doradas del hero ---
+(() => {
+  const hero = document.querySelector(".hero");
+  if (!hero || quieto) return;
+  const lienzo = document.createElement("canvas");
+  lienzo.id = "chispas"; lienzo.setAttribute("aria-hidden","true");
+  hero.appendChild(lienzo);
+  const ctx = lienzo.getContext("2d");
+  let w, h, puntos = [], corriendo = true, raf;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const cuantas = () => window.innerWidth < 700 ? 16 : 30;
+  function medir(){
+    w = hero.clientWidth; h = hero.clientHeight;
+    lienzo.width = w*dpr; lienzo.height = h*dpr; lienzo.style.width = w+"px"; lienzo.style.height = h+"px";
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    puntos = Array.from({length:cuantas()}, () => ({
+      x:Math.random()*w, y:Math.random()*h, r:Math.random()*1.6+.5,
+      vy:-(Math.random()*.22+.06), vx:(Math.random()-.5)*.14, a:Math.random()*.5+.15,
+      f:Math.random()*Math.PI*2
+    }));
+  }
+  function pintar(){
+    ctx.clearRect(0,0,w,h);
+    puntos.forEach(p => {
+      p.y += p.vy; p.x += p.vx + Math.sin(p.f += .01)*.12;
+      if (p.y < -6){ p.y = h+6; p.x = Math.random()*w; }
+      if (p.x < -6) p.x = w+6; if (p.x > w+6) p.x = -6;
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(185,154,104,${p.a*(.5+.5*Math.sin(p.f))})`;
+      ctx.arc(p.x,p.y,p.r,0,6.283); ctx.fill();
+    });
+    if (corriendo) raf = requestAnimationFrame(pintar);
+  }
+  medir(); pintar();
+  window.addEventListener("resize", medir);
+  new IntersectionObserver(es => {
+    corriendo = es[0].isIntersecting;
+    if (corriendo) raf = requestAnimationFrame(pintar); else cancelAnimationFrame(raf);
+  }, {threshold:0}).observe(hero);
+})();
+
+// --- cursor dorado ---
+if (conRaton && !quieto){
+  const punto = document.getElementById("cursor"), anillo = document.getElementById("cursor-anillo");
+  let x=0, y=0, ax=0, ay=0;
+  document.addEventListener("pointermove", e => {
+    x = e.clientX; y = e.clientY;
+    punto.style.transform = `translate(${x}px,${y}px)`;
+    document.body.classList.add("con-cursor");
+    const sobre = e.target.closest("a,button,.chip,.plan,.arco");
+    document.body.classList.toggle("sobre-enlace", !!sobre);
+  }, {passive:true});
+  (function seguir(){
+    ax += (x-ax)*.16; ay += (y-ay)*.16;
+    anillo.style.transform = `translate(${ax}px,${ay}px)`;
+    requestAnimationFrame(seguir);
+  })();
+  document.addEventListener("pointerleave", () => document.body.classList.remove("con-cursor"));
+}
+
+// --- botones magnéticos ---
+if (conRaton && !quieto){
+  document.querySelectorAll(".hero-cta .btn, .cta .btn, .btn-oro").forEach(b => {
+    b.addEventListener("pointermove", e => {
+      const r = b.getBoundingClientRect();
+      const dx = (e.clientX - r.left - r.width/2) * .16;
+      const dy = (e.clientY - r.top - r.height/2) * .22;
+      b.style.transform = `translate(${dx}px,${dy}px)`;
+    });
+    b.addEventListener("pointerleave", () => b.style.transform = "");
+  });
+}
+
+// --- inclinación suave de tarjetas ---
+function activarTilt(){
+  if (!conRaton || quieto) return;
+  document.querySelectorAll(".plan:not([data-tilt]), .arco:not([data-tilt])").forEach(c => {
+    c.dataset.tilt = "1"; c.classList.add("tilt");
+    c.addEventListener("pointermove", e => {
+      const r = c.getBoundingClientRect();
+      const px = (e.clientX - r.left)/r.width - .5, py = (e.clientY - r.top)/r.height - .5;
+      c.style.transform = `perspective(900px) rotateY(${px*3.2}deg) rotateX(${-py*3.2}deg) translateY(-4px)`;
+    });
+    c.addEventListener("pointerleave", () => c.style.transform = "");
+  });
+}
+activarTilt();
+window.activarTilt = activarTilt;
+
+// --- contadores ---
+function contar(el){
+  const fin = parseInt(el.dataset.num, 10);
+  if (quieto || !fin){ el.textContent = fin || el.textContent; return; }
+  const t0 = performance.now(), dur = 1100;
+  (function paso(t){
+    const k = Math.min((t-t0)/dur, 1);
+    el.textContent = Math.round(fin * (1 - Math.pow(1-k, 3)));
+    if (k < 1) requestAnimationFrame(paso);
+  })(performance.now());
+}
+const obsNum = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting){ contar(e.target); obsNum.unobserve(e.target); }
+}), {threshold:.6});
+document.querySelectorAll("[data-num]").forEach(n => { n.classList.add("num-anim"); obsNum.observe(n); });
+})();
+
+// texto de búsqueda acorde al ancho
+(() => {
+  const campo = document.getElementById("q");
+  const ajustar = () => campo.placeholder = window.innerWidth < 700 ? "Buscar tratamiento…" : "Buscar: blanqueamiento, corona, resina…";
+  ajustar(); window.addEventListener("resize", ajustar);
+})();
+
+// menú móvil
+const hamb = document.getElementById("hamb"), menu = document.getElementById("menu");
+hamb.addEventListener("click", () => {
+  const abierto = menu.classList.toggle("abierto");
+  hamb.setAttribute("aria-expanded", abierto);
+});
+menu.addEventListener("click", e => { if (e.target.tagName === "A") menu.classList.remove("abierto"); });
+
+document.getElementById("anio").textContent = new Date().getFullYear();
+
+/* ============================================================
+   ANIMACIONES: revelado, progreso, parallax, menú activo
+   ============================================================ */
+const sinMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// franja en movimiento
+(() => {
+  const frases = ["Diseño de sonrisa","Blanqueamiento","Carillas","Coronas en zirconio",
+                  "Rehabilitación oral","Incrustaciones","Prótesis","Higiene profesional"];
+  const bloque = frases.map(f => `<span>${f} <i>◆</i></span>`).join("");
+  document.getElementById("pista").innerHTML = bloque + bloque;
+})();
+
+// marcar elementos a revelar
+function prepararReveal(){
+  document.querySelectorAll("[data-reveal-sec]").forEach(s => {
+    s.querySelectorAll(":scope > .wrap > .kicker, :scope > .wrap > .h2, :scope > .wrap > .linea, :scope > .wrap > .sub, :scope > .wrap > h2, :scope > .wrap > p, :scope > .wrap > img, :scope > .wrap > .btn")
+     .forEach((el,i) => { el.setAttribute("data-reveal",""); el.style.setProperty("--d", (i*70)+"ms"); });
+  });
+  document.querySelectorAll("[data-reveal-grupo]").forEach(g => {
+    [...g.children].forEach((el,i) => { el.setAttribute("data-reveal",""); el.style.setProperty("--d", (i*110)+"ms"); });
+  });
+}
+prepararReveal();
+
+const observador = new IntersectionObserver((entradas) => {
+  entradas.forEach(e => {
+    if (e.isIntersecting){ e.target.classList.add("visible"); observador.unobserve(e.target); }
+  });
+}, {rootMargin:"0px 0px -8% 0px", threshold:.12});
+function observarReveal(){ document.querySelectorAll("[data-reveal]:not(.visible)").forEach(el => observador.observe(el)); }
+observarReveal();
+
+// barra de progreso + header compacto + menú activo (un solo rAF)
+const barra = document.getElementById("progreso");
+const cabecera = document.querySelector("header");
+const enlacesMenu = [...document.querySelectorAll(".menu a")];
+const secciones = enlacesMenu.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+let ticking = false;
+function alHacerScroll(){
+  const y = window.scrollY;
+  const alto = document.documentElement.scrollHeight - window.innerHeight;
+  barra.style.width = (alto > 0 ? (y/alto)*100 : 0) + "%";
+  cabecera.classList.toggle("compacto", y > 24);
+  let activo = -1;
+  secciones.forEach((s,i) => { if (s.getBoundingClientRect().top <= 120) activo = i; });
+  enlacesMenu.forEach((a,i) => a.classList.toggle("activo", i === activo));
+  if (!sinMovimiento){
+    const h1 = document.querySelector(".hoja-1"), h2 = document.querySelector(".hoja-2");
+    if (h1 && y < window.innerHeight*1.4){
+      h1.style.marginTop = (y*0.12) + "px";
+      h2.style.marginBottom = (y*0.08) + "px";
+    }
+  }
+  ticking = false;
+}
+window.addEventListener("scroll", () => {
+  if (!ticking){ ticking = true; requestAnimationFrame(alHacerScroll); }
+}, {passive:true});
+alHacerScroll();
+
+pintarFiltros();
+pintar();
+</script>
+</body>
+</html>
