@@ -8,17 +8,26 @@
 <meta property="og:title" content="María José Reyes · Rehabilitación Oral y Estética">
 <meta property="og:description" content="Diseño de sonrisa, estética dental y rehabilitación oral. Escribe por WhatsApp y agenda tu valoración.">
 <meta property="og:image" content="img/logo.png">
+<meta name="theme-color" content="#FAF6EF">
+<meta name="color-scheme" content="only light">
 <link rel="icon" href="img/monograma.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&family=Jost:wght@300;400;500&family=Sacramento&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400;500&family=Sacramento&display=swap" rel="stylesheet">
+<!--
+  Estructura, ritmo de secciones, pradera pintada y patrones de interacción adaptados de
+  "Fintech landing page template with flower meadow hero" (lilac-meadow-landing)
+  de Kedhareswer Naidu — 21st.dev/@kedhareswer — licencia MIT.
+  Paleta, tipografías, logo y textos: identidad de María José Reyes.
+-->
+<script>document.documentElement.classList.add("js")</script>
 <style>
 /* ============================================================
    MARÍA JOSÉ REYES — Rehabilitación Oral y Estética
-   Catálogo de planes con contacto directo por WhatsApp.
-   Paleta: crema / marfil / oro viejo / negro cálido.
+   Paleta: crema / arena / oro / marrón / tinta / marfil.
    ============================================================ */
 :root{
+  color-scheme:only light;
   --crema:#FAF6EF;
   --crema-2:#F4EDE1;
   --arena:#EDE4D5;
@@ -27,1045 +36,981 @@
   --oro-oscuro:#8A6A3A;
   --marron:#4A3B2A;
   --tinta:#221F1B;
-  --tinta-2:#3A332C;
-  --topo:#5E5449;
+  --topo:#4E453B;
   --marfil:#FFFDF9;
   --wa:#128C47;
-  --wa-oscuro:#0F7A3D;
-  --serif:"Cormorant Garamond",Georgia,serif;
+  --linea:rgba(34,31,27,.1);
+  --sobre-marron:#FFFDF9;
+  --sobre-marron-suave:rgba(255,253,249,.74);
+  --cielo0:#E9DDC7;
+  --cielo1:#F3EBDD;
+  --cielo2:#FBF7F0;
+  --brillo:rgba(255,253,249,.95);
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
   --sans:"Jost","Helvetica Neue",Arial,sans-serif;
-  --script:"Sacramento",cursive;
-  --max:1180px;
+  --script:"Sacramento","Brush Script MT",cursive;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --max:1240px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:86px}
-body{
-  margin:0;background:var(--crema);color:var(--tinta);
-  font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.7;
-  -webkit-font-smoothing:antialiased;
-}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--crema);color:var(--tinta);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-.centro{text-align:center}
+h1,h2,h3,h4,p,ul,ol,figure{margin:0;padding:0}
+ul,ol{list-style:none}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:where(a,button,input,select,summary,[tabindex]):focus-visible{outline:2px solid var(--oro-texto);outline-offset:3px;border-radius:10px}
+.plan.destacado :focus-visible,.feat--hondo :focus-visible{outline-color:var(--marfil)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.saltar{position:absolute;left:12px;top:-60px;z-index:100;padding:10px 16px;border-radius:999px;background:var(--marron);color:var(--marfil);font-size:14px;transition:top .2s}
+.saltar:focus{top:12px}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 clamp(16px,3.4vw,40px)}
+.svg{display:block;max-width:none;overflow:visible}
 
-/* ---------- tipografía ---------- */
-h1,h2,h3,h4{font-family:var(--serif);font-weight:400;margin:0;line-height:1.2}
-.kicker{
-  font-size:11px;letter-spacing:.28em;text-transform:uppercase;
-  color:var(--oro-texto);margin-bottom:14px;
-}
-.h2{font-size:clamp(26px,4vw,38px);color:var(--tinta)}
-.sub{color:var(--topo);font-size:15px;max-width:620px;margin:18px auto 0}
-.linea{width:54px;height:1px;background:var(--oro);margin:20px auto}
-.script{font-family:var(--script);color:var(--oro-texto);font-size:30px;line-height:1}
+/* ---------- tipografía escalada ---------- */
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.1;font-variant-numeric:lining-nums}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--oro-texto)}
+.kicker::before{content:"";width:22px;height:1px;background:var(--oro)}
+.h2{font-size:clamp(36px,4.8vw,60px);line-height:1.02;letter-spacing:-.012em;color:var(--tinta);text-wrap:balance}
+.h2 em,.h1 em{font-style:italic;color:var(--oro-texto)}
+.lede{font-size:clamp(15px,1.15vw,16.5px);line-height:1.65;color:var(--topo);max-width:34em;text-wrap:pretty}
+.script{font-family:var(--script);font-weight:400;color:var(--oro-texto);letter-spacing:0}
+.sec{position:relative;scroll-margin-top:84px}
 
 /* ---------- botones ---------- */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  font-family:var(--sans);font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;
-  min-height:50px;padding:0 30px;border:1px solid var(--oro);background:var(--marfil);color:var(--tinta);
-  cursor:pointer;transition:.25s;border-radius:0;
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:0 22px;border-radius:999px;border:1px solid transparent;background:var(--marron);color:var(--marfil);font-size:14px;font-weight:400;letter-spacing:.02em;white-space:nowrap;overflow:hidden;isolation:isolate;transition:transform .25s ease,box-shadow .3s ease,background-color .3s,color .3s,border-color .3s}
+.btn::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:linear-gradient(110deg,transparent 30%,rgba(255,253,249,.3) 50%,transparent 70%);transform:translateX(-110%);transition:transform .7s var(--ease)}
+.btn:hover{transform:translateY(-1px);box-shadow:0 14px 28px -16px rgba(74,59,42,.9)}
+.btn:hover::after{transform:translateX(110%)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn svg{width:17px;height:17px;flex:none}
+.btn--lg{min-height:50px;padding:0 28px;font-size:15px}
+.btn--claro{background:var(--marfil);color:var(--tinta);border:1.5px solid rgba(74,59,42,.62)}
+.btn--claro:hover{border-color:var(--oro-oscuro);box-shadow:0 14px 28px -18px rgba(74,59,42,.6)}
+.btn--claro svg{color:var(--wa)}
+.flecha{transition:transform .35s cubic-bezier(.3,1.5,.5,1)}
+.btn:hover .flecha{transform:translateX(3px)}
+
+/* ======================= NAV ======================= */
+.nav{position:sticky;top:0;z-index:40;padding:10px 0;transition:background-color .35s,box-shadow .35s,backdrop-filter .35s}
+.nav[data-scrolled="true"]{background:rgba(250,246,239,.84);-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);box-shadow:0 1px 0 var(--linea)}
+.navin{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:50px;gap:12px}
+.marca{display:inline-flex;align-items:center;gap:8px;justify-self:start;font-family:var(--serif);font-size:21px;font-weight:500;letter-spacing:.01em;color:var(--tinta);white-space:nowrap}
+.marca img{width:40px;height:40px;object-fit:cover;object-position:50% 50%;transform:scale(1.5);transition:transform .7s cubic-bezier(.3,1.6,.5,1)}
+.marca:hover img{transform:scale(1.5) rotate(-8deg)}
+.marca .monomarco{position:relative;width:40px;height:40px;border-radius:50%;overflow:hidden;background:var(--marfil);flex:none}
+.marca .monomarco::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--oro-oscuro);pointer-events:none}
+.marca img{filter:drop-shadow(0 0 .45px var(--tinta)) drop-shadow(0 0 .2px var(--tinta))}
+.links{display:flex;gap:4px}
+.link{position:relative;padding:8px 13px;border-radius:999px;font-size:14px;color:var(--tinta);opacity:.85;transition:opacity .2s,background-color .25s}
+.link:hover{opacity:1;background:rgba(74,59,42,.07)}
+.link[aria-current="true"]{opacity:1}
+.link[aria-current="true"]::after{content:"";position:absolute;left:50%;bottom:2px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--oro)}
+.navend{justify-self:end;display:flex;align-items:center;gap:8px}
+.navend .btn{min-height:40px;padding:0 18px;font-size:13.5px}
+.menu-btn{display:none;width:42px;height:42px;border-radius:999px;align-items:center;justify-content:center;flex-direction:column;background:rgba(74,59,42,.07);border:0}
+.menu-btn span{display:block;width:16px;height:1.6px;background:currentColor;border-radius:2px;transition:transform .3s}
+.menu-btn span+span{margin-top:4px}
+.menu-btn[aria-expanded="true"] span:first-child{transform:translateY(2.8px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:last-child{transform:translateY(-2.8px) rotate(-45deg)}
+.cajon{display:none}
+@media (max-width:900px){
+  .navin{grid-template-columns:1fr auto}
+  .links{display:none}
+  .menu-btn{display:inline-flex}
+  .cajon{display:grid;gap:2px;overflow:hidden;max-height:0;opacity:0;visibility:hidden;transition:max-height .45s var(--ease),opacity .3s,padding .3s,visibility 0s .45s;padding:0 4px}
+  .cajon[data-open="true"]{max-height:420px;opacity:1;visibility:visible;padding:10px 4px 14px;transition-delay:0s}
+  .cajon a{padding:12px 10px;border-radius:12px;font-size:16px}
+  .cajon a:hover{background:rgba(74,59,42,.07)}
 }
-.btn:focus-visible,.chip:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--marron);outline-offset:2px}
-.btn:hover{background:var(--oro);color:var(--marfil);border-color:var(--oro)}
-.btn-oro{background:var(--oro-oscuro);border-color:var(--oro-oscuro);color:var(--marfil)}
-.btn-oro:hover{background:var(--marron);border-color:var(--marron)}
-.btn-wa{border-color:var(--wa);color:#14703a;background:#fff}
-.btn-wa:hover{background:var(--wa);color:#fff;border-color:var(--wa)}
-.btn-wa-solido{background:var(--wa);border-color:var(--wa);color:#fff}
-.btn-wa-solido:hover{background:var(--wa-oscuro);border-color:var(--wa-oscuro);color:#fff}
-.btn svg{width:15px;height:15px;flex:0 0 auto}
-
-/* ---------- nav ---------- */
-header{
-  position:sticky;top:0;z-index:40;
-  background:rgba(250,246,239,.92);backdrop-filter:blur(8px);
-  border-bottom:1px solid rgba(185,154,104,.22);
-}
-.nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;height:74px;position:relative}
-.nav>.hamb{justify-self:end;grid-column:3}
-.nav>nav{justify-self:center}
-.nav>.btn{justify-self:end}
-.nav .marca{display:flex;align-items:center;gap:12px}
-.nav .marca img{height:40px;width:auto}
-.nav .marca span{
-  font-family:var(--serif);font-size:13px;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--tinta);display:block;white-space:nowrap;
-}
-.menu{display:flex;gap:30px;list-style:none;margin:0;padding:0}
-.menu a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta-2);padding:6px 0;border-bottom:1px solid transparent}
-.menu a:hover{border-bottom-color:var(--oro)}
-.nav-wa{display:none;border-color:var(--oro);color:var(--tinta)}
-.nav-wa svg{color:var(--oro-texto)}
-.nav-wa:hover{background:var(--oro);color:var(--marfil)}
-.nav-wa:hover svg{color:var(--marfil)}
-
-
-.hamb{
-  display:none;align-items:center;justify-content:center;width:44px;height:44px;
-  background:none;border:1px solid rgba(138,106,58,.35);color:var(--tinta);cursor:pointer;
-}
-.hamb svg{width:18px;height:18px}
-
-
-/* ---------- hero ---------- */
-.hero{position:relative;overflow:hidden;background:
-  radial-gradient(120% 90% at 50% 0%,#FFFDF9 0%,var(--crema) 45%,var(--crema-2) 100%);}
-.hero-in{position:relative;z-index:2;padding:66px 24px 84px;text-align:center;max-width:900px;margin:0 auto}
-.hero img.logo{width:min(210px,46%);margin:0 auto 26px}
-.hero h1{font-size:clamp(36px,6vw,66px);color:var(--tinta);margin-bottom:6px;text-wrap:balance}
-.hero h1 .script{display:block;font-size:clamp(30px,5vw,50px);margin-bottom:-6px}
-.hero p.lead{color:var(--topo);font-size:15.5px;max-width:560px;margin:20px auto 34px;text-wrap:balance}
-.hero-cta{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
-.hoja{position:absolute;opacity:.55;pointer-events:none;color:var(--oro)}
-.hoja-1{top:34px;right:24px;width:300px;transform:rotate(8deg)}
-.hoja-2{bottom:10px;left:20px;width:300px;transform:scaleX(-1) rotate(-6deg)}
-
-
-/* ---------- franja de valores ---------- */
-.valores{background:var(--arena);padding:46px 0}
-.valores-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:34px;text-align:center}
-.valores h3{font-size:19px;margin-bottom:6px}
-.valores p{font-size:13px;color:var(--topo);margin:0}
-.valores .ico{width:38px;height:38px;margin:0 auto 14px;color:var(--oro)}
-
-/* ---------- arcos (galería / pasos) ---------- */
-.arco{
-  border-radius:9999px 9999px 6px 6px;
-  border:1px solid var(--oro-oscuro);background:linear-gradient(180deg,#FBF6EC,#F0E7D7);
-  min-height:330px;display:flex;flex-direction:column;align-items:center;
-  gap:12px;padding:62px 26px 32px;text-align:center;overflow:hidden;
-  cursor:pointer;transition:.25s;
-}
-.arco:hover{box-shadow:0 12px 30px rgba(138,106,58,.14);transform:translateY(-3px)}
-.arco .ico{width:34px;height:34px;color:var(--oro-texto);flex:0 0 auto;margin-bottom:4px}
-.arco h4{font-size:19px}
-.arco p{font-size:13px;color:var(--topo);margin:0 0 auto;text-wrap:balance;max-width:230px}
-.arco .ver{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--oro-texto);margin-top:18px;border-bottom:1px solid var(--oro);padding-bottom:3px}
-
-
-/* ---------- secciones ---------- */
-section{padding:74px 0;scroll-margin-top:84px}
-.sec-arena{background:var(--arena)}
-.sec-crema2{background:var(--crema-2)}
-
-.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:26px;margin-top:46px}
-
-/* ---------- catálogo ---------- */
-.filtros{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:34px auto 10px;max-width:900px}
-.chip{
-  font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
-  padding:11px 20px;border:1px solid rgba(185,154,104,.55);background:transparent;color:var(--tinta-2);
-  cursor:pointer;transition:.2s;
-}
-.chip:hover{border-color:var(--oro)}
-.chip.on{background:var(--marron);border-color:var(--marron);color:var(--marfil)}
-.chip b{font-weight:400;color:var(--topo)}
-.chip.on b{color:#E8DCC6}
-.herramientas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:20px auto 6px;max-width:900px}
-.campo{position:relative;flex:1 1 320px;max-width:460px}
-.campo svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--oro-texto);pointer-events:none}
-.campo input{
-  font-family:var(--sans);font-size:13.5px;font-weight:300;color:var(--tinta);
-  width:100%;padding:13px 16px 13px 40px;background:var(--marfil);
-  border:1px solid rgba(138,106,58,.45);outline:none;
-}
-.campo input::placeholder{color:#6b6156}
-.campo input:focus{border-color:var(--oro)}
-select#orden{
-  font-family:var(--sans);font-size:13.5px;font-weight:300;color:var(--tinta);
-  height:48px;padding:0 38px 0 16px;background:var(--marfil);
-  border:1px solid rgba(138,106,58,.45);outline:none;cursor:pointer;
-  -webkit-appearance:none;appearance:none;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237E6236' stroke-width='1.8'><path d='M6 9l6 6 6-6'/></svg>");
-  background-repeat:no-repeat;background-position:right 13px center;background-size:15px;
-}
-.campo input{height:48px;padding:0 16px 0 40px}
-.contador{text-align:center;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--topo);margin-top:16px}
-
-.planes{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:40px;margin-top:30px;padding-bottom:34px}
-.plan{
-  background:var(--marfil);border:1px solid rgba(185,154,104,.35);
-  padding:26px 24px 24px;display:flex;flex-direction:column;position:relative;transition:.25s;
-}
-.plan:hover{border-color:var(--oro);box-shadow:0 10px 30px rgba(154,127,85,.10);transform:translateY(-2px)}
-.plan{text-align:left}
-.plan .cat{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--oro-texto);margin-bottom:10px}
-.plan h3{font-size:21px;margin-bottom:8px;color:var(--tinta);text-wrap:balance;min-height:2.4em}
-.plan.destacado h3{padding-right:96px}
-.plan .incluye{font-size:13.5px;color:var(--topo);margin:0 0 20px;flex:1;min-height:3.2em}
-.plan .precio{font-family:var(--serif);font-size:28px;color:var(--tinta);line-height:1.1}
-.plan .precio small{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--oro-texto);display:block;margin-bottom:4px}
-.plan .precio span.cop{font-family:var(--sans);font-size:12px;color:var(--topo);letter-spacing:.08em;margin-left:5px}
-.plan .btn{width:100%;justify-content:center;margin-top:18px}
-.plan.destacado{border-color:var(--oro);background:linear-gradient(180deg,#FFFDF9,#FBF5EA)}
-.plan .tag{
-  position:absolute;top:20px;right:20px;background:var(--marron);color:var(--marfil);
-  font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;
-}
-.aviso{font-size:12px;color:var(--topo);text-align:center;margin-top:34px;font-style:italic}
-
-/* ---------- pasos ---------- */
-.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;margin-top:46px;text-align:center}
-.paso .num{
-  font-family:var(--serif);font-size:30px;color:var(--oro);width:62px;height:62px;
-  border:1px solid var(--oro);border-radius:50%;display:flex;align-items:center;justify-content:center;
-  margin:0 auto 16px;background:var(--marfil);
-}
-.paso h3{font-size:19px;margin-bottom:6px}
-.paso p{font-size:13px;color:var(--topo);margin:0}
-
-/* ---------- cta final ---------- */
-.cta{background:var(--tinta);color:var(--marfil);text-align:center}
-.cta img{width:min(330px,70%);margin:0 auto 26px}
-.cta h2{color:var(--marfil);font-size:clamp(26px,4vw,36px)}
-.cta p{color:#CFC7BB;font-size:14px;max-width:470px;margin:16px auto 28px}
-.cta .btn{background:transparent;color:var(--marfil);border-color:rgba(185,154,104,.8)}
-.cta .btn:hover{background:var(--oro);border-color:var(--oro);color:#fff}
-
-/* ---------- footer ---------- */
-footer{background:var(--arena);padding:40px 0 96px;font-size:12.5px;color:var(--topo)}
-.foot{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
-.foot a:hover{color:var(--oro-texto)}
-.foot .redes{display:flex;gap:18px;align-items:center}
-.foot .redes svg{width:17px;height:17px}
-
-/* ---------- WhatsApp flotante ---------- */
-.fab{
-  position:fixed;right:18px;bottom:18px;z-index:50;
-  display:flex;align-items:center;gap:10px;
-  background:var(--wa);color:#fff;padding:13px 18px;border-radius:40px;
-  box-shadow:0 8px 24px rgba(0,0,0,.18);
-  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
-}
-.fab:hover{background:#17874a}
-.fab svg{width:19px;height:19px}
-.fab span{display:none}
-
-/* ============================================================
-   ANIMACIONES Y MICRO-INTERACCIONES
-   ============================================================ */
-@keyframes subir{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
-@keyframes aparecer{from{opacity:0}to{opacity:1}}
-@keyframes flotar{0%,100%{transform:var(--base) translateY(0)}50%{transform:var(--base) translateY(-14px)}}
-@keyframes trazo{to{stroke-dashoffset:0}}
-@keyframes brillo{0%{background-position:-120% 0}100%{background-position:220% 0}}
-@keyframes pulso{0%{box-shadow:0 8px 24px rgba(0,0,0,.18),0 0 0 0 rgba(18,140,71,.45)}70%{box-shadow:0 8px 24px rgba(0,0,0,.18),0 0 0 16px rgba(18,140,71,0)}100%{box-shadow:0 8px 24px rgba(0,0,0,.18),0 0 0 0 rgba(18,140,71,0)}}
-@keyframes correr{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* revelado al hacer scroll */
-[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.22,.7,.3,1),transform .75s cubic-bezier(.22,.7,.3,1);transition-delay:var(--d,0ms)}
-[data-reveal].visible{opacity:1;transform:none}
-[data-reveal="zoom"]{transform:scale(.94)}
-[data-reveal="izq"]{transform:translateX(-28px)}
-[data-reveal="der"]{transform:translateX(28px)}
-
-/* barra de progreso de lectura */
-#progreso{position:fixed;top:0;left:0;height:2px;width:0;z-index:60;
-  background:linear-gradient(90deg,var(--oro),var(--marron));transition:width .1s linear}
-
-/* header que se compacta */
-header{transition:box-shadow .3s,background .3s}
-header.compacto{box-shadow:0 6px 24px rgba(90,70,45,.10);background:rgba(250,246,239,.97)}
-header.compacto .nav{height:62px}
-.nav{transition:height .3s}
-.menu a{position:relative;border-bottom:none!important}
-.menu a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--oro);transition:right .3s cubic-bezier(.22,.7,.3,1)}
-.menu a:hover::after,.menu a.activo::after{right:0}
-.menu a.activo{color:var(--marron)}
-
-/* hero animado */
-.hero-in>*{animation:subir .9s cubic-bezier(.22,.7,.3,1) both}
-.hero-in>img.logo{animation-delay:.05s}
-.hero-in>h1{animation-delay:.18s}
-.hero-in>p.lead{animation-delay:.3s}
-.hero-in>.hero-cta{animation-delay:.42s}
-.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:radial-gradient(60% 50% at 20% 15%,rgba(255,255,255,.75),transparent 60%),
-             radial-gradient(55% 45% at 85% 70%,rgba(214,190,150,.30),transparent 65%);
-  animation:aparecer 1.6s ease both}
-.hoja{animation:flotar 9s ease-in-out infinite;will-change:transform}
-.hoja-1{--base:rotate(8deg)}
-.hoja-2{--base:scaleX(-1) rotate(-6deg);animation-duration:11s;animation-delay:-3s}
-.hoja path{stroke-dasharray:420;stroke-dashoffset:420;animation:trazo 2.6s ease forwards .25s}
-
-/* botones con brillo al pasar */
-.btn{position:relative;overflow:hidden}
-.btn::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;
-  background:linear-gradient(100deg,transparent 35%,rgba(255,255,255,.55) 50%,transparent 65%);
-  background-size:250% 100%}
-.btn:hover::after{opacity:1;animation:brillo .9s ease}
-.btn:active{transform:translateY(1px)}
-
-/* franja dorada en movimiento */
-.marquesina{background:var(--marron);color:#F2E6D0;overflow:hidden;padding:13px 0}
-.marquesina .pista{display:flex;width:max-content;animation:correr 32s linear infinite}
-.marquesina span{font-size:11px;letter-spacing:.26em;text-transform:uppercase;padding:0 26px;white-space:nowrap;opacity:.92}
-.marquesina i{color:var(--oro);font-style:normal}
-.marquesina:hover .pista{animation-play-state:paused}
-
-/* tarjetas */
-.plan{transition:transform .35s cubic-bezier(.22,.7,.3,1),box-shadow .35s,border-color .35s}
-.plan::before{content:"";position:absolute;left:0;top:0;width:100%;height:2px;background:var(--oro);
-  transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.22,.7,.3,1)}
-.plan:hover::before{transform:scaleX(1)}
-.plan:hover{transform:translateY(-6px)}
-.plan .btn{transition:.25s}
-.plan:hover .btn-wa:not(.btn-wa-solido){background:var(--wa);color:#fff;border-color:var(--wa)}
-.plan.entrando{animation:subir .5s cubic-bezier(.22,.7,.3,1) both}
-.arco{transition:transform .4s cubic-bezier(.22,.7,.3,1),box-shadow .4s,background .4s}
-.arco .ico{transition:transform .4s cubic-bezier(.22,.7,.3,1)}
-.arco:hover .ico{transform:translateY(-6px) scale(1.08)}
-.arco:hover{background:linear-gradient(180deg,#FFFCF6,#F3EADA)}
-.arco .ver{transition:letter-spacing .3s}
-.arco:hover .ver{letter-spacing:.22em}
-.valores>*>.ico,.valores-grid>div .ico{transition:transform .4s}
-.valores-grid>div:hover .ico{transform:translateY(-5px) rotate(-4deg)}
-.paso .num{transition:transform .4s,background .4s,color .4s}
-.paso:hover .num{transform:translateY(-5px);background:var(--oro);color:var(--marfil)}
-.chip{transition:background .25s,border-color .25s,color .25s,transform .2s}
-.chip:active{transform:scale(.96)}
-
-/* WhatsApp flotante con latido */
-.fab{animation:pulso 3.6s ease-out 2s infinite;transition:transform .25s,background .25s}
-.fab:hover{transform:translateY(-3px) scale(1.04);animation-play-state:paused}
-
-/* accesibilidad: sin movimiento si el sistema lo pide */
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
-  [data-reveal]{opacity:1!important;transform:none!important}
-  .hoja path{stroke-dashoffset:0!important}
+@media (max-width:420px){
+  .marca{font-size:18px;gap:6px}
+  .marca .monomarco{width:34px;height:34px}
+  .marca img{width:34px;height:34px}
+  .navend .btn{padding:0 13px}
+  .navend .btn .txt{display:none}
+  .navend .btn{width:42px;padding:0}
 }
 
-/* ============================================================
-   SISTEMA DE MOVIMIENTO (referencias: Odyssée, Venetian Nail Spa)
-   ============================================================ */
-:root{--ease:cubic-bezier(.22,.7,.3,1)}
-
-/* cortina de entrada */
-#cortina{position:fixed;inset:0;z-index:100;background:var(--marfil);
-  display:grid;place-items:center;transition:opacity .7s var(--ease),visibility .7s}
-#cortina img{width:92px;opacity:0;transform:translateY(10px);animation:entraMonograma 1.5s var(--ease) forwards}
-#cortina.fuera{opacity:0;visibility:hidden}
-@keyframes entraMonograma{
-  0%{opacity:0;transform:translateY(12px) scale(.96)}
-  40%{opacity:1;transform:none}
-  100%{opacity:1;transform:none}
+/* ======================= HERO (pradera) ======================= */
+.hero{padding-top:4px}
+.escena{--px:0;--py:0;--prado:clamp(230px,24vw,300px);position:relative;border-radius:clamp(20px,2.2vw,30px);overflow:hidden;isolation:isolate;
+  background:radial-gradient(56% 46% at 50% 36%,var(--brillo),transparent 72%),linear-gradient(180deg,var(--cielo0) 0%,var(--cielo1) 42%,var(--cielo2) 74%,var(--cielo2) 100%);
+  padding:clamp(30px,3.6vw,52px) 20px calc(var(--prado) * .62 + 48px)}
+.escena::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(40% 30% at 12% 8%,rgba(185,154,104,.16),transparent 70%),radial-gradient(36% 28% at 92% 14%,rgba(185,154,104,.12),transparent 70%)}
+/* suelo de respaldo: se ve si el JS no corre */
+.prado{position:absolute;left:0;right:0;bottom:0;height:var(--prado);pointer-events:none;background:linear-gradient(180deg,transparent 0%,transparent 38%,rgba(210,184,138,.35) 62%,rgba(160,127,76,.45) 100%)}
+.js .prado{background:none}
+.capa{position:absolute;left:-40px;right:-40px;top:0;bottom:-30px}
+.capa svg{position:absolute;inset:0;width:100%;height:100%}
+.pradera{opacity:0;transition:opacity 1.1s ease}
+.pradera.lista{opacity:1}
+.capa0{transform:translate3d(calc(var(--px) * -8px),calc(var(--py) * -4px),0)}
+.capa1{transform:translate3d(calc(var(--px) * -16px),calc(var(--py) * -8px),0)}
+.capa2{transform:translate3d(calc(var(--px) * -30px),calc(var(--py) * -12px),0)}
+.protas{position:absolute;inset:0;transform:translate3d(calc(var(--px) * -22px),calc(var(--py) * -10px),0)}
+.capa0{z-index:1}.protas{z-index:2}.capa1{z-index:3}.capa2{z-index:5}
+/* el objeto más cercano queda entre la capa media y la delantera */
+.prota{position:absolute;display:block;transform:translate(-50%,0);-webkit-tap-highlight-color:transparent;pointer-events:auto;cursor:pointer}
+.prota .cuerpo{display:block;animation:flotar 7s ease-in-out infinite}
+.prota .svg{width:100%;height:auto;transition:transform .5s cubic-bezier(.3,1.4,.5,1);filter:drop-shadow(0 18px 16px rgba(74,59,42,.24))}
+.prota:hover .svg{transform:rotate(-5deg) scale(1.03)}
+.prota[data-gira="true"] .svg{animation:girar 1.1s cubic-bezier(.3,.9,.3,1)}
+.prota--a{left:14%;bottom:22%;width:clamp(104px,10.5vw,148px)}
+.prota--a .cuerpo{transform:rotate(-10deg)}
+.prota--b{left:86%;bottom:28%;width:clamp(90px,9vw,132px)}
+.prota--b .cuerpo{animation-delay:-3s}
+.prota--b .svg{transform:rotate(9deg)}
+.prota--b:hover .svg{transform:rotate(3deg) scale(1.03)}
+.protas-delante{position:absolute;inset:0;z-index:4;transform:translate3d(calc(var(--px) * -26px),calc(var(--py) * -11px),0)}
+.globo{position:absolute;left:50%;top:-6px;transform:translate(-50%,0);padding:6px 12px;border-radius:999px;background:var(--marfil);color:var(--tinta);font-size:13px;font-weight:400;white-space:nowrap;box-shadow:0 10px 24px -12px rgba(74,59,42,.5);pointer-events:none;animation:globo 1.8s var(--ease) forwards}
+.polen{position:absolute;inset:0;pointer-events:none;z-index:6}
+.polen i{position:absolute;bottom:14%;width:4px;height:4px;border-radius:50%;background:#fffaf0;box-shadow:0 0 8px 2px rgba(255,236,190,.85);opacity:0;animation:polen linear infinite}
+.herocopia{position:relative;z-index:7;display:flex;flex-direction:column;align-items:center;text-align:center;color:var(--tinta)}
+.claim{display:inline-flex;align-items:center;gap:12px;margin-bottom:clamp(10px,1.2vw,16px);font-size:11.5px;font-weight:400;letter-spacing:.26em;text-transform:uppercase;color:#6E5B2A}
+.claim::before,.claim::after{content:"";width:22px;height:1px;background:var(--oro-oscuro)}
+.h1{font-size:clamp(46px,6.4vw,88px);line-height:.98;letter-spacing:-.015em;text-wrap:balance;max-width:11.5em}
+.h1 .script{display:block;font-size:.78em;line-height:1.1;margin-bottom:.02em}
+.herosub{margin-top:clamp(14px,1.5vw,20px);max-width:30em;font-size:clamp(15px,1.2vw,17px);line-height:1.55;font-weight:400;color:var(--topo);text-wrap:balance}
+.herocta{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:clamp(20px,2.2vw,28px)}
+.heronota .nw{white-space:nowrap}
+.heronota{margin-top:12px;font-size:13.5px;font-weight:400;line-height:1.45;letter-spacing:.01em;color:#3A3128}
+/* velo crema detrás de CTA + nota: se alarga ~56px bajo el bloque para que la textura floral no toque el texto */
+.herocopia::after{content:"";position:absolute;z-index:-1;left:50%;bottom:-56px;width:min(820px,118%);height:230px;transform:translateX(-50%);pointer-events:none;background:radial-gradient(50% 50% at 50% 50%,rgba(251,247,240,.97) 0%,rgba(251,247,240,.9) 52%,rgba(251,247,240,.55) 76%,rgba(251,247,240,0) 100%)}
+/* entrada */
+.escena[data-intro="play"] .capa,.escena[data-intro="play"] .protas,.escena[data-intro="play"] .protas-delante{animation:crecer 1.6s cubic-bezier(.16,.84,.3,1) both}
+.escena[data-intro="play"] .capa1{animation-delay:.12s}
+.escena[data-intro="play"] .capa2{animation-delay:.22s}
+.escena[data-intro="play"] .protas,.escena[data-intro="play"] .protas-delante{animation-delay:.3s;animation-duration:1.9s}
+.escena[data-intro="play"] .herocopia > *{animation:subir 1.1s var(--ease) both}
+.escena[data-intro="play"] .herocopia > :nth-child(2){animation-delay:.1s}
+.escena[data-intro="play"] .herocopia > :nth-child(3){animation-delay:.2s}
+.escena[data-intro="play"] .herocopia > :nth-child(4){animation-delay:.3s}
+.escena[data-intro="play"] .herocopia > :nth-child(5){animation-delay:.4s}
+@media (max-width:640px){
+  .escena{--prado:200px;padding:22px 16px calc(var(--prado) * .56 + 60px)}
+  .prota--a{left:18%;bottom:16%;width:96px}
+  .prota--b{left:84%;bottom:24%;width:74px}
+  .h1{font-size:44px}
+  .herosub{margin-top:12px}
+  .claim{letter-spacing:.2em;gap:0}
+  .claim::before,.claim::after{display:none}
+  .herocta{flex-direction:column;align-items:stretch;width:100%;max-width:320px}
+  .herocta .btn{width:100%}
+}
+/* nota en dos líneas controladas: el «·» nunca queda colgando al final de línea */
+@media (max-width:560px){
+  .heronota .nw{display:block}
+  .heronota .sep{display:none}
+}
+/* tablet / laptop chica: decoración completa dentro de la tarjeta, sin recorte en el borde inferior */
+@media (min-width:641px) and (max-width:1100px){
+  .prota--a{bottom:30%;width:104px}
+  .prota--b{bottom:34%;width:86px}
 }
 
-/* revelado de texto por palabras */
-.pal{display:inline-block;overflow:hidden;vertical-align:bottom}
-.pal>span{display:inline-block;transform:translateY(105%);transition:transform .9s var(--ease);transition-delay:var(--dp,0ms)}
-.visible .pal>span,.pal.visible>span{transform:none}
+/* ======================= PROPUESTA ======================= */
+.propuesta{padding:clamp(44px,4.6vw,64px) 0 clamp(32px,3.4vw,44px)}
+.propgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:28px 56px;align-items:start}
+.propgrid .h2{margin-top:14px}
+.declaracion{font-family:var(--serif);font-size:clamp(22px,2.1vw,29px);line-height:1.3;color:var(--tinta);max-width:20em;padding-top:12px;text-wrap:pretty}
+.declaracion em{font-style:italic;color:var(--oro-texto)}
+.propgrid .btn{margin-top:26px}
 
-/* filete dorado que se dibuja */
-.linea{transform:scaleX(0);transform-origin:center;transition:transform .9s var(--ease) .15s}
-.visible .linea,.linea.visible{transform:scaleX(1)}
-
-/* partículas doradas del hero */
-#chispas{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.85}
-
-/* cursor dorado (solo ratón) */
-#cursor,#cursor-anillo{position:fixed;top:0;left:0;z-index:95;pointer-events:none;border-radius:50%;
-  mix-blend-mode:multiply;opacity:0;transition:opacity .3s}
-#cursor{width:7px;height:7px;background:var(--oro-oscuro);margin:-3.5px 0 0 -3.5px}
-#cursor-anillo{width:34px;height:34px;border:1px solid rgba(185,154,104,.75);margin:-17px 0 0 -17px;
-  transition:opacity .3s,width .3s var(--ease),height .3s var(--ease),margin .3s var(--ease),background .3s}
-body.con-cursor #cursor,body.con-cursor #cursor-anillo{opacity:1}
-body.con-cursor.sobre-enlace #cursor-anillo{width:52px;height:52px;margin:-26px 0 0 -26px;background:rgba(185,154,104,.12)}
-@media(hover:none),(pointer:coarse){body:not(.forzar-raton) #cursor,body:not(.forzar-raton) #cursor-anillo{display:none}}
-
-/* inclinación 3D sutil en tarjetas */
-.plan,.arco{transform-style:preserve-3d}
-.plan.tilt,.arco.tilt{transition:transform .25s var(--ease),box-shadow .35s}
-
-/* logo del hero: revelado con máscara */
-.hero img.logo{clip-path:inset(0 0 100% 0);transition:clip-path 1.1s var(--ease) .1s}
-.hero.listo img.logo{clip-path:inset(0 0 0 0)}
-
-/* contador de números */
-.num-anim{font-variant-numeric:tabular-nums}
-
-@media (prefers-reduced-motion:reduce){
-  #chispas,#cursor,#cursor-anillo{display:none}
-  .pal>span{transform:none!important}
-  .linea{transform:scaleX(1)!important}
-  .hero img.logo{clip-path:none!important}
-  #cortina{display:none}
+/* ======================= VALORES (tarjetas) ======================= */
+.feats{display:grid;grid-template-columns:1.55fr 1fr 1fr;grid-template-rows:auto auto;gap:14px;padding-bottom:clamp(72px,9vw,120px)}
+.feat{position:relative;min-height:clamp(230px,19vw,270px);border-radius:24px;padding:24px 24px 22px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:16px;isolation:isolate;transition:transform .45s var(--ease),box-shadow .45s}
+.feat:hover{transform:translateY(-4px)}
+.feat h3{position:relative;z-index:2;font-size:clamp(23px,2vw,28px);line-height:1.12}
+.feat p{position:relative;z-index:2;font-size:14.5px;line-height:1.55;max-width:22em}
+.feat .ficha{position:relative;z-index:2;display:inline-flex;align-self:flex-start;align-items:center;gap:7px;padding:5px 11px;border-radius:999px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
+.feat--flor{grid-row:1 / span 2;background:linear-gradient(160deg,var(--marfil) 0%,var(--crema-2) 55%,var(--arena) 100%);color:var(--tinta);box-shadow:inset 0 0 0 1px rgba(185,154,104,.25);min-height:clamp(480px,40vw,560px);justify-content:flex-start}
+.feat--flor p{color:var(--topo);max-width:17em}
+.feat--flor .ficha{background:rgba(255,253,249,.8);color:var(--oro-texto);box-shadow:inset 0 0 0 1px rgba(185,154,104,.4)}
+.feat--flor:hover{box-shadow:0 34px 56px -38px rgba(106,80,36,.8),inset 0 0 0 1px rgba(185,154,104,.35)}
+.feat--hondo{background:var(--marron);color:var(--sobre-marron)}
+.feat--hondo p{color:var(--sobre-marron-suave)}
+.feat--hondo .ficha{background:rgba(255,253,249,.1);color:#EBDDC2}
+.feat--hondo:hover{box-shadow:0 34px 50px -30px rgba(74,59,42,.9)}
+.feat--ancho{grid-column:2 / span 2}
+.feat--flor .prado-card{position:absolute;left:-10px;right:-10px;bottom:-6px;height:38%;z-index:1}
+.feat--flor .prado-card svg{position:absolute;inset:0;width:100%;height:100%}
+.flor{position:absolute;right:12%;bottom:8%;height:74%;width:auto;aspect-ratio:210/380;z-index:0;transform-origin:50% 100%;animation:mecer 6s ease-in-out infinite}
+.feat--flor:hover .flor{animation-duration:2.4s}
+.medalla-card{position:absolute;right:42%;bottom:9%;width:clamp(84px,9vw,120px);z-index:0;transform:rotate(-10deg)}
+.viz{position:absolute;right:22px;top:24px;z-index:1;opacity:.6;transition:opacity .4s}
+.feat:hover .viz{opacity:1}
+.viz-doc{width:78px;height:96px}
+.viz-doc .ln{stroke-dasharray:60;stroke-dashoffset:0;animation:trazar 2.2s .4s var(--ease) both}
+.viz-doc .ln:nth-of-type(2){animation-delay:.55s}.viz-doc .ln:nth-of-type(3){animation-delay:.7s}.viz-doc .ln:nth-of-type(4){animation-delay:.85s}
+.feat:hover .viz-doc .ln{animation:retrazar 1.4s var(--ease) both}
+.viz-chat{width:104px;height:84px}
+.viz-chat .pt{animation:latir 1.4s ease-in-out infinite}
+.viz-chat .pt:nth-of-type(2){animation-delay:.2s}.viz-chat .pt:nth-of-type(3){animation-delay:.4s}
+.viz-orbita{width:86px;height:86px;animation:orbitar 14s linear infinite}
+.feat:hover .viz-orbita{animation-duration:5s}
+.materiales{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:8px}
+.materiales span{padding:6px 13px;border-radius:999px;background:rgba(255,253,249,.08);box-shadow:inset 0 0 0 1px rgba(255,253,249,.16);font-size:13px;color:var(--sobre-marron)}
+@media (max-width:1000px){
+  .feats{grid-template-columns:1fr 1fr}
+  .feat--flor{grid-row:auto;grid-column:1 / -1;min-height:420px}
+  .feat--ancho{grid-column:1 / -1}
+}
+@media (max-width:600px){
+  .feats{grid-template-columns:1fr}
+  .propgrid{grid-template-columns:1fr}
+  .feat--flor{min-height:440px}
+  .flor{right:4%;height:62%}
+  .medalla-card{right:46%;width:88px}
+  .viz{transform:scale(.85);transform-origin:top right;right:16px}
 }
 
-.hero-in h1{max-width:14ch;margin-inline:auto}
-@media(max-width:620px){.hero-in h1{max-width:none}}
-
-/* ============================================================
-   ACABADOS (ideas de Magic UI / Aceternity, en CSS puro)
-   ============================================================ */
-
-/* entrada con desenfoque (blur fade) */
-[data-reveal]{filter:blur(6px)}
-[data-reveal].visible{filter:blur(0);transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease);transition-delay:var(--d,0ms)}
-
-/* foco que sigue al cursor dentro de las tarjetas (magic card) */
-.plan,.arco{position:relative;isolation:isolate}
-.plan::after,.arco::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;opacity:0;
-  transition:opacity .35s;pointer-events:none;
-  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(185,154,104,.18),transparent 70%)}
-.plan:hover::after,.arco:hover::after{opacity:1}
-
-/* haz dorado recorriendo el borde de las tarjetas destacadas (border beam) */
-.plan.destacado{position:relative}
-.plan.destacado::before{content:"";position:absolute;inset:-1px;left:-1px;top:-1px;width:auto;height:auto;
-  transform:none;transition:none;border-radius:inherit;padding:1.6px;
-  background:conic-gradient(from var(--giro,0deg),transparent 0 62%,rgba(185,154,104,.55) 74%,rgba(201,166,110,1) 82%,#FFF4DE 88%,rgba(185,154,104,.75) 94%,transparent 100%);
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
-  -webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;
-  animation:girarHaz 6s linear infinite;pointer-events:none}
-@property --giro{syntax:"<angle>";inherits:false;initial-value:0deg}
-@keyframes girarHaz{to{--giro:360deg}}
-
-/* brillo que barre el botón dorado y el distintivo (shine) */
-.btn-oro{position:relative;overflow:hidden}
-.btn-oro::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;
-  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
-  transform:skewX(-18deg);animation:barrido 4.5s ease-in-out infinite}
-@keyframes barrido{0%,62%{left:-120%}88%,100%{left:160%}}
-.plan .tag{position:relative;overflow:hidden}
-.plan .tag::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(100deg,transparent 35%,rgba(255,255,255,.65) 50%,transparent 65%);
-  transform:translateX(-100%);animation:barridoTag 5s ease-in-out infinite}
-@keyframes barridoTag{0%,70%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-
-/* trama de puntos de fondo en el catálogo (dot pattern) */
-#planes{position:relative}
-#planes::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
-  background-image:radial-gradient(rgba(185,154,104,.17) 1px,transparent 1px);background-size:28px 28px;
-  -webkit-mask-image:radial-gradient(ellipse 80% 55% at 50% 0%,#000 25%,transparent 75%);
-  mask-image:radial-gradient(ellipse 80% 55% at 50% 0%,#000 25%,transparent 75%)}
-#planes>*{position:relative;z-index:1}
-
-/* flecha del botón principal */
-.btn .flecha{width:17px;height:17px;margin-left:2px;transition:transform .35s var(--ease)}
-.btn:hover .flecha{transform:translateX(4px)}
-
-@media (prefers-reduced-motion:reduce){
-  [data-reveal]{filter:none!important}
-  .plan.destacado::before,.btn-oro::after,.plan .tag::after{animation:none}
-  .plan::after,.arco::after{display:none}
+/* ======================= TRATAMIENTOS (texto + visual alternados) ======================= */
+.trat-sec{padding-bottom:clamp(56px,7vw,96px)}
+.cabeza{display:grid;grid-template-columns:1fr 1fr;gap:20px 56px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.cabeza .h2{margin-top:14px}
+.trat{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,80px);align-items:center;padding:clamp(20px,2.6vw,36px) 0}
+.trat + .trat{border-top:1px solid var(--linea)}
+.trat:nth-child(even) .trat-texto{order:2}
+.trat-num{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;letter-spacing:.2em;color:var(--oro-texto);font-variant-numeric:tabular-nums}
+.trat-num::after{content:"";width:46px;height:1px;background:var(--oro)}
+.trat h3{margin-top:14px;font-size:clamp(32px,3.4vw,46px);line-height:1.04}
+.trat p{margin-top:14px;font-size:15.5px;line-height:1.65;color:var(--topo);max-width:28em}
+.trat .notas{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.trat .notas span{padding:6px 13px;border-radius:999px;background:var(--marfil);box-shadow:inset 0 0 0 1px rgba(185,154,104,.38);font-size:13px;color:var(--marron)}
+.mas{display:inline-flex;align-items:center;gap:12px;margin-top:24px;font-size:14.5px;color:var(--tinta);font-weight:400}
+.mas span{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:rgba(74,59,42,.07);transition:transform .35s cubic-bezier(.3,1.5,.5,1),background-color .3s}
+.mas:hover span{transform:translateX(4px);background:var(--arena)}
+.mas svg{width:15px;height:15px}
+.arte{position:relative;min-height:clamp(300px,30vw,400px);border-radius:26px;overflow:hidden;isolation:isolate;background:radial-gradient(60% 50% at 50% 30%,var(--marfil),transparent 75%),linear-gradient(180deg,var(--crema-2) 0%,var(--arena) 100%);box-shadow:inset 0 0 0 1px rgba(185,154,104,.22);transition:box-shadow .45s,transform .45s var(--ease)}
+.trat:hover .arte{box-shadow:0 34px 56px -40px rgba(106,80,36,.75),inset 0 0 0 1px rgba(185,154,104,.36)}
+.arte .ilus{position:absolute;left:50%;bottom:17%;width:min(80%,380px);height:auto;transform:translateX(-50%);z-index:0}
+.arte .prado-arte{position:absolute;left:-10px;right:-10px;bottom:-4px;height:38%;z-index:1}
+.arte .prado-arte svg{position:absolute;inset:0;width:100%;height:100%}
+.trat.visible .ilus{animation:emerger 1s var(--ease) both}
+.flotante{animation:flotar 5s ease-in-out infinite}
+.flotante--b{animation-delay:-2s;animation-duration:6s}
+.flotante--c{animation-delay:-1s;animation-duration:7s}
+.chispa{animation:latir 2.4s ease-in-out infinite}
+.chispa--b{animation-delay:-1.2s}
+@media (max-width:860px){
+  .cabeza{grid-template-columns:1fr}
+  .trat{grid-template-columns:1fr;gap:22px}
+  .trat:nth-child(even) .trat-texto{order:0}
+  .arte{min-height:280px}
 }
 
-/* iconos lineales: mismo peso óptico */
-.valores-grid .ico{transform:scale(.94)}
-.valores-grid > *:last-child .ico{transform:scale(.88)}
-/* insignia con más presencia */
-.plan .tag{background:linear-gradient(180deg,#F6E9CF,#EBD9B4);border-color:rgba(138,106,58,.45);color:#5A4221;font-weight:600}
+/* ======================= FRANJA (prueba social) ======================= */
+.franja{display:grid;grid-template-columns:220px 1fr;gap:20px 40px;align-items:center;padding:clamp(28px,3vw,40px) 0;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.franja p{font-size:13px;line-height:1.5;color:var(--topo);max-width:16em}
+.nombres{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 28px}
+.nombre{display:inline-flex;align-items:center;gap:8px;color:var(--topo);font-family:var(--serif);font-size:19px;white-space:nowrap;transition:color .3s,transform .3s}
+.nombre:hover{color:var(--tinta);transform:translateY(-1px)}
+.nombre:nth-child(2n){font-style:italic}
+.nombre svg{width:16px;height:16px;color:var(--oro)}
+@media (max-width:760px){.franja{grid-template-columns:1fr}.nombres{justify-content:flex-start}}
 
-/* ---------- responsive (al final: manda sobre lo anterior) ---------- */
+/* ======================= TESTIMONIOS (vacío hasta tener reales) ======================= */
+.testimonios{padding:clamp(72px,9vw,120px) 0 0}
+.testimonios[hidden]{display:none}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:36px}
+.tcard{padding:26px;border-radius:22px;background:var(--marfil);box-shadow:inset 0 0 0 1px rgba(185,154,104,.25)}
+.tcard blockquote{margin:0;font-family:var(--serif);font-size:22px;line-height:1.35}
+.tcard figcaption{margin-top:16px;font-size:13px;color:var(--topo)}
 
-
-@media(min-width:900px){
-  .nav-wa{display:inline-flex}
-}
-@media(max-width:899px){
-  .menu{
-    display:none;position:absolute;left:0;right:0;top:74px;
-    flex-direction:column;gap:0;background:var(--marfil);
-    border-bottom:1px solid rgba(185,154,104,.3);box-shadow:0 14px 26px rgba(80,62,40,.10);
-  }
-  .menu.abierto{display:flex}
-  .menu li{border-top:1px solid rgba(185,154,104,.18)}
-  .menu a{display:block;padding:16px 24px;font-size:12px}
-  .hamb{display:inline-flex}
-}
-@media(max-width:620px){
-  .nav{grid-template-columns:1fr auto}
-  .nav .marca span{font-size:11px;letter-spacing:.16em}
-  .hero-cta{flex-direction:column;align-items:stretch;gap:12px}
-  .hero-cta .btn{width:100%}
-  .arco{padding-top:46px}
-  .fab{padding:12px}
-  .fab svg{width:22px;height:22px}
-  section{padding:52px 0}
-  .wrap{padding:0 18px}
-  .filtros{
-    flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;
-    padding:2px 18px;margin:26px -18px 4px;scroll-snap-type:x proximity;scroll-padding-left:18px;
-    -ms-overflow-style:none;scrollbar-width:none;
-  }
-  .filtros::-webkit-scrollbar{display:none}
-  .chip{flex:0 0 auto;white-space:nowrap;scroll-snap-align:start}
-  .herramientas{display:grid;grid-template-columns:1fr;gap:10px;justify-items:stretch}
-  .campo{max-width:none;flex:none}
-  select#orden{width:100%}
-  .planes{gap:20px}
-  .sub{font-size:14.5px}
-  .nav-wa{display:none}
-  .hero-in{padding:44px 20px 60px}
-}
-@media(max-width:700px){.hoja{width:190px;opacity:.3}}
-@media(max-width:620px){.arco{min-height:0;border-radius:140px 140px 6px 6px;padding:52px 26px 30px;max-width:330px;margin:0 auto;width:100%}}
-@media(max-width:620px){
-  .fab{right:14px;bottom:14px;padding:13px;border-radius:50%}
-  .planes{padding-bottom:18px}
-}
-@media(min-width:700px){.fab span{display:inline}}
-@media(min-width:621px) and (max-width:899px){
-  .nav-wa{display:inline-flex;padding:0 16px;gap:7px}
-  .nav-wa span.txt{display:none}
-  .nav{grid-template-columns:auto 1fr}
-  .nav>.btn{grid-column:2;justify-self:end}
-}
-
-/* ---------- tablet vertical (iPad) ---------- */
-@media(min-width:700px) and (max-width:1023px){
-  .wrap{padding:0 32px}
-  section{padding:66px 0}
-  .hero-in{padding:60px 32px 76px}
-  .hero img.logo{width:min(240px,40%)}
-  .galeria{grid-template-columns:repeat(2,1fr);gap:30px;max-width:620px;margin-inline:auto}
-  .planes{grid-template-columns:repeat(2,1fr);gap:28px}
-  .pasos{grid-template-columns:repeat(3,1fr);gap:24px}
-  .valores-grid{grid-template-columns:repeat(2,1fr);gap:30px}
-  .campo{flex:1 1 300px}
-}
-/* iPad horizontal y portátiles pequeños */
-@media(min-width:1024px) and (max-width:1199px){
-  .planes{grid-template-columns:repeat(3,1fr)}
-  .galeria{grid-template-columns:repeat(4,1fr)}
-}
-/* pantallas grandes */
-@media(min-width:1500px){
-  :root{--max:1300px}
-  .planes{grid-template-columns:repeat(4,1fr)}
-  .hero-in{padding:86px 24px 104px}
-}
-/* hover solo en dispositivos con puntero (evita estados pegados en táctil) */
-@media(hover:none){
-  .plan:hover{transform:none;box-shadow:none}
-  .arco:hover{transform:none;box-shadow:none}
-  .btn:hover::after{animation:none}
-}
-/* ---------- correcciones de revisión visual ---------- */
-/* franja: bordes difuminados y más contraste */
-.marquesina{
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);
-          mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);
-}
-.marquesina span{color:#F7EEDC;opacity:1}
-.marquesina i{color:var(--oro);opacity:.85}
-
-/* un solo CTA de WhatsApp a la vista: el del header solo en escritorio */
-@media(max-width:1023px){ .nav-wa{display:none!important} }
-
-/* el flotante se aparta cuando aparece el cierre con su propio CTA */
-.fab{transition:transform .35s cubic-bezier(.22,.7,.3,1),opacity .35s,background .25s}
-.fab.oculto{transform:translateY(130%);opacity:0;pointer-events:none}
-
-/* ancla por debajo del header fijo */
-section,.valores,footer{scroll-margin-top:96px}
-html{scroll-padding-top:96px}
-
-/* badge discreto, deja de competir con el precio */
-.plan .tag{
-  background:linear-gradient(180deg,#F7EBD3,#EBD9B4);color:#5A4221;border:1px solid rgba(138,106,58,.45);
-  letter-spacing:.12em;padding:4px 9px;font-size:9px;top:16px;right:16px;
-}
-.plan.destacado h3{padding-right:86px}
-.plan .incluye{min-height:2.6em}
-
-/* chips: aviso visual de que la fila se desplaza */
-.filtros-caja{position:relative}
-.filtros-caja::after{
-  content:"";position:absolute;top:0;bottom:0;right:0;width:36px;pointer-events:none;
-  background:linear-gradient(90deg,transparent,var(--crema-2));opacity:0;transition:opacity .3s;
-}
-.filtros-caja.desborda::after{opacity:1}
-
-/* arcos: sin hueco muerto en pantallas medianas */
-@media(min-width:700px) and (max-width:1023px){
-  .arco{min-height:0;padding:54px 30px 30px;border-radius:200px 200px 6px 6px}
-  .arco p{margin-bottom:14px}
-  .arco .ver{margin-top:4px}
-  .herramientas{max-width:none}
-  .filtros{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding-inline:2px;scrollbar-width:none}
-  .filtros::-webkit-scrollbar{display:none}
-  .chip{flex:0 0 auto;white-space:nowrap}
-}
-@media(min-width:1024px){
-  .arco p{margin-bottom:18px}
-  .arco .ver{margin-top:6px}
-  .arco{min-height:300px}
-}
-/* ---------- ajustes finales ---------- */
-header{background:rgba(250,246,239,.97)}
-header.compacto{background:rgba(250,246,239,.99)}
-
-/* franja: degradado más largo para que el corte no se note */
-.marquesina{
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent);
-          mask-image:linear-gradient(90deg,transparent,#000 16%,#000 84%,transparent);
-}
-
-/* arcos: icono más arriba y filas de igual altura */
-.arco p{min-height:3.2em;display:flex;align-items:center;justify-content:center}
-
-@media(max-width:1023px){
-  .herramientas{max-width:none;width:100%;grid-template-columns:1fr;justify-items:stretch}
-  .herramientas>*{width:100%;max-width:none;min-width:0}
-  .campo{display:block;position:relative}
+/* ======================= PLANES (precios) ======================= */
+.planes-sec{padding:clamp(72px,9vw,120px) 0 clamp(56px,7vw,96px)}
+.caja-planes{position:relative;padding:clamp(22px,3.4vw,48px);border-radius:30px;background:linear-gradient(180deg,var(--crema-2) 0%,var(--arena) 100%);overflow:hidden;isolation:isolate;box-shadow:inset 0 0 0 1px rgba(185,154,104,.25)}
+.caja-planes::before{content:"";position:absolute;right:-14%;top:-34%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(255,253,249,.95),transparent);z-index:-1}
+.caja-planes .cabeza{margin-bottom:28px}
+.controles{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+.filtros-caja{position:relative;max-width:100%;min-width:0}
+.filtros{display:flex;gap:4px;padding:5px;border-radius:999px;background:rgba(255,253,249,.7);box-shadow:inset 0 0 0 1px rgba(185,154,104,.3);overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.filtros::-webkit-scrollbar{display:none}
+.filtros-caja.desborda::after{content:"";position:absolute;right:0;top:0;bottom:0;width:44px;border-radius:0 999px 999px 0;background:linear-gradient(90deg,transparent,var(--crema-2));pointer-events:none}
+.chip{flex:none;display:inline-flex;align-items:center;gap:7px;min-height:38px;padding:0 15px;border:0;border-radius:999px;background:transparent;font-size:14px;color:var(--topo);white-space:nowrap;transition:background-color .3s,color .3s,box-shadow .3s}
+.chip b{font-weight:400;font-size:11.5px;min-width:22px;padding:1px 6px;border-radius:999px;background:rgba(74,59,42,.08);color:var(--marron)}
+.chip:hover{color:var(--tinta)}
+.chip.on{background:var(--marron);color:var(--marfil);box-shadow:0 8px 18px -10px rgba(74,59,42,.8)}
+.chip.on b{background:rgba(255,253,249,.18);color:var(--marfil)}
+.herramientas{display:flex;gap:8px;flex-wrap:wrap}
+.campo{display:flex;align-items:center;gap:8px;min-height:46px;padding:0 16px;border-radius:999px;background:var(--marfil);box-shadow:inset 0 0 0 1px rgba(185,154,104,.35);transition:box-shadow .3s}
+.campo:focus-within{box-shadow:inset 0 0 0 1.5px var(--oro-texto)}
+.campo svg{width:17px;height:17px;color:var(--oro-texto);flex:none}
+.campo input{border:0;background:transparent;outline:none;min-width:0;width:220px;font-size:15px;color:var(--tinta)}
+.campo input::placeholder{color:#7a6f63}
+#orden{min-height:46px;padding:0 38px 0 16px;border-radius:999px;border:0;background:var(--marfil) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%236A5024' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 15px center;box-shadow:inset 0 0 0 1px rgba(185,154,104,.35);-webkit-appearance:none;appearance:none;font-size:14.5px;color:var(--tinta)}
+.contador{margin:20px 0 14px;font-size:13.5px;color:var(--topo)}
+.planes{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px}
+.plan{position:relative;display:flex;flex-direction:column;gap:10px;padding:22px 22px 20px;border-radius:22px;background:var(--marfil);box-shadow:0 1px 0 rgba(74,59,42,.04),inset 0 0 0 1px rgba(185,154,104,.22);transition:transform .45s var(--ease),box-shadow .45s}
+.plan:hover{transform:translateY(-4px);box-shadow:0 30px 46px -34px rgba(106,80,36,.75),inset 0 0 0 1px rgba(185,154,104,.45)}
+.plan .fila-sup{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:26px}
+.plan .cat{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--oro-texto)}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:linear-gradient(135deg,#F3E6C8,#D9BF8E);color:var(--marron);font-size:11.5px;font-weight:400;letter-spacing:.06em;white-space:nowrap}
+.tag::before{content:"✦";font-size:10px}
+.plan h3{font-size:24px;line-height:1.15}
+.plan .incluye{font-size:14px;line-height:1.55;color:var(--topo);flex:1}
+.plan .precio{font-feature-settings:"lnum" 1;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;margin-top:4px;font-family:var(--serif);font-size:30px;font-weight:500;line-height:1;color:var(--tinta);font-variant-numeric:tabular-nums}
+.plan .precio small{font-family:var(--sans);font-size:12px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--topo)}
+.plan .precio .cop{font-family:var(--sans);font-size:12px;font-weight:400;color:var(--topo)}
+.plan .btn{margin-top:8px;width:100%;min-height:44px;font-size:14px}
+.btn-wa{background:transparent;color:var(--marron);border:1.5px solid rgba(74,59,42,.6)}
+.btn-wa svg{color:var(--wa)}
+.btn-wa:hover{background:var(--marron);color:var(--marfil);border-color:var(--marron)}
+.btn-wa:hover svg{color:#7fe0a6}
+.btn-wa.btn-wa-solido{background:var(--marron);color:var(--marfil);border-color:var(--marron)}
+.btn-wa.btn-wa-solido svg{color:#7fe0a6}
+.plan.destacado{background:var(--marron);color:var(--sobre-marron);box-shadow:0 26px 44px -34px rgba(74,59,42,.9)}
+.plan.destacado .cat{color:#E3CFA5}
+.plan.destacado .incluye,.plan.destacado .precio small,.plan.destacado .precio .cop{color:var(--sobre-marron-suave)}
+.plan.destacado .precio{color:var(--marfil)}
+.plan.destacado .btn-wa.btn-wa-solido{background:var(--marfil);color:var(--marron);border-color:var(--marfil)}
+.plan.destacado .btn-wa.btn-wa-solido svg{color:var(--wa)}
+.plan.entrando{animation:subir .7s var(--ease) both}
+.aviso{margin-top:22px;font-size:13.5px;line-height:1.55;color:var(--topo);text-align:center;max-width:46em;margin-left:auto;margin-right:auto}
+@media (max-width:760px){
+  .controles{flex-direction:column;align-items:stretch}
+  .herramientas{display:grid;grid-template-columns:1fr}
   .campo input{width:100%}
-}
-@media(max-width:620px){
-  .valores-grid{padding-bottom:70px}
-  .arco{min-height:0}
-  .arco p{min-height:0}
-}
-/* en escritorio, aire bajo la franja de valores para que el flotante no pise texto */
-@media(min-width:900px){ .valores{padding-bottom:96px} }
-/* ---------- ajustes de tarjeta y arcos ---------- */
-.plan .fila-sup{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
-.plan .fila-sup .cat{margin:0}
-.plan .tag{position:static;flex:0 0 auto}
-.plan.destacado h3{padding-right:0}
-
-.arco{justify-content:center;gap:14px}
-.arco p{margin:0}
-.arco .ver{margin-top:6px}
-@media(min-width:1024px){ .arco{min-height:310px;padding:66px 26px 34px} }
-@media(min-width:700px) and (max-width:1023px){ .arco{padding:58px 30px 34px} }
-
-/* flotante: se aparta mientras se baja, vuelve al parar */
-.fab.escondido{transform:translateY(120%);opacity:0}
-@media(max-width:620px){ .fab{animation:none;box-shadow:0 8px 22px rgba(0,0,0,.20)} }
-/* ---------- uniformidad de arcos y flotante en móvil ---------- */
-.arco{border-radius:9999px 9999px 8px 8px !important;align-items:center}
-@media(min-width:1024px){ .arco{min-height:320px;padding:70px 26px 34px} }
-@media(min-width:700px) and (max-width:1023px){ .arco{min-height:320px;padding:70px 30px 34px} }
-@media(max-width:699px){ .arco{min-height:300px;padding:62px 26px 30px} }
-
-@media(max-width:620px){
-  .fab{bottom:16px;right:16px;padding:13px}
-  .fab svg{width:21px;height:21px}
-}
-/* indicio de desplazamiento más visible en los filtros */
-.filtros-caja::after{width:48px;background:linear-gradient(90deg,rgba(241,234,222,0),var(--crema-2) 72%)}
-.filtros-caja::before{
-  content:"›";position:absolute;right:10px;top:50%;transform:translateY(-55%);z-index:2;
-  font-size:22px;line-height:1;color:var(--oro-texto);opacity:0;transition:opacity .3s;pointer-events:none;
-}
-.filtros-caja.desborda::before{opacity:.75}
-.filtros{padding-right:40px}
-/* ---------- últimos retoques ---------- */
-.filtros-caja::before{content:none}
-.filtros-caja::after{width:54px;background:linear-gradient(90deg,rgba(241,234,222,0),var(--crema-2) 60%)}
-.arco{background:linear-gradient(180deg,#FBF6EC,#F0E7D7) !important}
-/* en el catálogo cada tarjeta ya tiene su botón: el flotante sobra */
-.fab.silenciado{transform:translateY(130%);opacity:0;pointer-events:none}
-@media print{.fab,header{display:none}}
-
-/* ============================================================
-   CAPA APPLE — tipografía del sistema, mucho aire, formas suaves
-   (va al final: manda sobre todo lo anterior)
-   ============================================================ */
-:root{
-  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Inter","Helvetica Neue",Arial,sans-serif;
-  --crema:#FFFFFF;
-  --crema-2:#F5F3EF;
-  --arena:#F0EDE7;
-  --marfil:#FFFFFF;
-  --tinta:#1D1B19;
-  --topo:#6E6A65;
-  --radio:18px;
-  --radio-g:24px;
-}
-body{font-weight:400;font-size:17px;line-height:1.56;letter-spacing:-.01em}
-h1,h2,h3,.h2,.plan h3,.arco h3,.hero-in h1,.cta h2{
-  font-family:var(--sans);font-weight:600;letter-spacing:-.022em;line-height:1.08;color:var(--tinta)}
-.hero-in h1{font-size:clamp(40px,6.4vw,76px);max-width:16ch}
-.h2,.cta h2{font-size:clamp(32px,4.6vw,52px)}
-.plan h3{font-size:21px;letter-spacing:-.018em;line-height:1.25}
-.arco h3{font-size:20px;letter-spacing:-.018em}
-.hero-in p,.seccion-in > p,.cta p{font-size:clamp(17px,1.5vw,21px);color:var(--topo);line-height:1.5;letter-spacing:-.01em}
-.eyebrow,.antetitulo,.cat,.contador,#contador{letter-spacing:.01em;text-transform:none}
-.marca{font-family:"Cormorant Garamond",Georgia,serif}   /* el logotipo conserva la marca */
-
-/* secciones: más aire */
-section{padding:112px 0}
-.hero{padding:132px 0 112px}
-
-/* cabecera traslúcida con desenfoque, como la de apple.com */
-header,.header{background:rgba(255,255,255,.72)!important;backdrop-filter:saturate(180%) blur(20px);
-  -webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.07)}
-.nav{height:56px}
-.nav a,.menu a{font-size:13px;letter-spacing:-.005em;text-transform:none;font-weight:400}
-
-/* botones tipo píldora */
-.btn{border-radius:980px;text-transform:none;letter-spacing:-.01em;font-size:15px;font-weight:500;
-  min-height:46px;padding:0 24px;border:1px solid transparent;transition:transform .25s var(--ease),background .25s,opacity .25s}
-.btn-oro{background:var(--tinta);color:#fff;border-color:var(--tinta)}
-.btn-oro:hover{background:#000;transform:scale(1.02)}
-.btn:not(.btn-oro):not(.btn-wa){background:transparent;color:var(--oro-texto);border-color:rgba(0,0,0,.14)}
-.btn-wa{background:var(--wa);color:#fff;border-color:transparent}
-.btn-wa:hover{background:var(--wa-oscuro)}
-.fab{border-radius:980px}
-
-/* tarjetas: esquinas suaves, sin bordes duros, sombra tenue */
-.plan,.arco,.paso,.valores-grid > *{border-radius:var(--radio)}
-.plan{border:1px solid rgba(0,0,0,.08);box-shadow:0 1px 2px rgba(0,0,0,.04);padding:28px 26px 26px;
-  transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
-.plan:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(0,0,0,.09)}
-.plan.destacado{border-color:rgba(0,0,0,.1);background:#fff}
-.arco{border-radius:var(--radio-g)!important;border:1px solid rgba(0,0,0,.08);background:#fff;
-  box-shadow:0 1px 2px rgba(0,0,0,.04)}
-.arco:hover{box-shadow:0 14px 34px rgba(0,0,0,.08)}
-
-/* controles: campo y chips estilo iOS */
-.campo,#q,#orden{border-radius:980px;border:1px solid rgba(0,0,0,.12);background:#F2F1EE;font-size:15px}
-.chip{border-radius:980px;border:1px solid rgba(0,0,0,.12);background:#fff;text-transform:none;
-  letter-spacing:-.005em;font-size:13.5px;font-weight:500}
-.chip[aria-pressed="true"],.chip.activo{background:var(--tinta);border-color:var(--tinta);color:#fff}
-.plan .tag{border-radius:980px;background:#F0EDE6;border:1px solid rgba(0,0,0,.08);color:var(--oro-texto);
-  text-transform:none;letter-spacing:-.005em;font-size:11.5px;font-weight:500;padding:5px 11px}
-.precio{font-family:var(--sans);font-weight:600;letter-spacing:-.025em}
-
-/* sobriedad: fuera los efectos llamativos (Apple no los usa) */
-.plan.destacado::before,.btn-oro::after,.plan .tag::after,#planes::before{display:none!important}
-#cursor,#cursor-anillo{display:none!important}
-#chispas{opacity:.35}
-.marquesina{background:var(--crema-2);border-top:1px solid rgba(0,0,0,.06);border-bottom:1px solid rgba(0,0,0,.06)}
-.marquesina .pista span{color:var(--topo);text-transform:none;letter-spacing:-.005em;font-weight:500}
-
-/* separadores finos en vez de filetes dorados gruesos */
-.linea{background:rgba(0,0,0,.12);height:1px}
-
-@media(max-width:899px){
-  body{font-size:16px}
-  section{padding:84px 0}
-  .hero{padding:104px 0 84px}
-}
-@media(max-width:620px){
-  section{padding:68px 0}
-  .hero{padding:92px 0 68px}
-  .hero-in h1{font-size:clamp(34px,9vw,44px)}
-  .btn{min-height:44px;font-size:15px}
+  .caja-planes{border-radius:24px;padding:22px 14px}
+  .planes{grid-template-columns:1fr}
+  .plan{padding:18px 18px 16px;gap:7px;border-radius:20px}
+  .plan h3{font-size:22px}
+  .plan .precio{font-size:27px}
+  .plan .btn{min-height:42px;margin-top:4px}
 }
 
+/* ======================= PASOS ======================= */
+.pasos-sec{padding:clamp(24px,3vw,40px) 0 clamp(72px,9vw,120px)}
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:clamp(28px,4vw,48px);counter-reset:paso}
+.paso{position:relative;padding:26px 24px 24px;border-radius:24px;background:var(--marfil);box-shadow:inset 0 0 0 1px rgba(185,154,104,.25);transition:transform .45s var(--ease),box-shadow .45s}
+.paso:hover{transform:translateY(-4px);box-shadow:0 30px 46px -36px rgba(106,80,36,.75),inset 0 0 0 1px rgba(185,154,104,.4)}
+.paso .num{font-family:var(--serif);font-size:54px;line-height:1;color:var(--oro-oscuro);font-style:italic}
+.paso h3{margin-top:18px;font-size:28px}
+.paso p{margin-top:8px;font-size:15px;line-height:1.6;color:var(--topo)}
+@media (max-width:860px){.pasos{grid-template-columns:1fr}}
 
-/* --- ajustes Apple, segunda pasada: menos ruido, más jerarquía --- */
-.hoja{display:none}                         /* fuera los ornamentos botánicos */
-.marquesina{display:none}                   /* fuera el ticker */
-.hero-in .logo{max-width:168px;opacity:.9;margin-bottom:34px}
-.hero-in h1 .script{font-family:var(--sans);font-style:normal}  /* una sola tipografía en el titular */
-.hero-in .lead{max-width:34ch;margin-inline:auto}
+/* ======================= PREGUNTAS (acordeón) ======================= */
+.faq{display:grid;grid-template-columns:1fr 1.35fr;gap:32px clamp(32px,6vw,96px);padding-bottom:clamp(72px,9vw,120px)}
+.faq .h2{margin:14px 0 16px}
+.qa{border-top:1px solid var(--linea)}
+.qa:last-child{border-bottom:1px solid var(--linea)}
+.qa[hidden]{display:none}
+.q{display:flex;width:100%;align-items:center;justify-content:space-between;gap:20px;padding:20px 2px;border:0;background:none;text-align:left;font-family:var(--serif);font-size:clamp(21px,1.8vw,25px);line-height:1.25;color:var(--tinta)}
+.mas-menos{position:relative;flex:none;width:34px;height:34px;border-radius:50%;background:rgba(74,59,42,.07);transition:background-color .3s,transform .45s cubic-bezier(.3,1.4,.5,1)}
+.mas-menos::before,.mas-menos::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;margin:-.75px 0 0 -6px;background:currentColor;border-radius:2px;transition:transform .35s}
+.mas-menos::after{transform:rotate(90deg)}
+.q[aria-expanded="true"] .mas-menos{transform:rotate(180deg);background:var(--arena)}
+.q[aria-expanded="true"] .mas-menos::after{transform:rotate(0deg)}
+.a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.a[data-open="true"]{grid-template-rows:1fr}
+.a > div{overflow:hidden}
+.a p{padding:0 48px 22px 2px;font-size:15px;line-height:1.65;color:var(--topo)}
+@media (max-width:860px){.faq{grid-template-columns:1fr}}
 
-/* un solo acento verde: el CTA flotante. Lo demás, neutro */
-.nav-wa{background:transparent!important;color:var(--tinta)!important;border:1px solid rgba(0,0,0,.14)!important}
-.nav-wa svg{color:var(--wa)}
-.hero-cta .btn-wa{background:transparent;color:var(--tinta);border:1px solid rgba(0,0,0,.14)}
-.hero-cta .btn-wa svg{color:var(--wa)}
-.hero-cta .btn-wa:hover{background:rgba(0,0,0,.04)}
-
-/* tarjetas: misma anatomía en toda la fila */
-#lista{align-items:stretch}
-.plan .fila-sup{min-height:26px;align-items:center}
-.plan h3{min-height:2.5em;display:flex;align-items:flex-start}
-.plan .incluye{min-height:3.1em}
-.plan .precio{font-size:27px;margin-top:auto;padding-top:6px}
-.plan .precio small{font-size:12px;font-weight:400;color:var(--topo);display:block;letter-spacing:0}
-.plan .precio .cop{font-size:12px;font-weight:400;color:var(--topo);margin-left:6px;letter-spacing:0}
-.plan .btn{width:100%;margin-top:16px}
-
-/* los arcos de tratamientos, como tarjetas de producto */
-.galeria{gap:22px}
-.arco{padding:34px 24px 28px}
-.arco .ico{width:44px;height:44px}
-
-@media(max-width:620px){
-  .hero-in .logo{max-width:132px;margin-bottom:26px}
-  .plan h3{min-height:0}
-  .plan .incluye{min-height:0}
+/* ======================= CTA FINAL (pradera) ======================= */
+.cta-sec{padding-bottom:clamp(40px,5vw,64px)}
+.cta{--prado:clamp(220px,24vw,320px);--px:0;--py:0;position:relative;border-radius:30px;overflow:hidden;isolation:isolate;padding:clamp(44px,6vw,72px) 20px calc(var(--prado) * .72);
+  background:radial-gradient(56% 50% at 50% 30%,var(--brillo),transparent 72%),linear-gradient(180deg,var(--cielo0) 0%,var(--cielo1) 44%,var(--cielo2) 76%)}
+.cta .prota--a{left:15%;bottom:12%;width:clamp(92px,11vw,150px)}
+.cta .prota--b{left:85%;bottom:16%;width:clamp(64px,7vw,100px)}
+.ctacopia{position:relative;z-index:7;display:flex;flex-direction:column;align-items:center;text-align:center}
+.ctacopia .script{font-size:clamp(34px,3.6vw,46px);line-height:1}
+.ctacopia .h2{margin-top:6px}
+.ctacopia p{margin-top:14px;max-width:30em;font-size:16px;line-height:1.55;color:var(--topo)}
+.ctacopia .btn{margin-top:26px}
+@media (max-width:640px){
+  .cta{--prado:200px;border-radius:24px}
+  .cta .prota--a{left:16%;width:86px}
+  .cta .prota--b{left:86%;width:58px;bottom:22%}
 }
 
+/* ======================= FOOTER ======================= */
+.pie{padding:clamp(40px,5vw,64px) 0 28px}
+.piegrid{display:grid;grid-template-columns:1.4fr repeat(3,minmax(0,1fr));gap:32px}
+.pie .logo-pie{width:190px;height:auto}
+.lema{margin-top:16px;max-width:24em;font-size:14.5px;line-height:1.6;color:var(--topo)}
+.redes{display:flex;gap:8px;margin-top:18px}
+.redes a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--marfil);color:var(--marron);box-shadow:inset 0 0 0 1px rgba(185,154,104,.35);transition:color .25s,transform .3s cubic-bezier(.3,1.5,.5,1),box-shadow .3s}
+.redes a:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1px var(--oro)}
+.redes svg{width:19px;height:19px}
+.col h4{font-family:var(--sans);font-size:12px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--oro-texto)}
+.col ul{display:grid;gap:10px;margin-top:16px}
+.col a{font-size:15px;color:var(--tinta);opacity:.85;transition:opacity .2s}
+.col a:hover{opacity:1;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--oro)}
+.palabra{position:relative;margin-top:clamp(36px,5vw,56px);font-family:var(--serif);font-size:clamp(68px,15.5vw,236px);font-weight:400;font-style:italic;line-height:.86;letter-spacing:-.02em;text-align:center;color:transparent;background:linear-gradient(180deg,#E6D6B8 0%,rgba(237,228,213,0) 92%);-webkit-background-clip:text;background-clip:text;user-select:none;white-space:nowrap;overflow:hidden}
+.barra{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:18px;border-top:1px solid var(--linea);font-size:13px;color:var(--topo)}
+@media (max-width:860px){.piegrid{grid-template-columns:1fr 1fr}.piegrid > :first-child,.piegrid > :last-child{grid-column:1 / -1}}
+.col a{white-space:nowrap}
 
-/* --- tercera pasada: un solo acento, sin repeticiones de marca --- */
-header,.header{background:rgba(255,255,255,.82)!important}
-.hero-in .logo{display:none}                 /* la marca ya está en la cabecera */
-.hero{padding-top:120px}
-.hero-in h1{margin-top:0}
+/* ---------- flotante de WhatsApp ---------- */
+.fab{position:fixed;right:18px;bottom:18px;z-index:50;display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 20px 0 16px;border-radius:999px;background:var(--wa);color:#fff;font-size:15px;font-weight:400;box-shadow:0 16px 30px -14px rgba(18,140,71,.7);opacity:0;pointer-events:none;transform:translateY(130%);transition:opacity .35s,transform .45s var(--ease)}
+.fab svg{width:22px;height:22px}
+.fab.ver{opacity:1;pointer-events:auto;transform:none}
+.fab:hover{background:#0F7A3D}
 
-/* los botones de las tarjetas, neutros: el verde queda solo en el botón flotante */
-.plan .btn-wa,.plan .btn-wa-solido{background:var(--tinta)!important;color:#fff!important;border-color:var(--tinta)!important}
-.plan .btn-wa svg{color:#fff}
-.plan .btn-wa:hover{background:#000!important}
-.nav-wa{background:#fff!important;color:var(--tinta)!important;border:1px solid rgba(0,0,0,.14)!important;box-shadow:none}
-.nav-wa svg{color:var(--wa)}
-.fab{background:var(--wa);color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.14)}
-
-/* arcos de tratamiento: tarjetas de producto con más presencia */
-.arco{background:linear-gradient(180deg,#FFFFFF,#FBFAF8)}
-
-
-/* ============================================================
-   PATRONES DE 21st.dev llevados a CSS puro
-   (Liquid Glass Navbar · Scroll Stacking Cards · Product Rail)
-   ============================================================ */
-
-/* --- 1. Liquid Glass Navbar: barra flotante de cristal --- */
-header{position:fixed;top:12px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 28px));
-  border:1px solid rgba(255,255,255,.55);border-radius:980px;
-  background:rgba(255,255,255,.62)!important;
-  backdrop-filter:saturate(200%) blur(26px);-webkit-backdrop-filter:saturate(200%) blur(26px);
-  box-shadow:0 10px 36px rgba(31,26,20,.10),inset 0 1px 0 rgba(255,255,255,.7);
-  transition:width .45s var(--ease),background .45s,box-shadow .45s,top .45s}
-header.compacta{width:min(880px,calc(100% - 28px));top:8px;
-  background:rgba(255,255,255,.78)!important;box-shadow:0 8px 26px rgba(31,26,20,.12)}
-header .wrap{padding-left:22px;padding-right:14px}
-.nav{height:54px}
-body{padding-top:0}
-html{scroll-padding-top:104px}
-section{scroll-margin-top:104px}
-
-/* --- 2. Scroll Stacking Cards: los pasos se apilan al bajar --- */
-.pasos{display:block;max-width:760px;margin-inline:auto}
-.paso{position:sticky;top:120px;background:#fff;border:1px solid rgba(0,0,0,.08);
-  border-radius:var(--radio-g);padding:34px 34px 30px;margin-bottom:22px;
-  box-shadow:0 10px 30px rgba(31,26,20,.06);text-align:left;
-  display:grid;grid-template-columns:52px 1fr;gap:6px 20px;align-items:start}
-.paso:nth-child(1){top:116px;z-index:1}
-.paso:nth-child(2){top:132px;z-index:2}
-.paso:nth-child(3){top:148px;z-index:3}
-.paso .num{grid-row:1/3;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
-  background:var(--crema-2);color:var(--oro-texto);font-size:15px;font-weight:600;letter-spacing:0}
-.paso h3{margin:4px 0 2px;font-size:22px}
-.paso p{margin:0;color:var(--topo);font-size:16.5px}
-
-/* --- 3. Product Rail: los tratamientos se deslizan con imán --- */
-@media(max-width:1023px){
-  .galeria{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;
-    padding:4px 18px 18px;margin-inline:-18px;scrollbar-width:none}
-  .galeria::-webkit-scrollbar{display:none}
-  .galeria .arco{flex:0 0 78%;scroll-snap-align:center;min-height:0}
+/* ---------- revelado por scroll ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .js [data-rv]{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0ms)}
+  .js [data-rv].visible{opacity:1;transform:none}
 }
 
-/* --- chips del catálogo: no se esconden bajo la barra --- */
-.herramientas,#filtrosCaja{scroll-margin-top:116px}
-#planes{scroll-margin-top:104px}
-
-
-/* --- ajustes tras la revisión: sin desenfoques agresivos, un solo verde --- */
-.paso{filter:none!important}                 /* el apilado se lee por posición, no por blur */
-.paso{box-shadow:0 4px 14px rgba(31,26,20,.07);border:1px solid rgba(0,0,0,.09)}
-
-/* el CTA flotante aparece solo al bajar y cuando no hay otro botón en pantalla */
-.fab{opacity:0;pointer-events:none;transform:translateY(130%)}
-.fab:not(.oculto):not(.silenciado):not(.escondido){opacity:1;pointer-events:auto;transform:none}
-
-/* el header transparente ya no necesita su botón verde: queda neutro */
-header .nav-wa{border:1px solid rgba(0,0,0,.14);color:var(--tinta);background:#fff!important}
-header .nav-wa svg{color:var(--wa)}
-
+@keyframes flotar{0%,100%{translate:0 0}50%{translate:0 -7px}}
+@keyframes girar{0%{transform:rotateY(0) scale(1)}40%{transform:rotateY(400deg) scale(1.1) translateY(-14px)}100%{transform:rotateY(720deg) scale(1)}}
+@keyframes globo{0%{opacity:0;transform:translate(-50%,10px) scale(.9)}20%{opacity:1;transform:translate(-50%,-6px) scale(1)}75%{opacity:1}100%{opacity:0;transform:translate(-50%,-34px)}}
+@keyframes polen{0%{opacity:0;transform:translate(0,0)}15%{opacity:.9}85%{opacity:.5}100%{opacity:0;transform:translate(26px,-260px)}}
+@keyframes crecer{from{opacity:0;transform:translate3d(0,60px,0)}}
+@keyframes subir{from{opacity:0;transform:translateY(18px)}}
+@keyframes mecer{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.8deg)}}
+@keyframes trazar{from{stroke-dashoffset:60}}
+@keyframes retrazar{from{stroke-dashoffset:60}}
+@keyframes latir{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes orbitar{to{transform:rotate(360deg)}}
+@keyframes emerger{from{opacity:0;transform:translate(-50%,24px)}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .polen{display:none}
+}
 </style>
 </head>
 <body>
+<a class="saltar" href="#planes">Ir directo a los planes</a>
+
+<!-- Piezas reutilizables (medallón con el monograma y diente perlado). SVG inline, sin imágenes externas. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g-canto" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5a4527"/><stop offset=".22" stop-color="#9c7c4a"/><stop offset=".45" stop-color="#ecdcb8"/>
+      <stop offset=".68" stop-color="#8a6a3a"/><stop offset="1" stop-color="#4A3B2A"/>
+    </linearGradient>
+    <linearGradient id="g-aro" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/><stop offset=".25" stop-color="#e8d5ad"/><stop offset=".5" stop-color="#B99A68"/>
+      <stop offset=".72" stop-color="#ead8b2"/><stop offset="1" stop-color="#8a6a3a"/>
+    </linearGradient>
+    <radialGradient id="g-cara" cx=".36" cy=".3" r=".85">
+      <stop offset="0" stop-color="#FFFDF9"/><stop offset=".6" stop-color="#F6EFE2"/><stop offset="1" stop-color="#E4D6BC"/>
+    </radialGradient>
+    <radialGradient id="g-perla" cx=".38" cy=".28" r=".9">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#FBF5EA"/><stop offset=".8" stop-color="#EADCC2"/><stop offset="1" stop-color="#cdb48a"/>
+    </radialGradient>
+    <linearGradient id="g-petalo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFDF9"/><stop offset=".6" stop-color="#F1E4CB"/><stop offset="1" stop-color="#C9AC7A"/>
+    </linearGradient>
+    <radialGradient id="g-boton" cx=".4" cy=".35" r=".7">
+      <stop offset="0" stop-color="#d9bf8e"/><stop offset=".6" stop-color="#8a6a3a"/><stop offset="1" stop-color="#4A3B2A"/>
+    </radialGradient>
+    <linearGradient id="g-tallo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a99266"/><stop offset="1" stop-color="#7d6a45"/>
+    </linearGradient>
+    <clipPath id="c-cara"><ellipse cx="64" cy="54" rx="46" ry="38"/></clipPath>
+    <symbol id="medallon" viewBox="0 0 128 116">
+      <ellipse cx="64" cy="63" rx="57" ry="47" fill="url(#g-canto)"/>
+      <ellipse cx="64" cy="54" rx="57" ry="47" fill="url(#g-aro)"/>
+      <ellipse cx="64" cy="54" rx="50.5" ry="41.5" fill="none" stroke="#fff8ea" stroke-opacity=".7" stroke-width=".8"/>
+      <ellipse cx="64" cy="54" rx="46" ry="38" fill="url(#g-cara)"/>
+      <g clip-path="url(#c-cara)">
+        <image href="img/monograma.png" x="20" y="14" width="88" height="88" transform="translate(0 6) scale(1 .86)" preserveAspectRatio="xMidYMid meet"/>
+      </g>
+      <path d="M22 40c8-17 26-26 46-25" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2.4" stroke-linecap="round"/>
+      <ellipse cx="64" cy="54" rx="46" ry="38" fill="none" stroke="#B99A68" stroke-width=".9"/>
+    </symbol>
+    <symbol id="diente" viewBox="0 0 120 132">
+      <path d="M60 15C41 4 16 9 16 38c0 22 10 32 14 54 3 18 7 28 14 28 8 0 10-12 12-24 1-8 7-8 8 0 2 12 4 24 12 24 7 0 11-10 14-28 4-22 14-32 14-54 0-29-25-34-44-23z" fill="url(#g-perla)" stroke="#B99A68" stroke-width="1.4"/>
+      <path d="M30 34c2-12 12-18 24-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+      <path d="M60 15c-6 4-9 9-10 14" fill="none" stroke="#d9c49c" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M100 4l2.6 7 7 2.6-7 2.6-2.6 7-2.6-7-7-2.6 7-2.6z" fill="#B99A68" class="chispa"/>
+    </symbol>
+    <symbol id="estrella" viewBox="0 0 24 24"><path d="M12 1.5l2.6 7.9 7.9 2.6-7.9 2.6L12 22.5l-2.6-7.9L1.5 12l7.9-2.6z"/></symbol>
+    <symbol id="ico-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2 3.2 5 4.4 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2.1-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.5-.4zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></symbol>
+    <symbol id="ico-flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
 
 <!-- ======================= NAV ======================= -->
-<div id="cortina"><img src="img/monograma.png" alt=""></div>
-<div id="cursor" aria-hidden="true"></div><div id="cursor-anillo" aria-hidden="true"></div>
-<div id="progreso"></div>
-<header>
-  <div class="wrap nav">
-    <a class="marca" href="#inicio">
-      <span>María José Reyes</span>
-    </a>
-    <button class="hamb" id="hamb" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16" /> <path d="M4 12h16" /> <path d="M4 19h16" /></svg>
-    </button>
-    <nav>
-      <ul class="menu" id="menu">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#tratamientos">Tratamientos</a></li>
-        <li><a href="#planes">Planes</a></li>
-        <li><a href="#proceso">Cómo agendar</a></li>
-      </ul>
+<header class="nav" id="nav" data-scrolled="false">
+  <div class="wrap">
+    <div class="navin">
+      <a class="marca" href="#inicio" aria-label="María José Reyes — inicio">
+        <span class="monomarco"><img src="img/monograma.png" alt="" width="40" height="40"></span>
+        <span>María José Reyes</span>
+      </a>
+      <nav class="links" aria-label="Principal">
+        <a class="link" href="#tratamientos">Tratamientos</a>
+        <a class="link" href="#planes">Planes</a>
+        <a class="link" href="#proceso">Cómo agendar</a>
+        <a class="link" href="#preguntas">Preguntas</a>
+      </nav>
+      <div class="navend">
+        <a class="btn" href="#" data-wa="Hola Dra. María José, vi su página web y quiero agendar una valoración." aria-label="Escribir por WhatsApp">
+          <svg aria-hidden="true"><use href="#ico-wa"/></svg><span class="txt">WhatsApp</span>
+        </a>
+        <button class="menu-btn" id="hamb" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="cajon"><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="cajon" id="cajon" data-open="false" aria-label="Menú móvil">
+      <a href="#inicio">Inicio</a>
+      <a href="#tratamientos">Tratamientos</a>
+      <a href="#planes">Planes</a>
+      <a href="#proceso">Cómo agendar</a>
+      <a href="#preguntas">Preguntas</a>
     </nav>
-    <a class="btn btn-wa nav-wa" href="#" data-wa="Hola Dra. María José, vi su página web y quiero agendar una valoración.">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2 3.2 5 4.4 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2.1-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.5-.4zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-      <span class="txt">WhatsApp</span>
-    </a>
   </div>
 </header>
 
-<!-- ======================= HERO ======================= -->
-<section class="hero" id="inicio" style="padding:0">
-  <!-- ornamento botánico (line art dorado) -->
-  <svg class="hoja hoja-1" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
-    <path d="M190 10C150 30 120 60 100 100c-20 40-28 70-30 85"/>
-    <path d="M150 30c-18-6-34-2-44 10 12 10 30 10 44-10z"/>
-    <path d="M128 62c-19-4-34 2-42 15 13 8 31 6 42-15z"/>
-    <path d="M110 96c-19-2-33 6-39 19 14 6 31 2 39-19z"/>
-    <path d="M96 132c-18 1-30 10-34 24 14 4 30-2 34-24z"/>
-    <path d="M160 44c14 6 24 18 26 32-15 1-28-9-26-32z"/>
-    <path d="M138 80c14 5 24 17 26 31-15 1-28-9-26-31z"/>
-  </svg>
-  <svg class="hoja hoja-2" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
-    <path d="M190 10C150 30 120 60 100 100c-20 40-28 70-30 85"/>
-    <path d="M150 30c-18-6-34-2-44 10 12 10 30 10 44-10z"/>
-    <path d="M128 62c-19-4-34 2-42 15 13 8 31 6 42-15z"/>
-    <path d="M110 96c-19-2-33 6-39 19 14 6 31 2 39-19z"/>
-    <path d="M160 44c14 6 24 18 26 32-15 1-28-9-26-32z"/>
-  </svg>
-
-  <div class="hero-in">
-    <img class="logo" src="img/logo.png" alt="María José Reyes — Rehabilitación Oral y Estética">
-    <h1><span class="script">Tu sonrisa,</span> diseñada a tu medida</h1>
-    <p class="lead">Elige el plan que te interesa y escríbeme directo por WhatsApp: resolvemos tus dudas y agendamos tu valoración.</p>
-    <div class="hero-cta">
-      <a class="btn btn-oro" href="#planes">Ver planes <svg class="flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></svg></a>
-      <a class="btn btn-wa" href="#" data-wa="Hola Dra. María José, vi su página web y quiero agendar una valoración.">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2 3.2 5 4.4 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2.1-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.5-.4zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-        Escríbeme
-      </a>
+<main id="contenido">
+<!-- ======================= HERO: pradera floral ======================= -->
+<section class="hero sec" id="inicio" aria-label="Presentación">
+  <div class="wrap">
+    <div class="escena" id="escena">
+      <div class="prado" aria-hidden="true">
+        <div class="capa capa0"><svg class="pradera" data-pradera="h0" data-semilla="11"></svg></div>
+        <div class="capa capa1"><svg class="pradera" data-pradera="h1" data-semilla="23"></svg></div>
+        <div class="protas-delante">
+          <span class="prota prota--b" data-globo="Tu sonrisa ✦"><span class="cuerpo"><svg class="svg" viewBox="0 0 120 132"><use href="#diente"/></svg></span></span>
+          <span class="prota prota--a" data-globo="Agenda tu valoración"><span class="cuerpo"><svg class="svg" viewBox="0 0 128 116"><use href="#medallon"/></svg></span></span>
+        </div>
+        <div class="capa capa2"><svg class="pradera" data-pradera="h2" data-semilla="37"></svg></div>
+        <div class="polen" id="polen"></div>
+      </div>
+      <div class="herocopia">
+        <p class="claim">Rehabilitación oral + estética</p>
+        <h1 class="h1"><span class="script">Tu sonrisa,</span> diseñada a tu medida</h1>
+        <p class="herosub">Elige el plan que te interesa y escríbeme directo por WhatsApp: resolvemos tus dudas y agendamos tu valoración.</p>
+        <div class="herocta">
+          <a class="btn btn--lg" href="#planes">Ver planes <svg class="flecha" aria-hidden="true"><use href="#ico-flecha"/></svg></a>
+          <a class="btn btn--lg btn--claro" href="#" data-wa="Hola Dra. María José, vi su página web y quiero agendar una valoración."><svg aria-hidden="true"><use href="#ico-wa"/></svg>Escríbeme</a>
+        </div>
+        <p class="heronota"><span class="nw">Respondo por WhatsApp</span><span class="sep"> · </span><span class="nw">Valoración previa a cualquier plan</span></p>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ======================= PROPUESTA DE VALOR ======================= -->
+<section class="propuesta sec" aria-labelledby="prop-h">
+  <div class="wrap propgrid">
+    <div data-rv>
+      <p class="kicker">Rehabilitación oral y estética</p>
+      <h2 class="h2" id="prop-h">Cuatro frentes de trabajo, <em>un plan a tu medida</em></h2>
+    </div>
+    <div data-rv style="--d:120ms">
+      <p class="declaracion">Diseño de sonrisa, blanqueamiento, coronas y prótesis. <em>Primero revisamos tu caso y definimos qué necesitas realmente.</em></p>
+      <a class="btn" href="#tratamientos">Ver tratamientos <svg class="flecha" aria-hidden="true"><use href="#ico-flecha"/></svg></a>
+    </div>
+  </div>
+</section>
 
-<!-- ======================= FRANJA EN MOVIMIENTO ======================= -->
-<div class="marquesina" aria-hidden="true">
-  <div class="pista" id="pista"></div>
-</div>
-
-<!-- ======================= VALORES ======================= -->
-<div class="valores">
-  <div class="wrap valores-grid" data-reveal-grupo>
-    <div>
-      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /></svg>
+<!-- ======================= VALORES (tarjetas) ======================= -->
+<!-- EDITABLE: los 4 textos de valores son redacción propuesta (ver PENDIENTE.md) -->
+<section class="sec" aria-label="Cómo trabajamos">
+  <div class="wrap feats">
+    <article class="feat feat--flor" data-rv>
+      <span class="ficha">Primero</span>
       <h3>Valoración personalizada</h3>
       <p>Primero revisamos tu caso y definimos qué necesitas realmente.</p>
-    </div>
-    <div>
-      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /></svg>
-      <h3>Plan claro y por escrito</h3>
-      <p>Sabes qué incluye, cuántas sesiones son y cuánto cuesta antes de empezar.</p>
-    </div>
-    <div>
-      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" /></svg>
-      <h3>Agenda por WhatsApp</h3>
-      <p>Escribes, cuadramos horario y te confirmo la cita sin vueltas.</p>
-    </div>
-    <div>
-      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41l-7.59-7.59a2.41 2.41 0 0 0-3.41 0Z" /></svg>
-      <h3>Materiales de alta gama</h3>
-      <p>Resina, disilicato y zirconio según el resultado que buscas.</p>
-    </div>
-  </div>
-</div>
+      <svg class="flor svg" viewBox="0 0 210 380" aria-hidden="true">
+        <path d="M105 380C104 300 98 230 106 140" fill="none" stroke="url(#g-tallo)" stroke-width="4" stroke-linecap="round"/>
+        <path d="M103 290c-26-8-46-30-52-58 26 4 46 24 52 58z" fill="#cdb98f"/>
+        <path d="M106 250c22-14 46-16 64-6-14 18-40 22-64 6z" fill="#bfa878"/>
+        <g transform="translate(106 126)">
+          <g id="petalos">
+            <ellipse rx="11" ry="44" cy="-46" fill="url(#g-petalo)" stroke="#d6c19a" stroke-width=".6"/>
+            <ellipse rx="11" ry="44" cy="-46" fill="url(#g-petalo)" stroke="#d6c19a" stroke-width=".6" transform="rotate(26)"/>
+            <ellipse rx="11" ry="44" cy="-46" fill="url(#g-petalo)" stroke="#d6c19a" stroke-width=".6" transform="rotate(52)"/>
+            <ellipse rx="11" ry="44" cy="-46" fill="url(#g-petalo)" stroke="#d6c19a" stroke-width=".6" transform="rotate(78)"/>
+            <ellipse rx="11" ry="44" cy="-46" fill="url(#g-petalo)" stroke="#d6c19a" stroke-width=".6" transform="rotate(104)"/>
+            <ellipse rx="11" ry="44" cy="-46" fill="url(#g-petalo)" stroke="#d6c19a" stroke-width=".6" transform="rotate(130)"/>
+            <ellipse rx="11" ry="44" cy="-46" fill="url(#g-petalo)" stroke="#d6c19a" stroke-width=".6" transform="rotate(156)"/>
+            <ellipse rx="11" ry="44" cy="-46" fill="url(#g-petalo)" stroke="#d6c19a" stroke-width=".6" transform="rotate(182)"/>
+            <ellipse rx="11" ry="44" cy="-46" fill="url(#g-petalo)" stroke="#d6c19a" stroke-width=".6" transform="rotate(208)"/>
+            <ellipse rx="11" ry="44" cy="-46" fill="url(#g-petalo)" stroke="#d6c19a" stroke-width=".6" transform="rotate(234)"/>
+            <ellipse rx="11" ry="44" cy="-46" fill="url(#g-petalo)" stroke="#d6c19a" stroke-width=".6" transform="rotate(260)"/>
+            <ellipse rx="11" ry="44" cy="-46" fill="url(#g-petalo)" stroke="#d6c19a" stroke-width=".6" transform="rotate(286)"/>
+            <ellipse rx="11" ry="44" cy="-46" fill="url(#g-petalo)" stroke="#d6c19a" stroke-width=".6" transform="rotate(312)"/>
+            <ellipse rx="11" ry="44" cy="-46" fill="url(#g-petalo)" stroke="#d6c19a" stroke-width=".6" transform="rotate(338)"/>
+          </g>
+          <circle r="21" fill="url(#g-boton)"/>
+          <circle r="21" fill="none" stroke="#e8d5ad" stroke-width="1" stroke-dasharray="1.5 3.2"/>
+          <circle cx="-6" cy="-7" r="5" fill="#f3e6c8" opacity=".55"/>
+        </g>
+      </svg>
+      <svg class="medalla-card svg" viewBox="0 0 128 116" aria-hidden="true"><use href="#medallon"/></svg>
+      <div class="prado-card" aria-hidden="true"><svg class="pradera" data-pradera="card" data-semilla="5"></svg></div>
+    </article>
 
-<!-- ======================= TRATAMIENTOS (arcos) ======================= -->
-<section id="tratamientos" data-reveal-sec>
-  <div class="wrap centro">
-    <p class="kicker">Lo que hacemos</p>
-    <h2 class="h2">Tratamientos</h2>
-    <div class="linea"></div>
-    <p class="sub">Cuatro frentes de trabajo. Dentro de cada uno hay varios planes según el número de dientes y el material.</p>
+    <article class="feat feat--hondo" data-rv style="--d:110ms">
+      <svg class="viz viz-doc svg" viewBox="0 0 78 96" aria-hidden="true">
+        <rect x="1" y="1" width="62" height="80" rx="9" fill="rgba(255,253,249,.06)" stroke="rgba(255,253,249,.5)"/>
+        <path class="ln" d="M13 22h38" stroke="#E3CFA5" stroke-width="2" stroke-linecap="round"/>
+        <path class="ln" d="M13 34h30" stroke="rgba(255,253,249,.7)" stroke-width="2" stroke-linecap="round"/>
+        <path class="ln" d="M13 46h38" stroke="rgba(255,253,249,.7)" stroke-width="2" stroke-linecap="round"/>
+        <path class="ln" d="M13 58h22" stroke="rgba(255,253,249,.7)" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="62" cy="80" r="14" fill="#B99A68"/>
+        <path d="M55.5 80l4.5 4.5 8-8.5" fill="none" stroke="#4A3B2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="ficha">Claridad</span>
+      <div>
+        <h3>Plan claro y por escrito</h3>
+        <p>Sabes qué incluye, cuántas sesiones son y cuánto cuesta antes de empezar.</p>
+      </div>
+    </article>
 
-    <div class="galeria" data-reveal-grupo>
-      <a class="arco" href="#planes" data-ir="diseno">
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20c4.5-5 10-7.5 16-7.5S35.5 15 40 20"/><rect x="13" y="20" width="7.5" height="11" rx="3"/><rect x="20.5" y="20" width="7" height="12.5" rx="3"/><rect x="27.5" y="20" width="7.5" height="11" rx="3"/><path d="M10 26c2 7 7.5 11 14 11s12-4 14-11"/></svg>
-        <h4>Diseño de sonrisa</h4>
-        <p>Mini diseño, resina, resina impresa y cerámica. De 4 a 20 dientes.</p>
-        <span class="ver">Ver planes</span>
-      </a>
-      <a class="arco" href="#planes" data-ir="estetica">
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 14c-5-3-11-2-11 5.5 0 7.5 3.4 9.4 4.3 15.3.3 2.5 1.2 3.4 2.2 3.4 1.1 0 1.7-1.4 2.4-5.1.4-2.2 2.3-2.2 2.7 0 .7 3.7 1.3 5.1 2.4 5.1 1 0 1.9-.9 2.2-3.4.5-3.3 1.7-5.6 2.7-8"/><path d="M33 10l1.5 3.8 3.8 1.5-3.8 1.5L33 20.6l-1.5-3.8-3.8-1.5 3.8-1.5z"/></svg>
-        <h4>Estética dental</h4>
-        <p>Blanqueamiento, higiene, microabrasión, resinas y carillas.</p>
-        <span class="ver">Ver planes</span>
-      </a>
-      <a class="arco" href="#planes" data-ir="rehabilitacion">
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10.5h18l-2 10H17z"/><path d="M13.5 10.5h21"/><path d="M19 24.5c0 6-1 9.5-1 12.5M29 24.5c0 6 1 9.5 1 12.5"/><path d="M17 24.5h14"/></svg>
-        <h4>Rehabilitación oral</h4>
-        <p>Coronas, incrustaciones, prótesis fijas, removibles y flexibles.</p>
-        <span class="ver">Ver planes</span>
-      </a>
-      <a class="arco" href="#planes" data-ir="mantenimiento">
-        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 9.5c-4.4-2.6-9.8-1.6-9.8 4.6 0 6.4 2.9 8.3 3.7 13.6.3 2.2 1 3 1.9 3 1 0 1.5-1.2 2.1-4.4.4-1.9 2-1.9 2.4 0 .6 3.2 1.1 4.4 2.1 4.4.9 0 1.6-.8 1.9-3 .8-5.3 3.7-7.2 3.7-13.6 0-6.2-5.4-7.2-9.8-4.6z"/><path d="M18.5 20.5l3.6 3.6 7-7"/></svg>
-        <h4>Mantenimiento</h4>
-        <p>Controles, retenedores y cuidado de tu diseño en el tiempo.</p>
-        <span class="ver">Ver planes</span>
-      </a>
-    </div>
-  </div>
-</section>
+    <article class="feat feat--hondo" data-rv style="--d:220ms">
+      <svg class="viz viz-chat svg" viewBox="0 0 104 84" aria-hidden="true">
+        <rect x="1" y="1" width="70" height="32" rx="16" fill="rgba(255,253,249,.1)" stroke="rgba(255,253,249,.35)"/>
+        <path d="M14 17h44" stroke="rgba(255,253,249,.6)" stroke-width="2" stroke-linecap="round"/>
+        <rect x="40" y="44" width="62" height="32" rx="16" fill="#B99A68"/>
+        <circle class="pt" cx="58" cy="60" r="3.2" fill="#4A3B2A"/>
+        <circle class="pt" cx="71" cy="60" r="3.2" fill="#4A3B2A"/>
+        <circle class="pt" cx="84" cy="60" r="3.2" fill="#4A3B2A"/>
+      </svg>
+      <span class="ficha">Cercanía</span>
+      <div>
+        <h3>Agenda por WhatsApp</h3>
+        <p>Escribes, cuadramos horario y te confirmo la cita sin vueltas.</p>
+      </div>
+    </article>
 
-<!-- ======================= CATÁLOGO DE PLANES ======================= -->
-<section id="planes" class="sec-crema2" data-reveal-sec>
-  <div class="wrap centro">
-    <p class="kicker">Catálogo</p>
-    <h2 class="h2">Planes y tarifas</h2>
-    <div class="linea"></div>
-    <p class="sub">Toca el plan que te interese y te llega a mi WhatsApp con el nombre ya escrito. Si no sabes cuál elegir, pide la valoración y lo definimos juntas.</p>
-
-    <div class="filtros-caja" id="filtrosCaja"><div class="filtros" id="filtros"></div></div>
-    <div class="herramientas">
-      <label class="campo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /></svg>
-        <input id="q" type="search" placeholder="Buscar: blanqueamiento, corona, resina…" aria-label="Buscar plan">
-      </label>
-      <select id="orden" aria-label="Ordenar planes">
-        <option value="destacados">Más pedidos primero</option>
-        <option value="menor">Precio: menor a mayor</option>
-        <option value="mayor">Precio: mayor a menor</option>
-        <option value="az">Nombre A–Z</option>
-      </select>
-    </div>
-    <p class="contador" id="contador" aria-live="polite"></p>
-    <div class="planes" id="lista"></div>
-    <p class="aviso">Los valores son de referencia (pesos colombianos) y pueden variar según tu caso. El plan definitivo se confirma en la valoración.</p>
-  </div>
-</section>
-
-<!-- ======================= PROCESO ======================= -->
-<section id="proceso" data-reveal-sec>
-  <div class="wrap centro">
-    <p class="kicker">Cómo agendar</p>
-    <h2 class="h2">Tres pasos</h2>
-    <div class="linea"></div>
-    <div class="pasos" data-reveal-grupo>
-      <div class="paso"><div class="num">I</div><h3>Escribes</h3><p>Eliges el plan en el catálogo y me llega el mensaje por WhatsApp.</p></div>
-      <div class="paso"><div class="num">II</div><h3>Valoración</h3><p>Reviso tu caso, te explico opciones y te doy el precio exacto.</p></div>
-      <div class="paso"><div class="num">III</div><h3>Tu tratamiento</h3><p>Agendamos las sesiones y empezamos. Yo te acompaño en todo el proceso.</p></div>
-    </div>
+    <article class="feat feat--hondo feat--ancho" data-rv style="--d:330ms">
+      <svg class="viz viz-orbita svg" viewBox="0 0 86 86" aria-hidden="true">
+        <circle cx="43" cy="43" r="40" fill="none" stroke="rgba(255,253,249,.22)" stroke-dasharray="2 5"/>
+        <circle cx="43" cy="43" r="26" fill="none" stroke="rgba(255,253,249,.3)"/>
+        <path d="M43 30l9 9-9 17-9-17z" fill="#E3CFA5" stroke="#FFFDF9" stroke-width=".8" stroke-linejoin="round"/>
+        <path d="M34 39h18" stroke="#FFFDF9" stroke-width=".8"/>
+        <circle cx="43" cy="3" r="4" fill="#B99A68"/>
+        <circle cx="83" cy="43" r="3" fill="#FFFDF9"/>
+        <circle cx="17" cy="43" r="3.4" fill="#E3CFA5"/>
+      </svg>
+      <span class="ficha">Calidad</span>
+      <div>
+        <h3>Materiales de alta gama</h3>
+        <p>Resina, disilicato y zirconio según el resultado que buscas.</p>
+      </div>
+      <div class="materiales" aria-label="Materiales"><span>Resina</span><span>Disilicato</span><span>Zirconio</span></div>
+    </article>
   </div>
 </section>
 
-<!-- ======================= CTA FINAL ======================= -->
-<section class="cta" data-reveal-sec>
+<!-- ======================= TRATAMIENTOS: texto + visual alternados ======================= -->
+<section class="sec trat-sec" id="tratamientos" aria-labelledby="trat-h">
   <div class="wrap">
-    <img src="img/logo-blanco.png" alt="María José Reyes">
-    <h2>¿Lista para empezar?</h2>
-    <p>Cuéntame qué te gustaría mejorar de tu sonrisa. Respondo personalmente.</p>
-    <a class="btn" href="#" data-wa="Hola Dra. María José, vi su página web y quiero agendar una valoración.">Escribir por WhatsApp</a>
+    <div class="cabeza">
+      <div data-rv>
+        <p class="kicker">Lo que hacemos</p>
+        <h2 class="h2" id="trat-h">Tratamientos</h2>
+      </div>
+      <p class="lede" data-rv style="--d:120ms">Cuatro frentes de trabajo. Dentro de cada uno hay varios planes según el número de dientes y el material.</p>
+    </div>
+
+    <div class="tratamientos">
+      <!-- 01 Diseño de sonrisa -->
+      <article class="trat" data-rv>
+        <div class="trat-texto">
+          <span class="trat-num">01</span>
+          <h3>Diseño de sonrisa</h3>
+          <p>Mini diseño, resina, resina impresa y cerámica. De 4 a 20 dientes.</p>
+          <div class="notas"><span>Mini diseño</span><span>Resina</span><span>Resina impresa</span><span>Cerámica</span></div>
+          <a class="mas" href="#planes" data-ir="diseno"><span><svg aria-hidden="true"><use href="#ico-flecha"/></svg></span><em style="font-style:normal" data-cuenta="diseno">Ver planes</em></a>
+        </div>
+        <div class="arte" aria-hidden="true">
+          <svg class="ilus svg" viewBox="0 0 400 240">
+            <g class="flotante">
+              <path d="M60 92c40 46 92 66 140 66s100-20 140-66" fill="none" stroke="#d9c49c" stroke-width="2" stroke-dasharray="3 6"/>
+              <g stroke="#B99A68" stroke-width="1.3" fill="url(#g-perla)">
+                <rect x="84" y="88" width="34" height="50" rx="14" transform="rotate(-24 101 113)"/>
+                <rect x="122" y="104" width="38" height="58" rx="15" transform="rotate(-12 141 133)"/>
+                <rect x="164" y="110" width="34" height="62" rx="14" transform="rotate(-4 181 141)"/>
+                <rect x="202" y="110" width="34" height="62" rx="14" transform="rotate(4 219 141)"/>
+                <rect x="240" y="104" width="38" height="58" rx="15" transform="rotate(12 259 133)"/>
+                <rect x="282" y="88" width="34" height="50" rx="14" transform="rotate(24 299 113)"/>
+              </g>
+              <path d="M172 122c4-6 10-8 16-7M210 122c4-6 10-8 16-7" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/>
+            </g>
+            <use href="#estrella" x="312" y="40" width="22" height="22" fill="#B99A68" class="chispa"/>
+            <use href="#estrella" x="70" y="52" width="14" height="14" fill="#cdb48a" class="chispa chispa--b"/>
+            <use href="#estrella" x="196" y="38" width="12" height="12" fill="#B99A68" class="chispa"/>
+          </svg>
+          <div class="prado-arte"><svg class="pradera" data-pradera="arte" data-semilla="41"></svg></div>
+        </div>
+      </article>
+
+      <!-- 02 Estética dental -->
+      <article class="trat" data-rv>
+        <div class="trat-texto">
+          <span class="trat-num">02</span>
+          <h3>Estética dental</h3>
+          <p>Blanqueamiento, higiene, microabrasión, resinas y carillas.</p>
+          <div class="notas"><span>Blanqueamiento</span><span>Higiene</span><span>Microabrasión</span><span>Carillas</span></div>
+          <a class="mas" href="#planes" data-ir="estetica"><span><svg aria-hidden="true"><use href="#ico-flecha"/></svg></span><em style="font-style:normal" data-cuenta="estetica">Ver planes</em></a>
+        </div>
+        <div class="arte" aria-hidden="true">
+          <svg class="ilus svg" viewBox="0 0 400 240">
+            <!-- guía de color en abanico -->
+            <g transform="translate(118 196)">
+              <g stroke="#B99A68" stroke-width="1">
+                <rect x="-9" y="-120" width="18" height="96" rx="9" fill="#e6d3ae" transform="rotate(-34)"/>
+                <rect x="-9" y="-124" width="18" height="100" rx="9" fill="#efe1c5" transform="rotate(-17)"/>
+                <rect x="-9" y="-126" width="18" height="102" rx="9" fill="#f5ecda"/>
+                <rect x="-9" y="-124" width="18" height="100" rx="9" fill="#faf4e9" transform="rotate(17)"/>
+                <rect x="-9" y="-120" width="18" height="96" rx="9" fill="#FFFDF9" transform="rotate(34)"/>
+              </g>
+              <circle r="7" fill="#8a6a3a"/>
+            </g>
+            <g class="flotante flotante--b">
+              <svg x="214" y="40" width="130" height="143" viewBox="0 0 120 132"><use href="#diente"/></svg>
+            </g>
+            <g stroke="#d9c49c" stroke-width="1.6" stroke-linecap="round" class="chispa">
+              <path d="M200 64l-14-8M196 98h-16M352 64l14-8M356 98h16"/>
+            </g>
+            <use href="#estrella" x="330" y="168" width="16" height="16" fill="#B99A68" class="chispa chispa--b"/>
+          </svg>
+          <div class="prado-arte"><svg class="pradera" data-pradera="arte" data-semilla="53"></svg></div>
+        </div>
+      </article>
+
+      <!-- 03 Rehabilitación oral -->
+      <article class="trat" data-rv>
+        <div class="trat-texto">
+          <span class="trat-num">03</span>
+          <h3>Rehabilitación oral</h3>
+          <p>Coronas, incrustaciones, prótesis fijas, removibles y flexibles.</p>
+          <div class="notas"><span>Zirconio</span><span>Disilicato de litio</span><span>Prótesis</span></div>
+          <a class="mas" href="#planes" data-ir="rehabilitacion"><span><svg aria-hidden="true"><use href="#ico-flecha"/></svg></span><em style="font-style:normal" data-cuenta="rehabilitacion">Ver planes</em></a>
+        </div>
+        <div class="arte" aria-hidden="true">
+          <svg class="ilus svg" viewBox="0 0 400 240">
+            <!-- muñón -->
+            <path d="M162 164c0-16 10-24 38-24s38 8 38 24c0 14-6 22-10 40-2 10-6 18-12 18-5 0-7-8-8-16-1-6-5-6-6 0-1 8-3 16-8 16-6 0-10-8-12-18-4-18-10-26-10-40z" fill="#efe3cb" stroke="#B99A68" stroke-width="1.3"/>
+            <!-- corona flotando -->
+            <g class="flotante">
+              <path d="M148 112c0-34 18-58 52-58s52 24 52 58c0 10-8 16-20 16h-64c-12 0-20-6-20-16z" fill="url(#g-perla)" stroke="#B99A68" stroke-width="1.4"/>
+              <path d="M166 82c6-12 16-18 28-18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+              <path d="M152 116h96" stroke="#d9c49c" stroke-width="1.2"/>
+            </g>
+            <path d="M200 132v6" stroke="#B99A68" stroke-width="1.4" stroke-dasharray="2 3"/>
+            <use href="#estrella" x="270" y="44" width="20" height="20" fill="#B99A68" class="chispa"/>
+            <use href="#estrella" x="110" y="80" width="12" height="12" fill="#cdb48a" class="chispa chispa--b"/>
+          </svg>
+          <div class="prado-arte"><svg class="pradera" data-pradera="arte" data-semilla="67"></svg></div>
+        </div>
+      </article>
+
+      <!-- 04 Mantenimiento -->
+      <article class="trat" data-rv>
+        <div class="trat-texto">
+          <span class="trat-num">04</span>
+          <h3>Mantenimiento</h3>
+          <p>Controles, retenedores y cuidado de tu diseño en el tiempo.</p>
+          <div class="notas"><span>Controles</span><span>Retenedores</span><span>Pulido</span></div>
+          <a class="mas" href="#planes" data-ir="mantenimiento"><span><svg aria-hidden="true"><use href="#ico-flecha"/></svg></span><em style="font-style:normal" data-cuenta="mantenimiento">Ver planes</em></a>
+        </div>
+        <div class="arte" aria-hidden="true">
+          <svg class="ilus svg" viewBox="0 0 400 240">
+            <!-- retenedor (arco) -->
+            <path d="M92 170c20-80 70-120 108-120s88 40 108 120" fill="none" stroke="rgba(185,154,104,.35)" stroke-width="18" stroke-linecap="round"/>
+            <path d="M92 170c20-80 70-120 108-120s88 40 108 120" fill="none" stroke="#B99A68" stroke-width="1.4" stroke-linecap="round"/>
+            <g class="flotante flotante--c">
+              <svg x="146" y="66" width="108" height="119" viewBox="0 0 120 132"><use href="#diente"/></svg>
+              <!-- sello de cuidado -->
+              <circle cx="262" cy="160" r="24" fill="#4A3B2A"/>
+              <circle cx="262" cy="160" r="24" fill="none" stroke="#E3CFA5" stroke-width="1" stroke-dasharray="2 3"/>
+              <path d="M251 160l7.5 7.5 13-14" fill="none" stroke="#FFFDF9" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <use href="#estrella" x="96" y="60" width="16" height="16" fill="#B99A68" class="chispa"/>
+          </svg>
+          <div class="prado-arte"><svg class="pradera" data-pradera="arte" data-semilla="79"></svg></div>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
+
+<!-- ======================= FRANJA (lugar de la prueba social de la plantilla) ======================= -->
+<section class="sec" aria-label="Tratamientos que puedes consultar">
+  <div class="wrap">
+    <div class="franja" data-rv>
+      <p>Lo que puedes consultar directamente por WhatsApp</p>
+      <div class="nombres" id="nombres"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TESTIMONIOS =======================
+     EDITABLE: la sección queda OCULTA mientras el arreglo TESTIMONIOS (en el <script>) esté vacío.
+     Solo agregar testimonios reales y con autorización de la paciente. -->
+<section class="sec testimonios" id="testimonios" aria-labelledby="test-h" hidden>
+  <div class="wrap">
+    <p class="kicker">Pacientes</p>
+    <h2 class="h2" id="test-h">Lo que cuentan</h2>
+    <div class="tgrid" id="tgrid"></div>
+  </div>
+</section>
+
+<!-- ======================= PLANES Y TARIFAS ======================= -->
+<section class="sec planes-sec" id="planes" aria-labelledby="planes-h">
+  <div class="wrap">
+    <div class="caja-planes">
+      <div class="cabeza">
+        <div data-rv>
+          <p class="kicker">Catálogo</p>
+          <h2 class="h2" id="planes-h">Planes y tarifas</h2>
+        </div>
+        <p class="lede" data-rv style="--d:120ms">Toca el plan que te interese y te llega a mi WhatsApp con el nombre ya escrito. Si no sabes cuál elegir, pide la valoración y lo definimos juntas.</p>
+      </div>
+
+      <div class="controles">
+        <div class="filtros-caja" id="filtrosCaja"><div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoría"></div></div>
+        <div class="herramientas">
+          <label class="campo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+            <input id="q" type="search" placeholder="Buscar: blanqueamiento, corona, resina…" aria-label="Buscar plan">
+          </label>
+          <select id="orden" aria-label="Ordenar planes">
+            <option value="destacados">Más pedidos primero</option>
+            <option value="menor">Precio: menor a mayor</option>
+            <option value="mayor">Precio: mayor a menor</option>
+            <option value="az">Nombre A–Z</option>
+          </select>
+        </div>
+      </div>
+      <p class="contador" id="contador" aria-live="polite"></p>
+      <div class="planes" id="lista"></div>
+      <p class="aviso">Los valores son de referencia (pesos colombianos) y pueden variar según tu caso. El plan definitivo se confirma en la valoración.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CÓMO AGENDAR ======================= -->
+<section class="sec pasos-sec" id="proceso" aria-labelledby="proceso-h">
+  <div class="wrap">
+    <div data-rv>
+      <p class="kicker">Cómo agendar</p>
+      <h2 class="h2" id="proceso-h">Tres pasos</h2>
+    </div>
+    <ol class="pasos">
+      <li class="paso" data-rv><div class="num" aria-hidden="true">I</div><h3>Escribes</h3><p>Eliges el plan en el catálogo y me llega el mensaje por WhatsApp.</p></li>
+      <li class="paso" data-rv style="--d:110ms"><div class="num" aria-hidden="true">II</div><h3>Valoración</h3><p>Reviso tu caso, te explico opciones y te doy el precio exacto.</p></li>
+      <li class="paso" data-rv style="--d:220ms"><div class="num" aria-hidden="true">III</div><h3>Tu tratamiento</h3><p>Agendamos las sesiones y empezamos. Yo te acompaño en todo el proceso.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================= PREGUNTAS ======================= -->
+<!-- Las respuestas reutilizan textos que ya estaban en el sitio. EDITABLE: revisar/ampliar con la doctora. -->
+<section class="sec" id="preguntas" aria-labelledby="faq-h">
+  <div class="wrap faq">
+    <div data-rv>
+      <p class="kicker">Preguntas</p>
+      <h2 class="h2" id="faq-h">Antes de escribir</h2>
+      <p class="lede">Si tu duda no está aquí, escríbeme: respondo personalmente.</p>
+    </div>
+    <div class="qas" id="qas" data-rv style="--d:120ms">
+      <div class="qa">
+        <h3><button class="q" type="button" aria-expanded="false" aria-controls="r1" id="p1">¿No sabes qué plan elegir?<span class="mas-menos" aria-hidden="true"></span></button></h3>
+        <div class="a" id="r1" role="region" aria-labelledby="p1" data-open="false"><div><p>Pide la valoración y lo definimos juntas. Primero revisamos tu caso y definimos qué necesitas realmente.</p></div></div>
+      </div>
+      <div class="qa">
+        <h3><button class="q" type="button" aria-expanded="false" aria-controls="r2" id="p2">¿Qué incluye la valoración?<span class="mas-menos" aria-hidden="true"></span></button></h3>
+        <div class="a" id="r2" role="region" aria-labelledby="p2" data-open="false"><div><p>Revisión clínica, diagnóstico y plan de tratamiento con precios. Sabes qué incluye, cuántas sesiones son y cuánto cuesta antes de empezar.</p></div></div>
+      </div>
+      <div class="qa" data-solo-precios>
+        <h3><button class="q" type="button" aria-expanded="false" aria-controls="r3" id="p3">¿Los precios del catálogo son definitivos?<span class="mas-menos" aria-hidden="true"></span></button></h3>
+        <div class="a" id="r3" role="region" aria-labelledby="p3" data-open="false"><div><p>Los valores son de referencia (pesos colombianos) y pueden variar según tu caso. El plan definitivo se confirma en la valoración.</p></div></div>
+      </div>
+      <div class="qa">
+        <h3><button class="q" type="button" aria-expanded="false" aria-controls="r4" id="p4">¿Qué materiales se usan?<span class="mas-menos" aria-hidden="true"></span></button></h3>
+        <div class="a" id="r4" role="region" aria-labelledby="p4" data-open="false"><div><p>Resina, disilicato y zirconio según el resultado que buscas.</p></div></div>
+      </div>
+      <div class="qa">
+        <h3><button class="q" type="button" aria-expanded="false" aria-controls="r5" id="p5">¿Cómo agendo mi cita?<span class="mas-menos" aria-hidden="true"></span></button></h3>
+        <div class="a" id="r5" role="region" aria-labelledby="p5" data-open="false"><div><p>Escribes, cuadramos horario y te confirmo la cita sin vueltas. Eliges el plan en el catálogo y me llega el mensaje por WhatsApp.</p></div></div>
+      </div>
+      <div class="qa">
+        <h3><button class="q" type="button" aria-expanded="false" aria-controls="r6" id="p6">¿Cómo cuido mi diseño después?<span class="mas-menos" aria-hidden="true"></span></button></h3>
+        <div class="a" id="r6" role="region" aria-labelledby="p6" data-open="false"><div><p>Controles, retenedores y cuidado de tu diseño en el tiempo. Los encuentras en la categoría Mantenimiento del catálogo.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA FINAL: pradera ======================= -->
+<section class="sec cta-sec" aria-labelledby="cta-h">
+  <div class="wrap">
+    <div class="cta" id="cta">
+      <div class="prado" aria-hidden="true">
+        <div class="capa capa0"><svg class="pradera" data-pradera="c0" data-semilla="83"></svg></div>
+        <div class="capa capa1"><svg class="pradera" data-pradera="c1" data-semilla="89"></svg></div>
+        <div class="protas-delante">
+          <span class="prota prota--b" data-globo="Tu sonrisa ✦"><span class="cuerpo"><svg class="svg" viewBox="0 0 120 132"><use href="#diente"/></svg></span></span>
+          <span class="prota prota--a" data-globo="Agenda tu valoración"><span class="cuerpo"><svg class="svg" viewBox="0 0 128 116"><use href="#medallon"/></svg></span></span>
+        </div>
+        <div class="capa capa2"><svg class="pradera" data-pradera="c2" data-semilla="97"></svg></div>
+      </div>
+      <div class="ctacopia" data-rv>
+        <p class="script" aria-hidden="true">Tu sonrisa,</p>
+        <h2 class="h2" id="cta-h">¿Lista para empezar?</h2>
+        <p>Cuéntame qué te gustaría mejorar de tu sonrisa. Respondo personalmente.</p>
+        <a class="btn btn--lg" href="#" data-wa="Hola Dra. María José, vi su página web y quiero agendar una valoración."><svg aria-hidden="true"><use href="#ico-wa"/></svg>Escribir por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
 
 <!-- ======================= FOOTER ======================= -->
-<footer>
-  <div class="wrap foot">
-    <span>© <span id="anio"></span> María José Reyes · Rehabilitación Oral y Estética</span>
-    <div class="redes">
-      <a href="#" data-wa="Hola Dra. María José, vi su página web y quiero información.">WhatsApp 317 698 0998</a>
-      <!-- Instagram: reemplazar el href por el perfil real -->
-      <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">Redirecting to /lucide-static@1.73.0/icons/instagram.svg</svg>
-      </a>
+<footer class="pie">
+  <div class="wrap">
+    <div class="piegrid">
+      <div>
+        <img class="logo-pie" src="img/logo.png" alt="María José Reyes — Rehabilitación Oral y Estética" width="900" height="427" loading="lazy">
+        <p class="lema">Elige el plan que te interesa y escríbeme directo por WhatsApp: resolvemos tus dudas y agendamos tu valoración.</p>
+        <div class="redes">
+          <a href="#" data-wa="Hola Dra. María José, vi su página web y quiero información." aria-label="WhatsApp"><svg aria-hidden="true"><use href="#ico-wa"/></svg></a>
+          <!-- EDITABLE: Instagram — reemplazar el href por el perfil real -->
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <h4>Tratamientos</h4>
+        <ul>
+          <li><a href="#planes" data-ir="diseno">Diseño de sonrisa</a></li>
+          <li><a href="#planes" data-ir="estetica">Estética dental</a></li>
+          <li><a href="#planes" data-ir="rehabilitacion">Rehabilitación oral</a></li>
+          <li><a href="#planes" data-ir="mantenimiento">Mantenimiento</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Sitio</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#planes">Planes y tarifas</a></li>
+          <li><a href="#proceso">Cómo agendar</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="#" data-wa="Hola Dra. María José, vi su página web y quiero información.">WhatsApp 317 698 0998</a></li>
+          <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="palabra" aria-hidden="true">María José</p>
+    <div class="barra">
+      <span>© <span id="anio"></span> María José Reyes · Rehabilitación Oral y Estética</span>
+      <span>Valores de referencia en pesos colombianos</span>
     </div>
   </div>
 </footer>
 
 <a class="fab" aria-label="Escríbeme por WhatsApp" href="#" data-wa="Hola Dra. María José, vi su página web y quiero agendar una valoración.">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.2.5-.6.6-.8.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.1.2 2 3.2 5 4.4 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2.1-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.2-.5-.4zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-  <span>Escríbeme</span>
+  <svg aria-hidden="true"><use href="#ico-wa"/></svg><span>Escríbeme</span>
 </a>
 
 <script>
@@ -1237,221 +1182,343 @@ function pintar(){
 document.getElementById("q").addEventListener("input", e => { busca = e.target.value; pintar(); });
 document.getElementById("orden").addEventListener("change", e => { orden = e.target.value; pintar(); });
 
-// navegación suave con el header sticky compensado
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener("click", ev => {
-    const destino = document.querySelector(a.getAttribute("href"));
-    if (!destino || a.getAttribute("href") === "#") return;
-    ev.preventDefault();
-    destino.scrollIntoView({behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"start"});
-    history.replaceState(null, "", a.getAttribute("href"));
-  });
+/* ============================================================
+   TESTIMONIOS — EDITABLE
+   Solo testimonios REALES y con autorización. Mientras esté vacío,
+   la sección no se muestra. Formato:
+   {texto:"…", autor:"Nombre o iniciales", plan:"Diseño de sonrisa"}
+   ============================================================ */
+const TESTIMONIOS = [];
+
+/* ============================================================
+   INTERFAZ (adaptada de la plantilla Lilac Meadow, MIT)
+   ============================================================ */
+const quieto = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const conRaton = window.matchMedia("(hover:hover) and (pointer:fine)").matches;
+
+// --- enlaces de WhatsApp y atajos al catálogo ---
+document.querySelectorAll("[data-wa]").forEach(a => {
+  a.href = waLink(a.dataset.wa);
+  a.target = "_blank"; a.rel = "noopener";
 });
 document.querySelectorAll("[data-ir]").forEach(a => a.addEventListener("click", () => {
   filtro = a.dataset.ir; busca = ""; document.getElementById("q").value = "";
   pintarFiltros(); pintar();
 }));
-document.querySelectorAll("[data-wa]").forEach(a => {
-  a.href = waLink(a.dataset.wa);
-  a.target = "_blank"; a.rel = "noopener";
+document.querySelectorAll("[data-cuenta]").forEach(el => {
+  const n = PLANES.filter(p => p.cat === el.dataset.cuenta).length;
+  el.textContent = "Ver los " + n + " planes";
 });
+if (!CONFIG.mostrarPrecios) document.querySelectorAll("[data-solo-precios]").forEach(el => el.hidden = true);
 
-// el flotante se esconde sobre el cierre y el pie (evita tapar contenido)
+// --- franja de tratamientos (lugar de los "backers" de la plantilla) ---
 (() => {
-  const fab = document.querySelector(".fab");
-  const zonas = [document.querySelector(".cta"), document.querySelector("footer")].filter(Boolean);
-  if (!fab || !zonas.length) return;
-  const dentro = new Set();
-  const obs = new IntersectionObserver(es => {
-    es.forEach(e => e.isIntersecting ? dentro.add(e.target) : dentro.delete(e.target));
-    fab.classList.toggle("oculto", dentro.size > 0);
-  }, {threshold:0, rootMargin:"-12% 0px -12% 0px"});
-  zonas.forEach(z => obs.observe(z));
+  const frases = ["Diseño de sonrisa","Blanqueamiento","Carillas","Coronas en zirconio",
+                  "Rehabilitación oral","Incrustaciones","Prótesis","Higiene profesional"];
+  const glifo = '<svg aria-hidden="true"><use href="#estrella"/></svg>';
+  document.getElementById("nombres").innerHTML = frases.map(f => `<span class="nombre">${glifo}${f}</span>`).join("");
 })();
 
-// el flotante se aparta mientras se baja y vuelve al detenerse
+// --- testimonios: solo si hay reales ---
 (() => {
+  if (!TESTIMONIOS.length) return;
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  document.getElementById("tgrid").innerHTML = TESTIMONIOS.map(t =>
+    `<figure class="tcard"><blockquote>«${esc(t.texto)}»</blockquote><figcaption>${esc(t.autor)}${t.plan ? " · " + esc(t.plan) : ""}</figcaption></figure>`).join("");
+  document.getElementById("testimonios").hidden = false;
+})();
+
+// --- menú móvil ---
+const hamb = document.getElementById("hamb"), cajon = document.getElementById("cajon");
+hamb.addEventListener("click", () => {
+  const abierto = cajon.dataset.open !== "true";
+  cajon.dataset.open = abierto; hamb.setAttribute("aria-expanded", abierto);
+  hamb.setAttribute("aria-label", abierto ? "Cerrar menú" : "Abrir menú");
+});
+cajon.addEventListener("click", e => { if (e.target.tagName === "A"){ cajon.dataset.open = "false"; hamb.setAttribute("aria-expanded", "false"); } });
+
+// --- acordeón ---
+document.querySelectorAll(".q").forEach(b => b.addEventListener("click", () => {
+  const abierto = b.getAttribute("aria-expanded") !== "true";
+  b.setAttribute("aria-expanded", abierto);
+  document.getElementById(b.getAttribute("aria-controls")).dataset.open = abierto;
+}));
+
+document.getElementById("anio").textContent = new Date().getFullYear();
+
+// --- nav con cristal al bajar + enlace activo + flotante ---
+(() => {
+  const nav = document.getElementById("nav");
+  const links = [...document.querySelectorAll(".link")];
+  const secs = links.map(a => document.querySelector(a.getAttribute("href")));
   const fab = document.querySelector(".fab");
-  if (!fab || window.matchMedia("(min-width:900px)").matches) return;
-  let ultimo = window.scrollY, t;
-  window.addEventListener("scroll", () => {
+  const escena = document.getElementById("escena"), cta = document.getElementById("cta"), pie = document.querySelector(".pie");
+  let t = false;
+  function rev(){
+    t = false;
     const y = window.scrollY;
-    if (y > ultimo + 12) fab.classList.add("escondido");
-    else if (y < ultimo - 12) fab.classList.remove("escondido");
-    ultimo = y;
-    clearTimeout(t);
-    t = setTimeout(() => fab.classList.remove("escondido"), 900);
-  }, {passive:true});
+    nav.dataset.scrolled = y > 8;
+    let activo = -1;
+    secs.forEach((s,i) => { if (s && s.getBoundingClientRect().top <= 140) activo = i; });
+    links.forEach((a,i) => a.setAttribute("aria-current", i === activo));
+    const vh = window.innerHeight;
+    const pasoHero = escena.getBoundingClientRect().bottom < vh * .35;
+    const sobreCierre = [cta, pie].some(z => { const r = z.getBoundingClientRect(); return r.top < vh * .88 && r.bottom > vh * .12; });
+    fab.classList.toggle("ver", pasoHero && !sobreCierre);
+  }
+  window.addEventListener("scroll", () => { if (!t){ t = true; requestAnimationFrame(rev); } }, {passive:true});
+  window.addEventListener("resize", rev);
+  rev();
 })();
 
-// en móvil el flotante se calla dentro del catálogo (cada tarjeta ya lleva su botón)
+// --- revelado por scroll ---
 (() => {
-  const fab = document.querySelector(".fab");
-  const zonas = [document.getElementById("planes"), document.querySelector(".valores")].filter(Boolean);
-  if (!fab || !zonas.length) return;
-  const activo = () => window.matchMedia("(max-width:899px)").matches;
-  const ob = new IntersectionObserver(es => {
-    es.forEach(e => fab.classList.toggle("silenciado", activo() && e.isIntersecting));
-  }, {threshold:0, rootMargin:"-20% 0px -20% 0px"});
-  zonas.forEach(z => ob.observe(z));
-})();
-
-// indicador de desplazamiento en la fila de filtros
-(() => {
-  const caja = document.getElementById("filtrosCaja"), fila = document.getElementById("filtros");
-  const revisar = () => caja.classList.toggle("desborda", fila.scrollWidth - fila.clientWidth > 8 && fila.scrollLeft < fila.scrollWidth - fila.clientWidth - 12);
-  fila.addEventListener("scroll", revisar, {passive:true});
-  window.addEventListener("resize", revisar);
-  new ResizeObserver(revisar).observe(fila);
-  revisar();
+  const els = document.querySelectorAll("[data-rv]");
+  if (quieto || !("IntersectionObserver" in window)){ els.forEach(e => e.classList.add("visible")); return; }
+  const ob = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting){ e.target.classList.add("visible"); ob.unobserve(e.target); }
+  }), {rootMargin:"0px 0px -3% 0px", threshold:0});
+  els.forEach(e => ob.observe(e));
 })();
 
 /* ============================================================
-   MOVIMIENTO: cortina, texto por palabras, chispas, cursor,
-   magnético, inclinación y contadores
+   PRADERA PINTADA — port del generador de la plantilla
+   (florecillas agrupadas en matas iluminadas desde arriba a la
+   izquierda, pajas secas, 3 capas con bruma), dibujado como SVG.
+   Determinista por semilla.
    ============================================================ */
-(() => {
-const quieto = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-// ?raton=1 fuerza los efectos de ratón (útil para probar en navegadores sin hover)
-const conRaton = new URLSearchParams(location.search).has("raton")
-  || window.matchMedia("(hover:hover) and (pointer:fine)").matches;
-
-// --- cortina de entrada ---
-if (conRaton) document.body.classList.add("forzar-raton");
-const cortina = document.getElementById("cortina");
-const salir = () => {
-  cortina.classList.add("fuera");
-  document.querySelector(".hero").classList.add("listo");
-  setTimeout(() => cortina.remove(), 800);
+const PRADERA_COLORES = {
+  flores:["#6b5538","#9d8259","#c8b088","#e4d5b8","#f6efe2","#FFFDF9"],
+  cielo:"#F1E8D9",
+  paja:["#dccb9f","#9c8657"]
 };
-if (quieto){ cortina.remove(); document.querySelector(".hero").classList.add("listo"); }
-else { window.addEventListener("load", () => setTimeout(salir, 420)); setTimeout(salir, 2600); }
+// base/montículos relativos a la caja .prado (no a toda la escena)
+const CAPAS_PRADERA = {
+  h0:{base:.5, mounds:[[.06,.16,.16],[.3,.18,.1],[.55,.2,.08],[.78,.17,.14],[.98,.14,.2]], size:[1.3,2.5], density:1.15, band:70, haze:.42, straws:14, wobble:.024, max:4200, pluma:72},
+  h1:{base:.68, mounds:[[0,.2,.26],[.2,.16,.12],[.44,.15,.12],[.62,.17,.18],[.95,.16,.24]], size:[1.9,3.5], density:1.2, band:130, haze:.16, straws:30, wobble:.03, max:5200, pluma:64},
+  h2:{base:.92, mounds:[[.06,.12,.24],[.42,.13,.18],[.6,.12,.22],[.98,.12,.3]], size:[2.2,4.6], density:1.35, band:999, haze:0, straws:40, wobble:.04, petals:true, max:3400},
+  c0:{base:.5, mounds:[[.12,.2,.2],[.45,.2,.12],[.8,.22,.24]], size:[1.3,2.5], density:1.1, band:70, haze:.42, straws:10, wobble:.024, max:3000, pluma:72},
+  c1:{base:.68, mounds:[[.02,.12,.2],[.4,.18,.16],[.62,.15,.14],[.98,.12,.2]], size:[1.9,3.5], density:1.2, band:130, haze:.16, straws:24, wobble:.03, max:3800, pluma:64},
+  c2:{base:.94, mounds:[[.03,.1,.2],[.44,.14,.16],[.66,.12,.22],[.99,.08,.14]], size:[2.6,5.2], density:1.25, band:999, haze:0, straws:30, wobble:.04, petals:true, max:2600},
+  card:{base:1.08, mounds:[[.7,.2,.78],[.94,.16,.66],[.5,.1,.36],[.15,.18,.4]], size:[2.2,4.4], density:1.25, band:999, haze:0, straws:16, wobble:.03, petals:true, max:1500},
+  arte:{base:.62, mounds:[[.08,.2,.36],[.36,.2,.12],[.66,.2,.2],[.95,.2,.42]], size:[2.2,4.2], density:1.25, band:999, haze:0, straws:22, wobble:.03, petals:true, max:1700}
+};
 
-// --- títulos palabra por palabra ---
-if (!quieto){
-  document.querySelectorAll(".h2, .hero-in h1, .cta h2").forEach(t => {
-    if (t.querySelector(".pal")) return;
-    const palabras = t.textContent.trim().split(/\s+/);
-    t.innerHTML = palabras.map((p,i) =>
-      `<span class="pal"><span style="--dp:${i*55}ms">${p}</span></span>`).join(" ");
-  });
+function clamp(v,a,b){ return Math.min(b, Math.max(a, v)); }
+function mulberry32(seed){
+  let a = seed >>> 0;
+  return () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function hexToRgb(h){ h = h.replace("#",""); const n = parseInt(h,16); return [(n>>16)&255,(n>>8)&255,n&255]; }
+function rgbToHex(c){ return "#" + c.map(v => clamp(Math.round(v),0,255).toString(16).padStart(2,"0")).join(""); }
+function mezcla(a,b,t){ const x = hexToRgb(a), y = hexToRgb(b), k = clamp(t,0,1); return rgbToHex([0,1,2].map(i => x[i] + (y[i]-x[i])*k)); }
+function rampa(stops,t){ const f = clamp(t,0,1)*(stops.length-1); const i = Math.min(stops.length-2, Math.floor(f)); return mezcla(stops[i], stops[i+1], f-i); }
+function cresta(x,W,H,L,fase,s){
+  const base = L.base*H; let top = base;
+  for (const m of L.mounds){
+    const u = (x - m[0]*W) / Math.max(1, m[1]*W);
+    if (u <= -1 || u >= 1) continue;
+    top = Math.min(top, base - m[2]*H*Math.pow(1-u*u, .7));
+  }
+  const q = x/s;
+  const n = Math.sin(q*.031+fase)*.5 + Math.sin(q*.077+fase*2.3)*.3 + Math.sin(q*.19+fase*4.1)*.2;
+  return top + n*L.wobble*H;
 }
 
-// cada título se revela solo cuando entra en pantalla
-const obsTitulos = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting){ e.target.classList.add("visible"); obsTitulos.unobserve(e.target); }
-}), {threshold:.25, rootMargin:"0px 0px -5% 0px"});
-document.querySelectorAll(".h2, .hero-in h1, .cta h2, .linea").forEach(t => obsTitulos.observe(t));
-// el título de portada se revela al retirarse la cortina
-setTimeout(() => document.querySelectorAll(".hero-in h1, .hero-in .linea").forEach(t => t.classList.add("visible")), quieto ? 0 : 700);
+function construirPradera(L,W,H,seed,colors){
+  const rnd = mulberry32(seed);
+  const s = clamp(W/1200, .6, 1.4);
+  const fase = rnd()*100;
+  const ridge = x => cresta(x,W,H,L,fase,s);
+  const NIV = 24, PROF = 4;
+  // colores cuantizados (nivel × profundidad) para agrupar en pocos <path>
+  const pal = {};
+  const color = (tipo,i,dq) => {
+    const k = tipo+i+"_"+dq;
+    if (pal[k]) return pal[k];
+    let c = rampa(colors.flores, i/(NIV-1));
+    if (tipo === "h") c = mezcla(c,"#ffffff",.3);
+    if (tipo === "k") c = mezcla(c,colors.flores[0],.35);
+    if (L.haze > 0) c = mezcla(c, colors.cielo, L.haze*(1 - (dq/(PROF-1))*.35));
+    return pal[k] = c;
+  };
+  const pts = []; let top = H;
+  for (let x = -12; x <= W+12; x += 6){ const y = ridge(x); pts.push([x,y]); top = Math.min(top,y); }
+  const r0 = L.size[0]*s, r1 = L.size[1]*s, rm = (r0+r1)/2, band = L.band*s;
+  let area = 0;
+  for (const p of pts) area += Math.max(0, Math.min(band, H-p[1]) + r1*1.4)*6;
+  const n = Math.min(L.max, Math.round(L.density*area/(Math.PI*rm*rm)));
+  const items = [];
+  const grow = L.petals ? 1.5 : 1, cr0 = 24*s*grow, cr1 = 62*s*grow;
+  const clumps = [];
+  const kc = Math.min(900, Math.round(area/(Math.PI*Math.pow((cr0+cr1)/2,2))*2.4));
+  for (let i = 0; i < kc; i++){
+    const x = rnd()*(W+60)-30, rg = ridge(x);
+    clumps.push([x, rg + rnd()*(Math.max(0, Math.min(band, H-rg)) + 10*s), cr0 + (cr1-cr0)*rnd()]);
+  }
+  let guard = n*8, count = 0;
+  while (count < n && guard-- > 0){
+    const x = rnd()*(W+24)-12, rg = ridge(x);
+    const depth = Math.max(0, Math.min(band, H-rg));
+    const y = rg - r1*1.4 + rnd()*(depth + r1*1.4);
+    const d = clamp((y-rg)/Math.max(40*s, Math.min(H-rg, band)*.95), 0, 1);
+    const r = (r0 + (r1-r0)*Math.pow(rnd(),1.7)) * (1 + d*(L.petals ? .45 : .2));
+    if (y < rg - r*(.3 + rnd()*.9)) continue;
+    const slope = (ridge(x-8*s) - ridge(x+8*s))/(16*s);
+    let dome = 0, lit = 0;
+    for (const c of clumps){
+      const dx = x-c[0], dy = y-c[1];
+      if (dx > c[2] || dx < -c[2] || dy > c[2] || dy < -c[2]) continue;
+      const q = (dx*dx+dy*dy)/(c[2]*c[2]);
+      if (q >= 1) continue;
+      const hh = Math.sqrt(1-q);
+      if (hh > dome){ dome = hh; lit = clamp((-.55*dx - .83*dy)/c[2], -1, 1); }
+    }
+    const lum = dome*(.45 + (lit*.5+.5)*.55);
+    const glow = Math.exp(-Math.max(0, y-rg)/(22*s));
+    let b = .22 + lum*.72 + glow*.2 - d*.16 + clamp(slope,-1,1)*.12 + (rnd()-.5)*.2;
+    if (lum > .55 && rnd() < .035) b += .22;
+    const i = Math.round(clamp(b,0,1)*(NIV-1)), dq = Math.round(d*(PROF-1));
+    items.push({t:0, x, y, r, c:color("c",i,dq), h:color("h",i,dq), k:color("k",i,dq), p:!!L.petals && r > 2.2, a:rnd()*Math.PI});
+    count++;
+  }
+  for (let i = 0; i < L.straws; i++){
+    const x = rnd()*W;
+    if (ridge(x) > H - 6*s) continue;
+    const y = ridge(x) + (3 + rnd()*16)*s;
+    const len = (14 + rnd()*38)*s*(L.petals ? 1.3 : 1);
+    const lean = (rnd()-.5)*.9;
+    const x2 = x + Math.sin(lean)*len, y2 = y - Math.cos(lean)*len, bow = (rnd()-.5)*len*.35;
+    let c = mezcla(colors.paja[0], colors.paja[1], Math.round(rnd()*4)/4);
+    if (L.haze > 0) c = mezcla(c, colors.cielo, L.haze);
+    items.push({t:1, x, y, x2, y2, cx:(x+x2)/2+bow, cy:(y+y2)/2, w:Math.round((.5+rnd()*.9)*s*(L.petals?1.3:1)*4)/4, c, head:rnd() < .4});
+  }
+  items.sort((p,q) => p.y - q.y);
+  const fill = [rampa(colors.flores,.5), rampa(colors.flores,.3)];
+  if (L.haze > 0){ fill[0] = mezcla(fill[0], colors.cielo, L.haze); fill[1] = mezcla(fill[1], colors.cielo, L.haze*.65); }
+  return {W, H, ridge:pts, top, fill, items};
+}
 
-// --- chispas doradas del hero ---
+let uidPradera = 0;
+function pintarPradera(svg){
+  const L = CAPAS_PRADERA[svg.dataset.pradera];
+  const W = Math.round(svg.clientWidth), H = Math.round(svg.clientHeight);
+  if (!L || !W || !H) return false;
+  const firma = W + "x" + H;
+  if (svg.dataset.firma === firma) return true;
+  svg.dataset.firma = firma;
+  const m = construirPradera(L, W, H, +svg.dataset.semilla || 7, PRADERA_COLORES);
+  const f1 = v => Math.round(v*10)/10, f2 = v => Math.round(v*100)/100;
+  const circ = (x,y,r) => `M${f1(x-r)} ${f1(y)}a${f2(r)} ${f2(r)} 0 1 0 ${f2(2*r)} 0a${f2(r)} ${f2(r)} 0 1 0 ${f2(-2*r)} 0`;
+  const id = "gp" + (++uidPradera);
+  let out = `<defs><linearGradient id="${id}" gradientUnits="userSpaceOnUse" x1="0" y1="${f1(m.top)}" x2="0" y2="${H}"><stop offset="0" stop-color="${m.fill[0]}"/><stop offset="1" stop-color="${m.fill[1]}"/></linearGradient></defs>`;
+  out += `<path fill="url(#${id})" d="M${m.ridge[0][0]} ${H+2}` + m.ridge.map(p => `L${p[0]} ${f1(p[1]+3)}`).join("") + `L${m.ridge[m.ridge.length-1][0]} ${H+2}Z"/>`;
+  // por franjas de profundidad (de atrás hacia adelante) se agrupa por color
+  const TAU = Math.PI*2, FR = 12, porFranja = Math.ceil(m.items.length/FR) || 1;
+  for (let f = 0; f < FR; f++){
+    const lote = m.items.slice(f*porFranja, (f+1)*porFranja);
+    if (!lote.length) break;
+    const paja = {}, osc = {}, base = {}, luz = {};
+    const add = (g,k,d) => (g[k] = g[k] || []).push(d);
+    for (const it of lote){
+      if (it.t === 1){
+        add(paja, it.c + "|" + it.w, `M${f1(it.x)} ${f1(it.y)}Q${f1(it.cx)} ${f1(it.cy)} ${f1(it.x2)} ${f1(it.y2)}`);
+        if (it.head) add(base, it.c, circ(it.x2, it.y2, it.w*1.9));
+        continue;
+      }
+      const {x,y,r} = it;
+      if (it.p){
+        add(osc, it.k, circ(x + r*.15, y + r*.35, r*.95));
+        for (let j = 0; j < 5; j++){
+          const a = it.a + j*TAU/5;
+          add(base, it.c, circ(x + Math.cos(a)*r*.52, y + Math.sin(a)*r*.46, r*.47));
+        }
+        add(luz, it.h, circ(x - r*.1, y - r*.12, r*.24));
+      } else {
+        add(base, it.c, circ(x, y, r));
+        if (r > 1.6) add(luz, it.h, circ(x - r*.3, y - r*.35, r*.34));
+      }
+    }
+    for (const k in paja){ const [c,w] = k.split("|"); out += `<path fill="none" stroke="${c}" stroke-width="${w}" stroke-linecap="round" d="${paja[k].join("")}"/>`; }
+    for (const g of [osc, base, luz]) for (const c in g) out += `<path fill="${c}" d="${g[c].join("")}"/>`;
+  }
+  // fundido de la cresta: máscara que sigue la silueta, difuminada ~L.pluma px, para que
+  // las flores no corten en seco sobre el degradado del cielo
+  if (L.pluma){
+    const pl = L.pluma, sg = f1(pl/4.5), dy = pl*.3;
+    const silueta = `M${m.ridge[0][0]} ${H+pl}` + m.ridge.map(p => `L${p[0]} ${f1(p[1]+dy)}`).join("") + `L${m.ridge[m.ridge.length-1][0]} ${H+pl}Z`;
+    const caja = `x="-60" y="${f1(-pl*2)}" width="${W+120}" height="${f1(H+pl*4)}"`;
+    out = `<defs><filter id="${id}f" filterUnits="userSpaceOnUse" ${caja}><feGaussianBlur stdDeviation="${sg}"/></filter>` +
+          `<mask id="${id}m" maskUnits="userSpaceOnUse" ${caja}><path fill="#fff" filter="url(#${id}f)" d="${silueta}"/></mask></defs>` +
+          `<g mask="url(#${id}m)">${out}</g>`;
+  }
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.setAttribute("preserveAspectRatio", "none");
+  svg.setAttribute("aria-hidden", "true");
+  svg.innerHTML = out;
+  svg.classList.add("lista");
+  return true;
+}
+
 (() => {
-  const hero = document.querySelector(".hero");
-  if (!hero || quieto) return;
-  const lienzo = document.createElement("canvas");
-  lienzo.id = "chispas"; lienzo.setAttribute("aria-hidden","true");
-  hero.appendChild(lienzo);
-  const ctx = lienzo.getContext("2d");
-  let w, h, puntos = [], corriendo = true, raf;
-  const dpr = Math.min(window.devicePixelRatio || 1, 2);
-  const cuantas = () => window.innerWidth < 700 ? 16 : 30;
-  function medir(){
-    w = hero.clientWidth; h = hero.clientHeight;
-    lienzo.width = w*dpr; lienzo.height = h*dpr; lienzo.style.width = w+"px"; lienzo.style.height = h+"px";
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-    puntos = Array.from({length:cuantas()}, () => ({
-      x:Math.random()*w, y:Math.random()*h, r:Math.random()*1.6+.5,
-      vy:-(Math.random()*.22+.06), vx:(Math.random()-.5)*.14, a:Math.random()*.5+.15,
-      f:Math.random()*Math.PI*2
-    }));
-  }
-  function pintar(){
-    ctx.clearRect(0,0,w,h);
-    puntos.forEach(p => {
-      p.y += p.vy; p.x += p.vx + Math.sin(p.f += .01)*.12;
-      if (p.y < -6){ p.y = h+6; p.x = Math.random()*w; }
-      if (p.x < -6) p.x = w+6; if (p.x > w+6) p.x = -6;
-      ctx.beginPath();
-      ctx.fillStyle = `rgba(185,154,104,${p.a*(.5+.5*Math.sin(p.f))})`;
-      ctx.arc(p.x,p.y,p.r,0,6.283); ctx.fill();
-    });
-    if (corriendo) raf = requestAnimationFrame(pintar);
-  }
-  medir(); pintar();
-  window.addEventListener("resize", medir);
-  new IntersectionObserver(es => {
-    corriendo = es[0].isIntersecting;
-    if (corriendo) raf = requestAnimationFrame(pintar); else cancelAnimationFrame(raf);
-  }, {threshold:0}).observe(hero);
+  const todas = [...document.querySelectorAll("svg[data-pradera]")];
+  const hero = todas.filter(s => s.closest("#escena"));
+  const resto = todas.filter(s => !s.closest("#escena"));
+  // el hero se pinta ya; el resto cuando se acerca a la pantalla
+  hero.forEach(pintarPradera);
+  const escena = document.getElementById("escena");
+  if (!quieto) escena.dataset.intro = "play";
+  if ("IntersectionObserver" in window){
+    const ob = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting){ pintarPradera(e.target); ob.unobserve(e.target); }
+    }), {rootMargin:"600px 0px"});
+    resto.forEach(s => ob.observe(s));
+  } else resto.forEach(pintarPradera);
+  // repintar si cambia el tamaño (con espera, como la plantilla)
+  let tm;
+  window.addEventListener("resize", () => {
+    clearTimeout(tm);
+    tm = setTimeout(() => todas.forEach(s => { if (s.classList.contains("lista")) pintarPradera(s); }), 180);
+  });
 })();
 
-// --- cursor dorado ---
-if (conRaton && !quieto){
-  const punto = document.getElementById("cursor"), anillo = document.getElementById("cursor-anillo");
-  let x=0, y=0, ax=0, ay=0;
-  document.addEventListener("pointermove", e => {
-    x = e.clientX; y = e.clientY;
-    punto.style.transform = `translate(${x}px,${y}px)`;
-    document.body.classList.add("con-cursor");
-    const sobre = e.target.closest("a,button,.chip,.plan,.arco");
-    document.body.classList.toggle("sobre-enlace", !!sobre);
-  }, {passive:true});
-  (function seguir(){
-    ax += (x-ax)*.16; ay += (y-ay)*.16;
-    anillo.style.transform = `translate(${ax}px,${ay}px)`;
-    requestAnimationFrame(seguir);
-  })();
-  document.addEventListener("pointerleave", () => document.body.classList.remove("con-cursor"));
-}
-
-// --- botones magnéticos ---
-if (conRaton && !quieto){
-  document.querySelectorAll(".hero-cta .btn, .cta .btn, .btn-oro").forEach(b => {
-    b.addEventListener("pointermove", e => {
-      const r = b.getBoundingClientRect();
-      const dx = (e.clientX - r.left - r.width/2) * .16;
-      const dy = (e.clientY - r.top - r.height/2) * .22;
-      b.style.transform = `translate(${dx}px,${dy}px)`;
-    });
-    b.addEventListener("pointerleave", () => b.style.transform = "");
-  });
-}
-
-// --- inclinación suave de tarjetas ---
-function activarTilt(){
-  if (!conRaton || quieto) return;
-  document.querySelectorAll(".plan:not([data-tilt]), .arco:not([data-tilt])").forEach(c => {
-    c.dataset.tilt = "1"; c.classList.add("tilt");
-    c.addEventListener("pointermove", e => {
-      const r = c.getBoundingClientRect();
-      const px = (e.clientX - r.left)/r.width - .5, py = (e.clientY - r.top)/r.height - .5;
-      c.style.transform = `perspective(900px) rotateY(${px*3.2}deg) rotateX(${-py*3.2}deg) translateY(-4px)`;
-      c.style.setProperty("--mx", (e.clientX - r.left) + "px");
-      c.style.setProperty("--my", (e.clientY - r.top) + "px");
-    });
-    c.addEventListener("pointerleave", () => c.style.transform = "");
-  });
-}
-activarTilt();
-window.activarTilt = activarTilt;
-
-// --- contadores ---
-function contar(el){
-  const fin = parseInt(el.dataset.num, 10);
-  if (quieto || !fin){ el.textContent = fin || el.textContent; return; }
-  const t0 = performance.now(), dur = 1100;
-  (function paso(t){
-    const k = Math.min((t-t0)/dur, 1);
-    el.textContent = Math.round(fin * (1 - Math.pow(1-k, 3)));
-    if (k < 1) requestAnimationFrame(paso);
-  })(performance.now());
-}
-const obsNum = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting){ contar(e.target); obsNum.unobserve(e.target); }
-}), {threshold:.6});
-document.querySelectorAll("[data-num]").forEach(n => { n.classList.add("num-anim"); obsNum.observe(n); });
+// --- polen que sube por el hero ---
+(() => {
+  const caja = document.getElementById("polen");
+  if (!caja || quieto) return;
+  const rnd = mulberry32(19);
+  const n = window.innerWidth < 640 ? 9 : 16;
+  caja.innerHTML = Array.from({length:n}, () =>
+    `<i style="left:${(rnd()*96+2).toFixed(1)}%;animation-duration:${(7+rnd()*7).toFixed(1)}s;animation-delay:${(-rnd()*10).toFixed(1)}s;transform:scale(${(.6+rnd()*.8).toFixed(2)})"></i>`).join("");
 })();
+
+// --- paralaje con el puntero (capas y objetos se separan) ---
+[document.getElementById("escena"), document.getElementById("cta")].forEach(esc => {
+  if (!esc || quieto || !conRaton) return;
+  let raf = 0, px = 0, py = 0;
+  esc.addEventListener("pointermove", e => {
+    const r = esc.getBoundingClientRect();
+    px = ((e.clientX - r.left)/r.width - .5)*2; py = ((e.clientY - r.top)/r.height - .5)*2;
+    if (!raf) raf = requestAnimationFrame(() => { esc.style.setProperty("--px", px.toFixed(3)); esc.style.setProperty("--py", py.toFixed(3)); raf = 0; });
+  });
+  esc.addEventListener("pointerleave", () => { esc.style.setProperty("--px", 0); esc.style.setProperty("--py", 0); });
+});
+
+// --- clic en el medallón o el diente: gira y muestra un globo ---
+document.querySelectorAll(".prota").forEach(p => p.addEventListener("click", () => {
+  if (quieto) return;
+  p.dataset.gira = "false"; void p.offsetWidth; p.dataset.gira = "true";
+  const g = document.createElement("span");
+  g.className = "globo"; g.textContent = p.dataset.globo || "";
+  p.appendChild(g);
+  setTimeout(() => g.remove(), 1800);
+}));
 
 // texto de búsqueda acorde al ancho
 (() => {
@@ -1460,89 +1527,18 @@ document.querySelectorAll("[data-num]").forEach(n => { n.classList.add("num-anim
   ajustar(); window.addEventListener("resize", ajustar);
 })();
 
-// menú móvil
-const hamb = document.getElementById("hamb"), menu = document.getElementById("menu");
-hamb.addEventListener("click", () => {
-  const abierto = menu.classList.toggle("abierto");
-  hamb.setAttribute("aria-expanded", abierto);
-});
-menu.addEventListener("click", e => { if (e.target.tagName === "A") menu.classList.remove("abierto"); });
-
-document.getElementById("anio").textContent = new Date().getFullYear();
-
-/* ============================================================
-   ANIMACIONES: revelado, progreso, parallax, menú activo
-   ============================================================ */
-const sinMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-// franja en movimiento
+// indicador de desplazamiento en la fila de filtros
 (() => {
-  const frases = ["Diseño de sonrisa","Blanqueamiento","Carillas","Coronas en zirconio",
-                  "Rehabilitación oral","Incrustaciones","Prótesis","Higiene profesional"];
-  const bloque = frases.map(f => `<span>${f} <i>◆</i></span>`).join("");
-  document.getElementById("pista").innerHTML = bloque + bloque;
+  const caja = document.getElementById("filtrosCaja"), fila = document.getElementById("filtros");
+  const revisar = () => caja.classList.toggle("desborda", fila.scrollWidth - fila.clientWidth > 8 && fila.scrollLeft < fila.scrollWidth - fila.clientWidth - 12);
+  fila.addEventListener("scroll", revisar, {passive:true});
+  window.addEventListener("resize", revisar);
+  if ("ResizeObserver" in window) new ResizeObserver(revisar).observe(fila);
+  revisar();
 })();
-
-// marcar elementos a revelar
-function prepararReveal(){
-  document.querySelectorAll("[data-reveal-sec]").forEach(s => {
-    s.querySelectorAll(":scope > .wrap > .kicker, :scope > .wrap > .h2, :scope > .wrap > .linea, :scope > .wrap > .sub, :scope > .wrap > h2, :scope > .wrap > p, :scope > .wrap > img, :scope > .wrap > .btn")
-     .forEach((el,i) => { el.setAttribute("data-reveal",""); el.style.setProperty("--d", (i*70)+"ms"); });
-  });
-  document.querySelectorAll("[data-reveal-grupo]").forEach(g => {
-    [...g.children].forEach((el,i) => { el.setAttribute("data-reveal",""); el.style.setProperty("--d", (i*110)+"ms"); });
-  });
-}
-prepararReveal();
-
-const observador = new IntersectionObserver((entradas) => {
-  entradas.forEach(e => {
-    if (e.isIntersecting){ e.target.classList.add("visible"); observador.unobserve(e.target); }
-  });
-}, {rootMargin:"0px 0px -8% 0px", threshold:.12});
-function observarReveal(){ document.querySelectorAll("[data-reveal]:not(.visible)").forEach(el => observador.observe(el)); }
-observarReveal();
-
-// barra de progreso + header compacto + menú activo (un solo rAF)
-const barra = document.getElementById("progreso");
-const cabecera = document.querySelector("header");
-const enlacesMenu = [...document.querySelectorAll(".menu a")];
-const secciones = enlacesMenu.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
-let ticking = false;
-function alHacerScroll(){
-  const y = window.scrollY;
-  const alto = document.documentElement.scrollHeight - window.innerHeight;
-  barra.style.width = (alto > 0 ? (y/alto)*100 : 0) + "%";
-  cabecera.classList.toggle("compacto", y > 24);
-  let activo = -1;
-  secciones.forEach((s,i) => { if (s.getBoundingClientRect().top <= 120) activo = i; });
-  enlacesMenu.forEach((a,i) => a.classList.toggle("activo", i === activo));
-  if (!sinMovimiento){
-    const h1 = document.querySelector(".hoja-1"), h2 = document.querySelector(".hoja-2");
-    if (h1 && y < window.innerHeight*1.4){
-      h1.style.marginTop = (y*0.12) + "px";
-      h2.style.marginBottom = (y*0.08) + "px";
-    }
-  }
-  ticking = false;
-}
-window.addEventListener("scroll", () => {
-  if (!ticking){ ticking = true; requestAnimationFrame(alHacerScroll); }
-}, {passive:true});
-alHacerScroll();
 
 pintarFiltros();
 pintar();
-
-/* barra de cristal: se encoge al bajar (patrón Liquid Glass Navbar) */
-(function(){
-  const cab = document.querySelector("header");
-  if (!cab) return;
-  const marcar = () => {cab.classList.toggle("compacta", window.scrollY > 40);
-    document.body.classList.toggle("al-principio", window.scrollY < 160);};
-  marcar();
-  window.addEventListener("scroll", marcar, {passive:true});
-})();
 </script>
 </body>
 </html>
